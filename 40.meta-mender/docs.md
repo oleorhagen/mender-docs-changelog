@@ -1,3 +1,11 @@
+---
+title: meta-mender
+taxonomy:
+    category: docs
+shortcode-core:
+    active: false
+---
+
 ## meta-mender zeus-v2021.02
 
 _Released 02.22.2021_

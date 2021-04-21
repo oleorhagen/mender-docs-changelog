@@ -1,3 +1,11 @@
+---
+title: mender-convert
+taxonomy:
+    category: docs
+shortcode-core:
+    active: false
+---
+
 ## mender-convert 2.4.0
 
 _Released 04.19.2021_

@@ -1,3 +1,11 @@
+---
+title: mender-binary-delta
+taxonomy:
+    category: docs
+shortcode-core:
+    active: false
+---
+
 ## mender-binary-delta 1.2.1
 
 _Released 04.16.2021_

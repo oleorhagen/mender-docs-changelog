@@ -1,3 +1,11 @@
+---
+title: mender-cli
+taxonomy:
+    category: docs
+shortcode-core:
+    active: false
+---
+
 ## mender-cli 1.7.0
 
 _Released 04.16.2021_

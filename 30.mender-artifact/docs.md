@@ -1,3 +1,11 @@
+---
+title: mender-artifact
+taxonomy:
+    category: docs
+shortcode-core:
+    active: false
+---
+
 ## mender-artifact 3.5.1
 
 _Released 04.16.2021_

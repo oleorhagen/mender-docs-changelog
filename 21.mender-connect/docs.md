@@ -1,3 +1,11 @@
+---
+title: mender-connect
+taxonomy:
+    category: docs
+shortcode-core:
+    active: false
+---
+
 ## mender-connect 1.1.0
 
 _Released 04.16.2021_

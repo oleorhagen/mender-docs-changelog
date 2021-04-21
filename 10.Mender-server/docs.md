@@ -1,3 +1,11 @@
+---
+title: Mender server
+taxonomy:
+    category: docs
+shortcode-core:
+    active: false
+---
+
 ## Mender 2.7.0
 
 _Released 04.16.2021_

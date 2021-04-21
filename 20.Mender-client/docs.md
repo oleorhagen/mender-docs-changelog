@@ -1,3 +1,11 @@
+---
+title: Mender client
+taxonomy:
+    category: docs
+shortcode-core:
+    active: false
+---
+
 ## mender 2.4.1
 
 _Released 11.03.2020_
