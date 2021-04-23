@@ -6,6 +6,310 @@ shortcode-core:
     active: false
 ---
 
+## meta-mender zeus-v2021.04
+
+_Released 04.23.2021_
+
+### Statistics
+
+A total of 264 lines added, 92 removed (delta 172)
+
+| Developers with the most changesets | |
+|---|---|
+| Kristian Amlie | 9 (34.6%) |
+| Lluis Campos | 8 (30.8%) |
+| Ole Petter Orhagen | 7 (26.9%) |
+| Peter Grzybowski | 1 (3.8%) |
+| Leon Anavi | 1 (3.8%) |
+
+| Developers with the most changed lines | |
+|---|---|
+| Kristian Amlie | 125 (46.5%) |
+| Lluis Campos | 99 (36.8%) |
+| Ole Petter Orhagen | 37 (13.8%) |
+| Leon Anavi | 6 (2.2%) |
+| Peter Grzybowski | 2 (0.7%) |
+
+| Developers with the most signoffs (total 1) | |
+|---|---|
+| Lluis Campos | 1 (100.0%) |
+
+| Top changeset contributors by employer | |
+|---|---|
+| Northern.tech | 25 (96.2%) |
+| Konsulko Group | 1 (3.8%) |
+
+| Top lines changed by employer | |
+|---|---|
+| Northern.tech | 263 (97.8%) |
+| Konsulko Group | 6 (2.2%) |
+
+| Employers with the most signoffs (total 1) | |
+|---|---|
+| Northern.tech | 1 (100.0%) |
+
+| Employers with the most hackers (total 5) | |
+|---|---|
+| Northern.tech | 4 (80.0%) |
+| Konsulko Group | 1 (20.0%) |
+
+### Changelogs
+
+#### meta-mender (zeus-v2021.04)
+
+New changes in meta-mender since zeus-v2021.02:
+
+* Fix Mender installation from a USB stick for BIOS
+* Fixes build warnings: "MENDER_CONNECT_..." is not a
+  recognized MENDER_ variable
+* mender-connect.conf: Remove unnecessary field ServerURL
+* Include a recipe for building dosfstools 4.2
+  This is due to an error in older versions, which can leave the Vfat boot
+  partitions bricked.
+  See for more information.
+  ([MEN-4497](https://tracker.mender.io/browse/MEN-4497))
+* Add mender-configure git recipe
+  ([MEN-4420](https://tracker.mender.io/browse/MEN-4420))
+* Add mender-configure-scripts package, which provides
+  timezone configuration out of the box.
+* Add mender-configure-demo package, which provides led
+  manipulation on Raspberry Pi devices, for demo purposes.
+* If the `mender-systemd` class is set (the default),
+  mender-configure now provides a service file for systemd which will
+  automatically apply the stored configuration on startup.
+* Prepopulate the device config in mender-configure-demo.
+  ([MEN-4594](https://tracker.mender.io/browse/MEN-4594))
+* mender-client: Split concatenated certificates in ca-certificates.
+  Multiple certificates in one file are necessary to split in
+  order for `update-ca-certificates` to produce a hashed symlink to
+  them, which is required by some programs, such as curl.
+  ([MEN-4580](https://tracker.mender.io/browse/MEN-4580))
+* Add mender-client 2.6.0.
+* Add mender-connect 1.1.0.
+* Add mender-artifact 3.5.1.
+* Add mender-configure 1.0.0.
+* Add mender-client 2.5.1
+* Add mender-connect 1.0.1
+* Add mender-binary-delta 1.1.2
+* Add mender-binary-delta-1.2.1 recipe.
+* Add mender-client 2.3.3
+* Add mender-artifact 3.4.2
+* chmod 600 on mender.conf
+  ([MEN-3762](https://tracker.mender.io/browse/MEN-3762))
+
+## meta-mender warrior-v2021.04
+
+_Released 04.23.2021_
+
+### Statistics
+
+A total of 271 lines added, 94 removed (delta 177)
+
+| Developers with the most changesets | |
+|---|---|
+| Lluis Campos | 9 (33.3%) |
+| Kristian Amlie | 9 (33.3%) |
+| Ole Petter Orhagen | 7 (25.9%) |
+| Peter Grzybowski | 1 (3.7%) |
+| Leon Anavi | 1 (3.7%) |
+
+| Developers with the most changed lines | |
+|---|---|
+| Kristian Amlie | 124 (44.9%) |
+| Lluis Campos | 107 (38.8%) |
+| Ole Petter Orhagen | 37 (13.4%) |
+| Leon Anavi | 6 (2.2%) |
+| Peter Grzybowski | 2 (0.7%) |
+
+| Developers with the most signoffs (total 6) | |
+|---|---|
+| Lluis Campos | 6 (100.0%) |
+
+| Top changeset contributors by employer | |
+|---|---|
+| Northern.tech | 26 (96.3%) |
+| Konsulko Group | 1 (3.7%) |
+
+| Top lines changed by employer | |
+|---|---|
+| Northern.tech | 270 (97.8%) |
+| Konsulko Group | 6 (2.2%) |
+
+| Employers with the most signoffs (total 6) | |
+|---|---|
+| Northern.tech | 6 (100.0%) |
+
+| Employers with the most hackers (total 5) | |
+|---|---|
+| Northern.tech | 4 (80.0%) |
+| Konsulko Group | 1 (20.0%) |
+
+### Changelogs
+
+#### meta-mender (warrior-v2021.04)
+
+New changes in meta-mender since warrior-v2021.02:
+
+* Fix Mender installation from a USB stick for BIOS
+* Fixes build warnings: "MENDER_CONNECT_..." is not a
+  recognized MENDER_ variable
+* mender-connect.conf: Remove unnecessary field ServerURL
+* Include a recipe for building dosfstools 4.2
+  This is due to an error in older versions, which can leave the Vfat boot
+  partitions bricked.
+  See for more information.
+  ([MEN-4497](https://tracker.mender.io/browse/MEN-4497))
+* Add mender-configure git recipe
+  ([MEN-4420](https://tracker.mender.io/browse/MEN-4420))
+* Add mender-configure-scripts package, which provides
+  timezone configuration out of the box.
+* Add mender-configure-demo package, which provides led
+  manipulation on Raspberry Pi devices, for demo purposes.
+* If the `mender-systemd` class is set (the default),
+  mender-configure now provides a service file for systemd which will
+  automatically apply the stored configuration on startup.
+* Prepopulate the device config in mender-configure-demo.
+  ([MEN-4594](https://tracker.mender.io/browse/MEN-4594))
+* mender-client: Split concatenated certificates in ca-certificates.
+  Multiple certificates in one file are necessary to split in
+  order for `update-ca-certificates` to produce a hashed symlink to
+  them, which is required by some programs, such as curl.
+  ([MEN-4580](https://tracker.mender.io/browse/MEN-4580))
+* Add mender 2.6.0.
+* Add mender-connect 1.1.0.
+* Add mender-artifact 3.5.1.
+* Add mender-configure 1.0.0.
+* Add mender 2.5.1
+* Add mender-connect 1.0.1
+* Add mender-binary-delta 1.1.2
+* Add mender-binary-delta-1.2.1 recipe.
+* Add mender 2.3.3
+* Add mender-artifact 3.4.2
+* chmod 600 on mender.conf
+  ([MEN-3762](https://tracker.mender.io/browse/MEN-3762))
+
+## meta-mender dunfell-v2021.04
+
+_Released 04.16.2021_
+
+### Statistics
+
+A total of 271 lines added, 85 removed (delta 186)
+
+| Developers with the most changesets | |
+|---|---|
+| Kristian Amlie | 12 (50.0%) |
+| Ole Petter Orhagen | 7 (29.2%) |
+| Lluis Campos | 5 (20.8%) |
+
+| Developers with the most changed lines | |
+|---|---|
+| Kristian Amlie | 143 (52.6%) |
+| Lluis Campos | 92 (33.8%) |
+| Ole Petter Orhagen | 37 (13.6%) |
+
+| Top changeset contributors by employer | |
+|---|---|
+| Northern.tech | 24 (100.0%) |
+
+| Top lines changed by employer | |
+|---|---|
+| Northern.tech | 272 (100.0%) |
+
+| Employers with the most hackers (total 3) | |
+|---|---|
+| Northern.tech | 3 (100.0%) |
+
+### Changelogs
+
+#### meta-mender (dunfell-v2021.04)
+
+New changes in meta-mender since dunfell-v2021.03:
+
+* Add mender-configure git recipe
+([MEN-4420](https://tracker.mender.io/browse/MEN-4420))
+* Include a recipe for building dosfstools 4.2
+This is due to an error in older versions, which can leave the Vfat boot
+partitions bricked.
+See for more information.
+([MEN-4497](https://tracker.mender.io/browse/MEN-4497))
+* Add mender-configure-scripts package, which provides
+timezone configuration out of the box.
+* Add mender-configure-demo package, which provides led
+manipulation on Raspberry Pi devices, for demo purposes.
+* If the `mender-systemd` class is set (the default),
+mender-configure now provides a service file for systemd which will
+automatically apply the stored configuration on startup.
+* Fix `EFI_PROVIDER` being set incorrectly when using certain layers.
+* Prepopulate the device config in mender-configure-demo.
+([MEN-4594](https://tracker.mender.io/browse/MEN-4594))
+* mender-client: Split concatenated certificates in ca-certificates.
+Multiple certificates in one file are necessary to split in
+order for `update-ca-certificates` to produce a hashed symlink to
+them, which is required by some programs, such as curl.
+([MEN-4580](https://tracker.mender.io/browse/MEN-4580))
+* Add mender-client 2.6.0.
+* Add mender-connect 1.1.0.
+* Add mender-artifact 3.5.1.
+* Add mender-configure 1.0.0.
+* Add mender-client 2.5.1
+* Add mender-connect 1.0.1
+* Add mender-binary-delta 1.1.2
+* Add mender-binary-delta-1.2.1 recipe.
+* Add mender-client 2.3.3
+* Add mender-artifact 3.4.2
+## meta-mender dunfell-v2021.03
+
+_Released 03.05.2021_
+
+### Statistics
+
+A total of 29 lines added, 23 removed (delta 6)
+
+| Developers with the most changesets | |
+|---|---|
+| Lluis Campos | 5 (62.5%) |
+| Kristian Amlie | 2 (25.0%) |
+| Leon Anavi | 1 (12.5%) |
+
+| Developers with the most changed lines | |
+|---|---|
+| Kristian Amlie | 16 (47.1%) |
+| Lluis Campos | 12 (35.3%) |
+| Leon Anavi | 6 (17.6%) |
+
+| Developers with the most lines removed | |
+|---|---|
+| Lluis Campos | 2 (8.7%) |
+
+| Top changeset contributors by employer | |
+|---|---|
+| Northern.tech | 7 (87.5%) |
+| Konsulko Group | 1 (12.5%) |
+
+| Top lines changed by employer | |
+|---|---|
+| Northern.tech | 28 (82.4%) |
+| Konsulko Group | 6 (17.6%) |
+
+| Employers with the most hackers (total 3) | |
+|---|---|
+| Northern.tech | 2 (66.7%) |
+| Konsulko Group | 1 (33.3%) |
+
+
+### Changelogs
+
+#### meta-mender (dunfell-v2021.03)
+
+New changes in meta-mender since dunfell-v2021.01:
+
+* Fix Mender installation from a USB stick for BIOS
+* Fixes build warnings: "MENDER_CONNECT_..." is not a
+recognized MENDER_ variable
+* mender-connect: Correct ShellCommand key in config file
+* mender-connect.conf: Remove unnecessary field ServerURL
+
 ## meta-mender zeus-v2021.02
 
 _Released 02.22.2021_
@@ -83,6 +387,237 @@ device. ([MEN-4273](https://tracker.mender.io/browse/MEN-4273))
 * Add mender-client 2.3.2 and 2.4.2 recipes.
 * Fix broken demo certificate in production recipes.
 * mender-connect: Correct ShellCommand key in config file
+
+## meta-mender warrior-v2021.02
+
+_Released 02.22.2021_
+
+### Statistics
+
+A total of 272 lines added, 180 removed (delta 92)
+
+| Developers with the most changesets | |
+|---|---|
+| Kristian Amlie | 13 (43.3%) |
+| Lluis Campos | 12 (40.0%) |
+| Fabio Tranchitella | 5 (16.7%) |
+
+| Developers with the most changed lines | |
+|---|---|
+| Lluis Campos | 202 (64.3%) |
+| Kristian Amlie | 77 (24.5%) |
+| Fabio Tranchitella | 35 (11.1%) |
+
+| Developers with the most signoffs (total 8) | |
+|---|---|
+| Lluis Campos | 8 (100.0%) |
+
+| Top changeset contributors by employer | |
+|---|---|
+| Northern.tech | 30 (100.0%) |
+
+| Top lines changed by employer | |
+|---|---|
+| Northern.tech | 314 (100.0%) |
+
+| Employers with the most signoffs (total 8) | |
+|---|---|
+| Northern.tech | 8 (100.0%) |
+
+| Employers with the most hackers (total 3) | |
+|---|---|
+| Northern.tech | 3 (100.0%) |
+
+### Changelogs
+
+#### meta-mender (warrior-v2021.02)
+
+New changes in meta-mender since warrior-v2020.12:
+
+* Make DBus support optional in Mender client with `PACKAGECONFIG`.
+It defaults to on, but can be turned off with:
+```
+PACKAGECONFIG_remove = "dbus"
+```
+Backported to dunfell, modifying the PACKAGECONFIG defaults and amending
+the test.
+Backported to warrior, removing the test.
+([MEN-4014](https://tracker.mender.io/browse/MEN-4014))
+* mender-client: Add DBus busconfig files.
+([MEN-4030](https://tracker.mender.io/browse/MEN-4030))
+* mender-client: The self-signed Mender server certificate, if
+present, is copied to ca-certificates in addition to
+`MENDER_CERT_LOCATION` to be trusted by other services running in the
+device. ([MEN-4273](https://tracker.mender.io/browse/MEN-4273))
+* mender-client: fix QA Issue: invalid PACKAGECONFIG: inventory-network-scripts
+* Rename mender-shell to mender-connect
+([MEN-4292](https://tracker.mender.io/browse/MEN-4292))
+* Add mender-binary-delta 1.1.1 and 1.2.0.
+* Add the MENDER_CONNECT_SHELL to meta-mender-core, defaults to /bin/sh
+* Add recipe mender-connect 1.0.0
+* Add recipe mender 2.5.0
+* Add recipe mender-artifact 3.5.0
+* Add mender-artifact 3.4.1 recipe.
+* Add mender 2.3.2 and 2.4.2 recipes.
+* Fix broken demo certificate in production recipes.
+* mender-connect: Correct ShellCommand key in config file
+
+## meta-mender dunfell-v2021.01
+
+_Released 01.26.2021_
+
+### Statistics
+
+A total of 959 lines added, 405 removed (delta 554)
+
+| Developers with the most changesets | |
+|---|---|
+| Lluis Campos | 28 (43.1%) |
+| Kristian Amlie | 21 (32.3%) |
+| Fabio Tranchitella | 14 (21.5%) |
+| Drew Moseley | 1 (1.5%) |
+| Ole Petter Orhagen | 1 (1.5%) |
+
+| Developers with the most changed lines | |
+|---|---|
+| Lluis Campos | 439 (41.6%) |
+| Fabio Tranchitella | 408 (38.6%) |
+| Kristian Amlie | 186 (17.6%) |
+| Ole Petter Orhagen | 20 (1.9%) |
+| Drew Moseley | 3 (0.3%) |
+
+| Developers with the most lines removed | |
+|---|---|
+| Ole Petter Orhagen | 20 (4.9%) |
+
+| Developers with the most signoffs (total 2) | |
+|---|---|
+| Lluis Campos | 2 (100.0%) |
+
+| Top changeset contributors by employer | |
+|---|---|
+| Northern.tech | 65 (100.0%) |
+
+| Top lines changed by employer | |
+|---|---|
+| Northern.tech | 1056 (100.0%) |
+
+| Employers with the most signoffs (total 2) | |
+|---|---|
+| Northern.tech | 2 (100.0%) |
+
+| Employers with the most hackers (total 5) | |
+|---|---|
+| Northern.tech | 5 (100.0%) |
+
+
+### Changelogs
+
+#### meta-mender (dunfell-v2021.01)
+
+New changes in meta-mender since dunfell-v2020.12:
+
+* Make DBus support optional in Mender client with `PACKAGECONFIG`.
+It defaults to on, but can be turned off with:
+```
+PACKAGECONFIG_remove = "dbus"
+```
+Backported to dunfell, modifying the PACKAGECONFIG defaults and amending
+the test. ([MEN-4014](https://tracker.mender.io/browse/MEN-4014))
+* mender-client: Add DBus busconfig files.
+([MEN-4030](https://tracker.mender.io/browse/MEN-4030))
+* mender-client: The self-signed Mender server certificate, if
+present, is copied to ca-certificates in addition to
+`MENDER_CERT_LOCATION` to be trusted by other services running in the
+device. ([MEN-4273](https://tracker.mender.io/browse/MEN-4273))
+* meta-mender-demo: install mender-shell
+([MEN-4187](https://tracker.mender.io/browse/MEN-4187))
+* Revert "mender: Reestablish labels on the root filesystems."
+* mender-client: fix QA Issue: invalid PACKAGECONFIG: inventory-network-scripts
+* mender-shell: generate and install mender-shell.conf with
+required fields. `ServerURL` can be configured setting yocto variable
+`MENDER_SERVER_URL`, same as used by mender-client recipe. If a
+`mender-shell.conf` file is found in the `SRC_URI` the contents will be
+merged. ([MEN-4242](https://tracker.mender.io/browse/MEN-4242))
+* mender-shell: Add `User` to generated mender-shell.conf. The
+value of it is configured using `MENDER_SHELL_USER` variable, which
+defaults to `nobody` for meta-mender-core and `root` for
+meta-mender-demo.
+([MEN-4242](https://tracker.mender.io/browse/MEN-4242))
+* Rename mender-shell to mender-connect
+([MEN-4292](https://tracker.mender.io/browse/MEN-4292))
+* mender-raspberrypi: Make kernel settings conditional
+* Remove mender-binary-delta 1.0.0, 1.0.1, and 1.1.0.
+All three of these have turned out to be incompatible with
+libubootenv, which is used on dunfell and later Yocto branches.
+* Add mender-binary-delta 1.1.1 and 1.2.0.
+* Add the MENDER_CONNECT_SHELL to meta-mender-core, defaults to /bin/sh
+* Add recipe mender-connect 1.0.0
+* Add recipe mender-client 2.5.0
+* Add recipe mender-artifact 3.5.0
+* Add mender-artifact 3.4.1 recipe.
+* Add mender-client 2.3.2 and 2.4.2 recipes.
+* Fix broken demo certificate in production recipes.
+* Aggregated Dependabot Changelogs:
+* Bumps alpine from 3.7 to 3.12.0.
+* Bumps [ubi-reader](https://github.com/jrspruitt/ubi_reader) from 0.6.5 to 0.7.0.
+- [Release notes](https://github.com/jrspruitt/ubi_reader/releases)
+- [Commits](https://github.com/jrspruitt/ubi_reader/commits)
+* Bumps [requests](https://github.com/psf/requests) from 2.22.0 to 2.24.0.
+- [Release notes](https://github.com/psf/requests/releases)
+- [Changelog](https://github.com/psf/requests/blob/master/HISTORY.md)
+- [Commits](https://github.com/psf/requests/compare/v2.22.0...v2.24.0)
+* Bumps [pytest-html](https://github.com/pytest-dev/pytest-html) from 2.0.1 to 2.1.1.
+- [Release notes](https://github.com/pytest-dev/pytest-html/releases)
+- [Changelog](https://github.com/pytest-dev/pytest-html/blob/master/CHANGES.rst)
+- [Commits](https://github.com/pytest-dev/pytest-html/compare/v2.0.1...v2.1.1)
+* Bumps [pytest](https://github.com/pytest-dev/pytest) from 5.3.2 to 6.1.1.
+- [Release notes](https://github.com/pytest-dev/pytest/releases)
+- [Changelog](https://github.com/pytest-dev/pytest/blob/master/CHANGELOG.rst)
+- [Commits](https://github.com/pytest-dev/pytest/compare/5.3.2...6.1.1)
+* Bumps [paramiko](https://github.com/paramiko/paramiko) from 2.7.1 to 2.7.2.
+- [Release notes](https://github.com/paramiko/paramiko/releases)
+- [Changelog](https://github.com/paramiko/paramiko/blob/master/NEWS)
+- [Commits](https://github.com/paramiko/paramiko/compare/2.7.1...2.7.2)
+* Bumps alpine from 3.12.0 to 3.12.1.
+* Bumps [pytest](https://github.com/pytest-dev/pytest) from 6.1.1 to 6.1.2.
+- [Release notes](https://github.com/pytest-dev/pytest/releases)
+- [Changelog](https://github.com/pytest-dev/pytest/blob/master/CHANGELOG.rst)
+- [Commits](https://github.com/pytest-dev/pytest/compare/6.1.1...6.1.2)
+* Bumps [requests](https://github.com/psf/requests) from 2.24.0 to 2.25.0.
+- [Release notes](https://github.com/psf/requests/releases)
+- [Changelog](https://github.com/psf/requests/blob/master/HISTORY.md)
+- [Commits](https://github.com/psf/requests/compare/v2.24.0...v2.25.0)
+* Bumps [pytest-html](https://github.com/pytest-dev/pytest-html) from 2.1.1 to 3.0.0.
+- [Release notes](https://github.com/pytest-dev/pytest-html/releases)
+- [Changelog](https://github.com/pytest-dev/pytest-html/blob/master/CHANGES.rst)
+- [Commits](https://github.com/pytest-dev/pytest-html/compare/v2.1.1...v3.0.0)
+* Bumps [pytest-html](https://github.com/pytest-dev/pytest-html) from 3.0.0 to 3.1.0.
+- [Release notes](https://github.com/pytest-dev/pytest-html/releases)
+- [Changelog](https://github.com/pytest-dev/pytest-html/blob/master/CHANGES.rst)
+- [Commits](https://github.com/pytest-dev/pytest-html/compare/v3.0.0...v3.1.0)
+* Bumps alpine from 3.12.1 to 3.12.2.
+* Bumps [pytest-html](https://github.com/pytest-dev/pytest-html) from 3.1.0 to 3.1.1.
+- [Release notes](https://github.com/pytest-dev/pytest-html/releases)
+- [Changelog](https://github.com/pytest-dev/pytest-html/blob/master/CHANGES.rst)
+- [Commits](https://github.com/pytest-dev/pytest-html/compare/v3.1.0...v3.1.1)
+* Bumps [pytest](https://github.com/pytest-dev/pytest) from 6.1.2 to 6.2.0.
+- [Release notes](https://github.com/pytest-dev/pytest/releases)
+- [Changelog](https://github.com/pytest-dev/pytest/blob/master/CHANGELOG.rst)
+- [Commits](https://github.com/pytest-dev/pytest/compare/6.1.2...6.2.0)
+* Bumps alpine from 3.12.2 to 3.12.3.
+* Bumps [psutil](https://github.com/giampaolo/psutil) from 5.7.2 to 5.8.0.
+- [Release notes](https://github.com/giampaolo/psutil/releases)
+- [Changelog](https://github.com/giampaolo/psutil/blob/master/HISTORY.rst)
+- [Commits](https://github.com/giampaolo/psutil/compare/release-5.7.2...release-5.8.0)
+* Bumps [requests](https://github.com/psf/requests) from 2.25.0 to 2.25.1.
+- [Release notes](https://github.com/psf/requests/releases)
+- [Changelog](https://github.com/psf/requests/blob/master/HISTORY.md)
+- [Commits](https://github.com/psf/requests/compare/v2.25.0...v2.25.1)
+* Bumps [pytest](https://github.com/pytest-dev/pytest) from 6.2.0 to 6.2.1.
+- [Release notes](https://github.com/pytest-dev/pytest/releases)
+- [Changelog](https://github.com/pytest-dev/pytest/blob/master/CHANGELOG.rst)
+- [Commits](https://github.com/pytest-dev/pytest/compare/6.2.0...6.2.1)
 
 ## meta-mender zeus-v2020.12
 
@@ -186,6 +721,315 @@ defaults to `nobody` for meta-mender-core and `root` for
 meta-mender-demo.
 ([MEN-4242](https://tracker.mender.io/browse/MEN-4242))
 
+## meta-mender warrior-v2020.12
+
+_Released 12.16.2020_
+
+### Statistics
+
+A total of 750 lines added, 94 removed (delta 656)
+
+| Developers with the most changesets | |
+|---|---|
+| Lluis Campos | 8 (33.3%) |
+| Kristian Amlie | 7 (29.2%) |
+| Ole Petter Orhagen | 5 (20.8%) |
+| Kasper Føns | 2 (8.3%) |
+| Drew Moseley | 1 (4.2%) |
+| Peter Grzybowski | 1 (4.2%) |
+
+| Developers with the most changed lines | |
+|---|---|
+| Lluis Campos | 534 (68.0%) |
+| Ole Petter Orhagen | 166 (21.1%) |
+| Kristian Amlie | 76 (9.7%) |
+| Kasper Føns | 5 (0.6%) |
+| Drew Moseley | 3 (0.4%) |
+| Peter Grzybowski | 1 (0.1%) |
+
+| Developers with the most lines removed | |
+|---|---|
+| Kristian Amlie | 13 (13.8%) |
+| Drew Moseley | 2 (2.1%) |
+
+| Developers with the most signoffs (total 2) | |
+|---|---|
+| Lluis Campos | 2 (100.0%) |
+
+| Top changeset contributors by employer | |
+|---|---|
+| Northern.tech | 22 (91.7%) |
+| Chora | 2 (8.3%) |
+
+| Top lines changed by employer | |
+|---|---|
+| Northern.tech | 780 (99.4%) |
+| Chora | 5 (0.6%) |
+
+| Employers with the most signoffs (total 2) | |
+|---|---|
+| Northern.tech | 2 (100.0%) |
+
+| Employers with the most hackers (total 6) | |
+|---|---|
+| Northern.tech | 5 (83.3%) |
+| Chora | 1 (16.7%) |
+
+### Changelogs
+
+#### meta-mender (warrior-v2020.12)
+
+New changes in meta-mender since warrior-v2020.10:
+
+* Disable `64bit` ext4 filesystem feature.
+([MEN-3513](https://tracker.mender.io/browse/MEN-3513))
+* Disable filesystem journal on read-only-rootfs, which
+sometimes causes unstable rootfs checksum together with fsck.
+([MEN-3912](https://tracker.mender.io/browse/MEN-3912))
+* mender: Fix broken patch for mender-systemd-machine-id.
+* Remove recipe mender-client 2.3.0
+* Add recipe mender-client 2.3.1
+* Remove recipe mender-client 2.4.0
+* Add recipe mender-client 2.4.1
+* New Mender-client configuration option: 'inventory-network-scripts'.
+This option, if enabled, installs the inventory-network-scripts in the client.
+This is enabled as an option, because the inventory-geo script relies on a
+third-party network service to figure out the geographic location of the device,
+which may not be something that everyone wants installed on their devices. The
+feature is enabled in the standard 'PACKAGECONFIG' for the Mender-client, and is
+included unless overridded. To remove it, add
+'PACKAGECONFIG_remove_pn-mender-client = "inventory-network-scripts"' to your
+local.conf file.
+* mender-client: Do not keep resizing if a little space is left unused
+([MEN-4176](https://tracker.mender.io/browse/MEN-4176))
+* mender-client: Ensure growfs works on GPT filesystems
+([MEN-4176](https://tracker.mender.io/browse/MEN-4176))
+* mender-client: Update LICENSE to include OpenSSL
+* Add a recipe for building 'mender-connect', remote shell support.
+([MEN-4083](https://tracker.mender.io/browse/MEN-4083))
+* meta-mender-demo: install mender-connect
+([MEN-4187](https://tracker.mender.io/browse/MEN-4187))
+* mender-connect: generate and install mender-connect.conf with
+required fields. `ServerURL` can be configured setting yocto variable
+`MENDER_SERVER_URL`, same as used by mender-client recipe. If a
+`mender-connect.conf` file is found in the `SRC_URI` the contents will be
+merged. ([MEN-4242](https://tracker.mender.io/browse/MEN-4242))
+* mender-connect: Add `User` to generated mender-connect.conf. The
+value of it is configured using `MENDER_CONNECT_USER` variable, which
+defaults to `nobody` for meta-mender-core and `root` for
+meta-mender-demo.
+([MEN-4242](https://tracker.mender.io/browse/MEN-4242))
+
+## meta-mender dunfell-v2020.12
+
+_Released 12.08.2020_
+
+### Statistics
+
+A total of 547 lines added, 1726 removed (delta -1179)
+
+| Developers with the most changesets | |
+|---|---|
+| Kristian Amlie | 7 (38.9%) |
+| Ole Petter Orhagen | 5 (27.8%) |
+| Lluis Campos | 3 (16.7%) |
+| Kasper Føns | 2 (11.1%) |
+| Drew Moseley | 1 (5.6%) |
+
+| Developers with the most changed lines | |
+|---|---|
+| Ole Petter Orhagen | 1823 (87.5%) |
+| Kristian Amlie | 143 (6.9%) |
+| Lluis Campos | 111 (5.3%) |
+| Kasper Føns | 5 (0.2%) |
+| Drew Moseley | 2 (0.1%) |
+
+| Developers with the most lines removed | |
+|---|---|
+| Ole Petter Orhagen | 1275 (73.9%) |
+
+| Developers with the most signoffs (total 2) | |
+|---|---|
+| Kristian Amlie | 2 (100.0%) |
+
+| Top changeset contributors by employer | |
+|---|---|
+| Northern.tech | 16 (88.9%) |
+| Chora | 2 (11.1%) |
+
+| Top lines changed by employer | |
+|---|---|
+| Northern.tech | 2079 (99.8%) |
+| Chora | 5 (0.2%) |
+
+| Employers with the most signoffs (total 2) | |
+|---|---|
+| Northern.tech | 2 (100.0%) |
+
+| Employers with the most hackers (total 5) | |
+|---|---|
+| Northern.tech | 4 (80.0%) |
+| Chora | 1 (20.0%) |
+
+### Changelogs
+
+#### meta-mender (dunfell-v2020.12)
+
+New changes in meta-mender since dunfell-v2020.11:
+
+* mender: Reestablish labels on the root filesystems.
+* New Mender-client configuration option: 'inventory-network-scripts'.
+This option, if enabled, installs the inventory-network-scripts in the client.
+This is enabled as an option, because the inventory-geo script relies on a
+third-party network service to figure out the geographic location of the device,
+which may not be something that everyone wants installed on their devices. The
+feature is enabled in the standard 'PACKAGECONFIG' for the Mender-client, and is
+included unless overridded. To remove it, add
+'PACKAGECONFIG_remove_pn-mender-client = "inventory-network-scripts"' to your
+local.conf file.
+* mender-client: Do not keep resizing if a little space is left unused
+([MEN-4176](https://tracker.mender.io/browse/MEN-4176))
+* mender-client: Ensure growfs works on GPT filesystems
+([MEN-4176](https://tracker.mender.io/browse/MEN-4176))
+* mender-client: Update LICENSE to include OpenSSL
+* mender-client: Include OpenSSL license from 2.4.x onwards.
+* Add a recipe for building 'mender-connect', remote shell support.
+([MEN-4083](https://tracker.mender.io/browse/MEN-4083))
+* Fix a parsing issue where `inherit` could not be used with
+variables that had been defined with overrides that depended on
+`MENDER_FEATURES_ENABLE`. One example would be:
+```
+MYVAR_mender-grub = "grub-efi"
+inherit ${MYVAR}
+```
+
+## meta-mender dunfell-v2020.11
+
+_Released 11.16.2020_
+
+### Statistics
+
+A total of 6 lines added, 1067 removed (delta -1061)
+
+| Developers with the most changesets | |
+|---|---|
+| Ole Petter Orhagen | 3 (50.0%) |
+| Lluis Campos | 2 (33.3%) |
+| Drew Moseley | 1 (16.7%) |
+
+| Developers with the most changed lines | |
+|---|---|
+| Lluis Campos | 922 (86.4%) |
+| Ole Petter Orhagen | 142 (13.3%) |
+| Drew Moseley | 3 (0.3%) |
+
+| Developers with the most lines removed | |
+|---|---|
+| Lluis Campos | 921 (86.3%) |
+| Ole Petter Orhagen | 138 (12.9%) |
+| Drew Moseley | 2 (0.2%) |
+
+| Top changeset contributors by employer | |
+|---|---|
+| Northern.tech | 6 (100.0%) |
+
+| Top lines changed by employer | |
+|---|---|
+| Northern.tech | 1067 (100.0%) |
+
+| Employers with the most hackers (total 3) | |
+|---|---|
+| Northern.tech | 3 (100.0%) |
+
+### Changelogs
+
+#### meta-mender (dunfell-v2020.11)
+
+New changes in meta-mender since dunfell-v2020.10:
+
+* mender: Fix broken patch for mender-systemd-machine-id.
+* Remove recipe mender-client 2.3.0
+* Add recipe mender-client 2.3.1
+* Remove recipe mender-client 2.4.0
+* Add recipe mender-client 2.4.1
+* Aggregated Dependabot Changelogs:
+* Bumps [tests/acceptance/image-tests](https://github.com/mendersoftware/mender-image-tests) from `457ea99` to `713c563`.
+- [Release notes](https://github.com/mendersoftware/mender-image-tests/releases)
+- [Commits](https://github.com/mendersoftware/mender-image-tests/compare/457ea99937642ec29da53a9a2d30a51067cf8dc0...713c56364b79a18ad86e6731b1a602f0f3d9d233)
+* Bump tests/acceptance/image-tests from `457ea99` to `713c563`
+
+## meta-mender dunfell-v2020.10
+
+_Released 10.13.2020_
+
+### Statistics
+
+A total of 334 lines added, 431 removed (delta -97)
+
+| Developers with the most changesets | |
+|---|---|
+| Drew Moseley | 17 (53.1%) |
+| Kristian Amlie | 8 (25.0%) |
+| Lluis Campos | 2 (6.2%) |
+| Ole Petter Orhagen | 2 (6.2%) |
+| Fabio Tranchitella | 2 (6.2%) |
+| Peter Grzybowski | 1 (3.1%) |
+
+| Developers with the most changed lines | |
+|---|---|
+| Drew Moseley | 315 (65.9%) |
+| Kristian Amlie | 129 (27.0%) |
+| Ole Petter Orhagen | 15 (3.1%) |
+| Fabio Tranchitella | 12 (2.5%) |
+| Lluis Campos | 6 (1.3%) |
+| Peter Grzybowski | 1 (0.2%) |
+
+| Developers with the most lines removed | |
+|---|---|
+| Drew Moseley | 114 (26.5%) |
+
+| Developers with the most signoffs (total 5) | |
+|---|---|
+| Lluis Campos | 5 (100.0%) |
+
+| Top changeset contributors by employer | |
+|---|---|
+| Northern.tech | 32 (100.0%) |
+
+| Top lines changed by employer | |
+|---|---|
+| Northern.tech | 478 (100.0%) |
+
+| Employers with the most signoffs (total 5) | |
+|---|---|
+| Northern.tech | 5 (100.0%) |
+
+| Employers with the most hackers (total 6) | |
+|---|---|
+| Northern.tech | 6 (100.0%) |
+
+### Changelogs
+
+#### meta-mender (dunfell-v2020.10)
+
+New changes in meta-mender since dunfell-v2020.09:
+
+* Disable filesystem journal on read-only-rootfs, which
+sometimes causes unstable rootfs checksum together with fsck.
+([MEN-3912](https://tracker.mender.io/browse/MEN-3912))
+* mender: Make Mender settings conditional.
+* meta-mender-demo: Make Mender settings conditional.
+* meta-mender-raspberrypi-demo: Make Mender settings conditional.
+* meta-mender-qemu: Make Mender settings conditional.
+* tests/mender: Make Mender settings conditional.
+* mender-grub: Rework to use conditional includes.
+* mender-uboot: Conditionally include settings.
+* mender: Only include full mender-setup if features are enabled.
+* mender-binary-delta: Only add SRC_URI entries for existing binaries.
+* grub-mender-grubenv: Cleanup PROVIDES and RPROVIDES.
+* mender: Switch from include to require.
+* Fix PACKAGECONFIG not propagating RDEPENDS properly.
+
 ## meta-mender zeus-v2020.10
 
 _Released 10.05.2020_
@@ -281,6 +1125,546 @@ checking for empty lines before processing for keys.
 * Use golang 1.14 in meta-mender-core layer to support Ed25519
 public keys for signing and transport in the Mender client.
 
+## meta-mender warrior-v2020.10
+
+_Released 10.05.2020_
+
+### Statistics
+
+A total of 86487 lines added, 100 removed (delta 86387)
+
+| Developers with the most changesets | |
+|---|---|
+| Drew Moseley | 7 (46.7%) |
+| Lluis Campos | 3 (20.0%) |
+| Peter Grzybowski | 1 (6.7%) |
+| Mirza Krak | 1 (6.7%) |
+| Kristian Amlie | 1 (6.7%) |
+| Michael Davis | 1 (6.7%) |
+| Kasper Føns | 1 (6.7%) |
+
+| Developers with the most changed lines | |
+|---|---|
+| Lluis Campos | 86463 (99.9%) |
+| Drew Moseley | 92 (0.1%) |
+| Peter Grzybowski | 9 (0.0%) |
+| Kristian Amlie | 4 (0.0%) |
+| Kasper Føns | 2 (0.0%) |
+| Mirza Krak | 1 (0.0%) |
+| Michael Davis | 1 (0.0%) |
+
+| Developers with the most lines removed | |
+|---|---|
+| Drew Moseley | 73 (73.0%) |
+
+| Top changeset contributors by employer | |
+|---|---|
+| Northern.tech | 13 (86.7%) |
+| Election Systems & Software | 1 (6.7%) |
+| Chora | 1 (6.7%) |
+
+| Top lines changed by employer | |
+|---|---|
+| Northern.tech | 86569 (100.0%) |
+| Chora | 2 (0.0%) |
+| Election Systems & Software | 1 (0.0%) |
+
+| Employers with the most signoffs (total 0) | |
+|---|---|
+
+| Employers with the most hackers (total 7) | |
+|---|---|
+| Northern.tech | 5 (71.4%) |
+| Chora | 1 (14.3%) |
+| Election Systems & Software | 1 (14.3%) |
+
+### Changelogs
+
+#### meta-mender (warrior-v2020.10)
+
+New changes in meta-mender since warrior-v2020.07:
+
+* initramfs-module-install-efi: Ensure variable changes are reflected on rebuild
+* mender-grub: Dynamically determine mender_grub_storage_device.
+* mender-grub: Add regexp module.
+* Deprecate MENDER_GRUB_STORAGE_DEVICE variable.
+* mender: Add sanity check to ensure partuuid with X86.
+* vexpress: Remove nonexistent kernel config options that issue warnings.
+* mender-commercial: Cleanup BBFILES.
+* mender: Add additonal x86 arch to partuuid sanity check
+* Warn when detecting U-Boot version without script '=' support.
+([MEN-3851](https://tracker.mender.io/browse/MEN-3851))
+* Add mender-client 2.4.0 recipe.
+* OpenSSL: qemu: set SECLEVEL=2 in /etc/ssl/openssl.cnf
+([MEN-3730](https://tracker.mender.io/browse/MEN-3730))
+* Add recipe go 1.14 from dunfell
+* Use golang 1.14 in meta-mender-core layer to support Ed25519
+public keys for signing and transport in the Mender client.
+
+## meta-mender thud-v2020.10
+
+_Released 10.05.2020_
+
+### Statistics
+
+A total of 82 lines added, 38 removed (delta 44)
+
+| Developers with the most changesets | |
+|---|---|
+| Drew Moseley | 7 (43.8%) |
+| Lluis Campos | 3 (18.8%) |
+| Gaurav Kalra | 2 (12.5%) |
+| Matthew Beckler | 2 (12.5%) |
+| Joerg Hofrichter | 1 (6.2%) |
+| Kristian Amlie | 1 (6.2%) |
+
+| Developers with the most changed lines | |
+|---|---|
+| Drew Moseley | 55 (63.2%) |
+| Lluis Campos | 16 (18.4%) |
+| Kristian Amlie | 10 (11.5%) |
+| Gaurav Kalra | 2 (2.3%) |
+| Matthew Beckler | 2 (2.3%) |
+| Joerg Hofrichter | 2 (2.3%) |
+
+| Top changeset contributors by employer | |
+|---|---|
+| Northern.tech | 11 (68.8%) |
+| Packet Power LLC | 2 (12.5%) |
+| National Instruments | 1 (6.2%) |
+| gvkalra@gmail.com | 1 (6.2%) |
+| SM Instruments Inc. | 1 (6.2%) |
+
+| Top lines changed by employer | |
+|---|---|
+| Northern.tech | 81 (93.1%) |
+| Packet Power LLC | 2 (2.3%) |
+| National Instruments | 2 (2.3%) |
+| gvkalra@gmail.com | 1 (1.1%) |
+| SM Instruments Inc. | 1 (1.1%) |
+
+| Employers with the most signoffs (total 1) | |
+|---|---|
+| Northern.tech | 1 (100.0%) |
+
+| Employers with the most hackers (total 7) | |
+|---|---|
+| Northern.tech | 3 (42.9%) |
+| Packet Power LLC | 1 (14.3%) |
+| National Instruments | 1 (14.3%) |
+| gvkalra@gmail.com | 1 (14.3%) |
+| SM Instruments Inc. | 1 (14.3%) |
+
+### Changelogs
+
+#### meta-mender (thud-v2020.10)
+
+New changes in meta-mender since thud-v2019.12:
+
+* grub-mender-grubenv: Fix broken debug-log PACKAGECONFIG.
+* grub-efi: Respect MENDER_BOOT_PART_MOUNT_LOCATION
+* mender-grub: Set EFI_PROVIDER to grub-efi.
+* remove stray '-' in IMAGE_NAME
+* systemd-boot: Respect MENDER_BOOT_PART_MOUNT_LOCATION
+* Add mender 2.2.0b1 recipe
+* Add mender-artifact 3.3.0b1 recipe
+* In demo mode, put demo certificate in same directory as Debian package.
+([MEN-3048](https://tracker.mender.io/browse/MEN-3048))
+* mender-helpers: Error out if copying different files to boot part.
+* Improve warning when multiple DTB files are in KERNEL_DEVICETREE
+* Add MENDER_DTB_NAME_FORCE to mender-vars.json to avoid unrecognized variable warning
+* rpi: fix rootfs cmdline trailing space
+* Add mender 2.2.1 recipe
+* Add mender-artifact 3.3.1 recipe
+* Remove mender 2.2.0b1 recipe
+* Remove mender-artifact 3.3.0b1 recipe
+
+## meta-mender sumo-v2020.10
+
+_Released 10.05.2020_
+
+### Statistics
+
+A total of 52 lines added, 60 removed (delta -8)
+
+| Developers with the most changesets | |
+|---|---|
+| Drew Moseley | 5 (45.5%) |
+| Lluis Campos | 2 (18.2%) |
+| Matthew Beckler | 2 (18.2%) |
+| Gaurav Kalra | 1 (9.1%) |
+| Kristian Amlie | 1 (9.1%) |
+
+| Developers with the most changed lines | |
+|---|---|
+| Lluis Campos | 49 (55.1%) |
+| Drew Moseley | 27 (30.3%) |
+| Kristian Amlie | 10 (11.2%) |
+| Matthew Beckler | 2 (2.2%) |
+| Gaurav Kalra | 1 (1.1%) |
+
+| Developers with the most lines removed | |
+|---|---|
+| Lluis Campos | 35 (58.3%) |
+
+| Top changeset contributors by employer | |
+|---|---|
+| Northern.tech | 8 (72.7%) |
+| Packet Power LLC | 2 (18.2%) |
+| SM Instruments Inc. | 1 (9.1%) |
+
+| Top lines changed by employer | |
+|---|---|
+| Northern.tech | 86 (96.6%) |
+| Packet Power LLC | 2 (2.2%) |
+| SM Instruments Inc. | 1 (1.1%) |
+
+| Employers with the most hackers (total 5) | |
+|---|---|
+| Northern.tech | 3 (60.0%) |
+| Packet Power LLC | 1 (20.0%) |
+| SM Instruments Inc. | 1 (20.0%) |
+
+### Changelogs
+
+#### meta-mender (sumo-v2020.10)
+
+New changes in meta-mender since sumo-v2019.12:
+
+* grub-mender-grubenv: Fix broken debug-log PACKAGECONFIG.
+* grub-efi: Respect MENDER_BOOT_PART_MOUNT_LOCATION
+* mender-grub: Set EFI_PROVIDER to grub-efi.
+* systemd-boot: Respect MENDER_BOOT_PART_MOUNT_LOCATION
+* Add mender 2.2.0b1 recipe
+* Add mender-artifact 3.3.0b1 recipe
+* In demo mode, put demo certificate in same directory as Debian package.
+([MEN-3048](https://tracker.mender.io/browse/MEN-3048))
+* Improve warning when multiple DTB files are in KERNEL_DEVICETREE
+* Add MENDER_DTB_NAME_FORCE to mender-vars.json to avoid unrecognized variable warning
+* rpi: fix rootfs cmdline trailing space
+* Add mender 2.2.1 recipe
+* Add mender-artifact 3.3.1 recipe
+* Remove mender 2.2.0b1 recipe
+* Remove mender-artifact 3.3.0b1 recipe
+
+## meta-mender rocko-v2020.10
+
+_Released 10.05.2020_
+
+### Statistics
+
+A total of 201 lines added, 147 removed (delta 54)
+
+| Developers with the most changesets | |
+|---|---|
+| Lluis Campos | 6 (46.2%) |
+| Kristian Amlie | 6 (46.2%) |
+| Ole Petter Orhagen | 1 (7.7%) |
+
+| Developers with the most changed lines | |
+|---|---|
+| Kristian Amlie | 157 (55.5%) |
+| Ole Petter Orhagen | 113 (39.9%) |
+| Lluis Campos | 13 (4.6%) |
+
+| Developers with the most lines removed | |
+|---|---|
+| Ole Petter Orhagen | 82 (55.8%) |
+
+| Top changeset contributors by employer | |
+|---|---|
+| Northern.tech | 13 (100.0%) |
+
+| Top lines changed by employer | |
+|---|---|
+| Northern.tech | 283 (100.0%) |
+
+| Employers with the most hackers (total 3) | |
+|---|---|
+| Northern.tech | 3 (100.0%) |
+
+### Changelogs
+
+#### meta-mender (rocko-v2020.10)
+
+New changes in meta-mender since rocko-v2019.08:
+
+* Add meta-mender-commercial layer.
+This will host our mender-binary-delta Update Module.
+* Update recipe for mender-binary-delta pre-release v0.1.1
+* `FILESEXTRAPATHS_prepend_pn-mender-binary-delta` now needs
+to point to the folder containing `arm`, `aarch64` and `x86_64`, not the folder
+containing the binary.
+* Update recipe for mender-binary-delta beta release v1.0.0b1
+* Update recipe for mender-binary-delta final release v1.0.0
+* Add mender 2.2.1 recipe
+* Add mender-artifact 3.3.1 recipe
+* Remove mender 2.1.0b1 recipe
+* Remove mender-artifact 3.1.0b1 recipe
+* Removes the tests covering Mender-Artifact version 1.
+([MEN-2156](https://tracker.mender.io/browse/MEN-2156))
+
+## meta-mender dunfell-v2020.09
+
+_Released 09.17.2020_
+
+### Statistics
+
+A total of 70 lines added, 136 removed (delta -66)
+
+| Developers with the most changesets | |
+|---|---|
+| Drew Moseley | 5 (26.3%) |
+| Peter Grzybowski | 3 (15.8%) |
+| Lluis Campos | 2 (10.5%) |
+| Kurt Kiefer | 2 (10.5%) |
+| Daniel Selvan D | 1 (5.3%) |
+| Kristian Amlie | 1 (5.3%) |
+| Ole Petter Orhagen | 1 (5.3%) |
+| Marek Belisko | 1 (5.3%) |
+| Mirza Krak | 1 (5.3%) |
+| Kasper Føns | 1 (5.3%) |
+
+| Developers with the most changed lines | |
+|---|---|
+| Marek Belisko | 64 (36.2%) |
+| Drew Moseley | 45 (25.4%) |
+| Peter Grzybowski | 35 (19.8%) |
+| Lluis Campos | 12 (6.8%) |
+| Kurt Kiefer | 9 (5.1%) |
+| Kristian Amlie | 4 (2.3%) |
+| Ossian Riday | 3 (1.7%) |
+| Kasper Føns | 2 (1.1%) |
+| Daniel Selvan D | 1 (0.6%) |
+| Ole Petter Orhagen | 1 (0.6%) |
+
+| Developers with the most lines removed | |
+|---|---|
+| Marek Belisko | 64 (47.1%) |
+| Drew Moseley | 34 (25.0%) |
+| Lluis Campos | 6 (4.4%) |
+
+| Developers with the most signoffs (total 1) | |
+|---|---|
+| Kristian Amlie | 1 (100.0%) |
+
+| Top changeset contributors by employer | |
+|---|---|
+| Northern.tech | 13 (68.4%) |
+| kekiefer@gmail.com | 2 (10.5%) |
+| danilselvan@gmail.com | 1 (5.3%) |
+| ossian.riday@gmail.com | 1 (5.3%) |
+| Chora | 1 (5.3%) |
+| open-nandra | 1 (5.3%) |
+
+| Top lines changed by employer | |
+|---|---|
+| Northern.tech | 98 (55.4%) |
+| open-nandra | 64 (36.2%) |
+| kekiefer@gmail.com | 9 (5.1%) |
+| ossian.riday@gmail.com | 3 (1.7%) |
+| Chora | 2 (1.1%) |
+| danilselvan@gmail.com | 1 (0.6%) |
+
+| Employers with the most signoffs (total 1) | |
+|---|---|
+| Northern.tech | 1 (100.0%) |
+
+| Employers with the most hackers (total 11) | |
+|---|---|
+| Northern.tech | 6 (54.5%) |
+| open-nandra | 1 (9.1%) |
+| kekiefer@gmail.com | 1 (9.1%) |
+| ossian.riday@gmail.com | 1 (9.1%) |
+| Chora | 1 (9.1%) |
+| danilselvan@gmail.com | 1 (9.1%) |
+
+### Changelogs
+
+#### meta-mender (dunfell-v2020.09)
+
+New changes in meta-mender since dunfell-v2020.07:
+
+* []MBR systems don't have a backup header, so always return true
+([MEN-3761](https://tracker.mender.io/browse/MEN-3761))
+* Fix error that no recipe provides bcm2835-bootfiles.
+* mender-client: fix install of systemd-machine-id.service
+* initramfs-module-install-efi: Ensure variable changes are reflected on rebuild
+* vexpress: Remove nonexistent kernel config options that issue warnings.
+* mender-commercial: Cleanup BBFILES.
+* libubootenv: Drop bbappend file
+* libubootenv: add RPROVIDES for u-boot-default-env
+* Add mender-client 2.4.0 recipe.
+* OpenSSL: qemu: set SECLEVEL=2 in /etc/ssl/openssl.cnf
+([MEN-3730](https://tracker.mender.io/browse/MEN-3730))
+* Fixed key extraction by skipping new lines in defconfig.
+The `add_kconfig_option_with_depends.py` file throws `Not sure how to
+handle Kconfig option that doesn't start with 'CONFIG_'` when the
+provided defconfig file contains blank lines. It has been fixed by
+checking for empty lines before processing for keys.
+* Add mender-client 2.4.0 recipe.
+
+## meta-mender warrior-v2020.07
+
+_Released 07.29.2020_
+
+### Statistics
+
+A total of 171 lines added, 54 removed (delta 117)
+
+| Developers with the most changesets | |
+|---|---|
+| Kristian Amlie | 4 (50.0%) |
+| Lluis Campos | 1 (12.5%) |
+| Ossian Riday | 1 (12.5%) |
+| Trevor Woerner | 1 (12.5%) |
+| Garrett Brown | 1 (12.5%) |
+
+| Developers with the most changed lines | |
+|---|---|
+| Garrett Brown | 147 (71.7%) |
+| Kristian Amlie | 51 (24.9%) |
+| Ossian Riday | 3 (1.5%) |
+| Lluis Campos | 2 (1.0%) |
+| Trevor Woerner | 2 (1.0%) |
+
+| Developers with the most lines removed | |
+|---|---|
+| Kristian Amlie | 33 (61.1%) |
+
+| Top changeset contributors by employer | |
+|---|---|
+| Northern.tech | 5 (62.5%) |
+| twoerner@gmail.com | 1 (12.5%) |
+| Aclima Inc. | 1 (12.5%) |
+| ossian.riday@gmail.com | 1 (12.5%) |
+
+| Top lines changed by employer | |
+|---|---|
+| Aclima Inc. | 147 (71.7%) |
+| Northern.tech | 53 (25.9%) |
+| ossian.riday@gmail.com | 3 (1.5%) |
+| twoerner@gmail.com | 2 (1.0%) |
+
+| Employers with the most hackers (total 5) | |
+|---|---|
+| Northern.tech | 2 (40.0%) |
+| Aclima Inc. | 1 (20.0%) |
+| ossian.riday@gmail.com | 1 (20.0%) |
+| twoerner@gmail.com | 1 (20.0%) |
+
+### Changelogs
+
+#### meta-mender (warrior-v2020.07)
+
+New changes in meta-mender since warrior-v2020.06:
+
+* Fix boot failure on ARM UEFI devices because of missing
+`regexp` module. A typical error log looks like this:
+```
+Welcome to GRUB!
+```
+* Fix EFI boot partition corruption with mtools 4.0.19
+* uboot_auto_configure: build U-Boot the same way Yocto does
+* Add mender_2.3.0 and mender-artifact_3.4.0 recipes.
+* Add mender-2.2.1 and mender-artifact-3.3.1 recipes.
+* Add mender-binary-delta-1.1.0 release.
+* MBR systems don't have a backup header, so always return true
+([MEN-3761](https://tracker.mender.io/browse/MEN-3761))
+
+## meta-mender dunfell-v2020.07
+
+_Released 07.28.2020_
+
+### Statistics
+
+A total of 895 lines added, 2274 removed (delta -1379)
+
+| Developers with the most changesets | |
+|---|---|
+| Kristian Amlie | 26 (83.9%) |
+| Peter Grzybowski | 1 (3.2%) |
+| Lluis Campos | 1 (3.2%) |
+| Corey Cothrum | 1 (3.2%) |
+| Ole Petter Orhagen | 1 (3.2%) |
+| Trevor Woerner | 1 (3.2%) |
+
+| Developers with the most changed lines | |
+|---|---|
+| Kristian Amlie | 2435 (96.4%) |
+| Corey Cothrum | 72 (2.8%) |
+| Ole Petter Orhagen | 14 (0.6%) |
+| Peter Grzybowski | 2 (0.1%) |
+| Lluis Campos | 2 (0.1%) |
+| Trevor Woerner | 2 (0.1%) |
+
+| Developers with the most lines removed | |
+|---|---|
+| Kristian Amlie | 1459 (64.2%) |
+
+| Top changeset contributors by employer | |
+|---|---|
+| Northern.tech | 29 (93.5%) |
+| twoerner@gmail.com | 1 (3.2%) |
+| contact@coreycothrum.com | 1 (3.2%) |
+
+| Top lines changed by employer | |
+|---|---|
+| Northern.tech | 2453 (97.1%) |
+| contact@coreycothrum.com | 72 (2.8%) |
+| twoerner@gmail.com | 2 (0.1%) |
+
+| Employers with the most hackers (total 6) | |
+|---|---|
+| Northern.tech | 4 (66.7%) |
+| contact@coreycothrum.com | 1 (16.7%) |
+| twoerner@gmail.com | 1 (16.7%) |
+
+### Changelogs
+
+#### meta-mender (dunfell-v2020.07)
+
+New changes in meta-mender since zeus-v2020.06:
+
+* uboot_auto_configure: build U-Boot the same way Yocto does
+* Fix error message about `CONFIG_ENV_OFFSET` being wrong,
+such as:
+```
+ERROR: u-boot-fw-utils-mender-auto-provided-1.0-r0 do_configure: U-Boot configuration rpi_4_config has setting:
+CONFIG_ENV_OFFSET=0x400000
+CONFIG_ENV_OFFSET_REDUND=0x800000
+but Mender expects:
+CONFIG_ENV_OFFSET=0x800000
+Please fix U-Boot’s configuration file.
+```
+* add support for separate A/B kernel partitions
+* Add MENDER_EXTRA_PARTS_SIZES_MB variable
+* U-Boot auto-configuration: Better algorithm for removing
+options from defconfig files. This increases board compatibility.
+* Start using libubootenv for U-Boot environment manipulation.
+This deprecates the u-boot-fw-utils tools, which have been removed
+from upstream. The functionality and command line API is the same.
+* `libubootenv` is now used instead of `u-boot-fw-utils`. If
+you have a "fw-utils" type recipe in your layer, you probably need to
+remove it, particularly if it references `u-boot-mender-common.inc`.
+* Patch broken UBI support in libubootenv_0.2.
+* chmod 600 on mender.conf
+([MEN-3762](https://tracker.mender.io/browse/MEN-3762))
+* Add mender-2.2.1 and mender-artifact-3.3.1 recipes.
+* Add mender-2.3.0 and mender-artifact-3.4.0 recipes.
+* Add mender-binary-delta-1.1.0 release.
+* Remove mender-client recipes that are incompatible with dunfell.
+([MEN-3764](https://tracker.mender.io/browse/MEN-3764))
+* Fix incorrect BOOTENV_SIZE value being used in libubootenv
+recipe. The symptom of this was a non-working set of `fw_printenv` and
+`fw_setenv` tools:
+```
+root@raspberrypi4:~# fw_printenv
+Cannot read environment, using default
+Cannot read default environment from file
+```
+([MEN-3834](https://tracker.mender.io/browse/MEN-3834))
+* Fix fsck running on every boot in dunfell.
 ## meta-mender zeus-v2020.07
 
 _Released 07.16.2020_
@@ -627,323 +2011,6 @@ PREFERRED_VERSION_pn-mender-binary-delta = "1.1.0b1"
 * Disable `64bit` ext4 filesystem feature.
 ([MEN-3513](https://tracker.mender.io/browse/MEN-3513))
 * Remove mender-client < 2.2, and mender-artifact < 3.3 recipes.
-
-## meta-mender warrior-v2021.02
-
-_Released 02.22.2021_
-
-### Statistics
-
-A total of 272 lines added, 180 removed (delta 92)
-
-| Developers with the most changesets | |
-|---|---|
-| Kristian Amlie | 13 (43.3%) |
-| Lluis Campos | 12 (40.0%) |
-| Fabio Tranchitella | 5 (16.7%) |
-
-| Developers with the most changed lines | |
-|---|---|
-| Lluis Campos | 202 (64.3%) |
-| Kristian Amlie | 77 (24.5%) |
-| Fabio Tranchitella | 35 (11.1%) |
-
-| Developers with the most signoffs (total 8) | |
-|---|---|
-| Lluis Campos | 8 (100.0%) |
-
-| Top changeset contributors by employer | |
-|---|---|
-| Northern.tech | 30 (100.0%) |
-
-| Top lines changed by employer | |
-|---|---|
-| Northern.tech | 314 (100.0%) |
-
-| Employers with the most signoffs (total 8) | |
-|---|---|
-| Northern.tech | 8 (100.0%) |
-
-| Employers with the most hackers (total 3) | |
-|---|---|
-| Northern.tech | 3 (100.0%) |
-
-### Changelogs
-
-#### meta-mender (warrior-v2021.02)
-
-New changes in meta-mender since warrior-v2020.12:
-
-* Make DBus support optional in Mender client with `PACKAGECONFIG`.
-It defaults to on, but can be turned off with:
-```
-PACKAGECONFIG_remove = "dbus"
-```
-Backported to dunfell, modifying the PACKAGECONFIG defaults and amending
-the test.
-Backported to warrior, removing the test.
-([MEN-4014](https://tracker.mender.io/browse/MEN-4014))
-* mender-client: Add DBus busconfig files.
-([MEN-4030](https://tracker.mender.io/browse/MEN-4030))
-* mender-client: The self-signed Mender server certificate, if
-present, is copied to ca-certificates in addition to
-`MENDER_CERT_LOCATION` to be trusted by other services running in the
-device. ([MEN-4273](https://tracker.mender.io/browse/MEN-4273))
-* mender-client: fix QA Issue: invalid PACKAGECONFIG: inventory-network-scripts
-* Rename mender-shell to mender-connect
-([MEN-4292](https://tracker.mender.io/browse/MEN-4292))
-* Add mender-binary-delta 1.1.1 and 1.2.0.
-* Add the MENDER_CONNECT_SHELL to meta-mender-core, defaults to /bin/sh
-* Add recipe mender-connect 1.0.0
-* Add recipe mender 2.5.0
-* Add recipe mender-artifact 3.5.0
-* Add mender-artifact 3.4.1 recipe.
-* Add mender 2.3.2 and 2.4.2 recipes.
-* Fix broken demo certificate in production recipes.
-* mender-connect: Correct ShellCommand key in config file
-
-## meta-mender warrior-v2020.12
-
-_Released 12.16.2020_
-
-### Statistics
-
-A total of 750 lines added, 94 removed (delta 656)
-
-| Developers with the most changesets | |
-|---|---|
-| Lluis Campos | 8 (33.3%) |
-| Kristian Amlie | 7 (29.2%) |
-| Ole Petter Orhagen | 5 (20.8%) |
-| Kasper Føns | 2 (8.3%) |
-| Drew Moseley | 1 (4.2%) |
-| Peter Grzybowski | 1 (4.2%) |
-
-| Developers with the most changed lines | |
-|---|---|
-| Lluis Campos | 534 (68.0%) |
-| Ole Petter Orhagen | 166 (21.1%) |
-| Kristian Amlie | 76 (9.7%) |
-| Kasper Føns | 5 (0.6%) |
-| Drew Moseley | 3 (0.4%) |
-| Peter Grzybowski | 1 (0.1%) |
-
-| Developers with the most lines removed | |
-|---|---|
-| Kristian Amlie | 13 (13.8%) |
-| Drew Moseley | 2 (2.1%) |
-
-| Developers with the most signoffs (total 2) | |
-|---|---|
-| Lluis Campos | 2 (100.0%) |
-
-| Top changeset contributors by employer | |
-|---|---|
-| Northern.tech | 22 (91.7%) |
-| Chora | 2 (8.3%) |
-
-| Top lines changed by employer | |
-|---|---|
-| Northern.tech | 780 (99.4%) |
-| Chora | 5 (0.6%) |
-
-| Employers with the most signoffs (total 2) | |
-|---|---|
-| Northern.tech | 2 (100.0%) |
-
-| Employers with the most hackers (total 6) | |
-|---|---|
-| Northern.tech | 5 (83.3%) |
-| Chora | 1 (16.7%) |
-
-### Changelogs
-
-#### meta-mender (warrior-v2020.12)
-
-New changes in meta-mender since warrior-v2020.10:
-
-* Disable `64bit` ext4 filesystem feature.
-([MEN-3513](https://tracker.mender.io/browse/MEN-3513))
-* Disable filesystem journal on read-only-rootfs, which
-sometimes causes unstable rootfs checksum together with fsck.
-([MEN-3912](https://tracker.mender.io/browse/MEN-3912))
-* mender: Fix broken patch for mender-systemd-machine-id.
-* Remove recipe mender-client 2.3.0
-* Add recipe mender-client 2.3.1
-* Remove recipe mender-client 2.4.0
-* Add recipe mender-client 2.4.1
-* New Mender-client configuration option: 'inventory-network-scripts'.
-This option, if enabled, installs the inventory-network-scripts in the client.
-This is enabled as an option, because the inventory-geo script relies on a
-third-party network service to figure out the geographic location of the device,
-which may not be something that everyone wants installed on their devices. The
-feature is enabled in the standard 'PACKAGECONFIG' for the Mender-client, and is
-included unless overridded. To remove it, add
-'PACKAGECONFIG_remove_pn-mender-client = "inventory-network-scripts"' to your
-local.conf file.
-* mender-client: Do not keep resizing if a little space is left unused
-([MEN-4176](https://tracker.mender.io/browse/MEN-4176))
-* mender-client: Ensure growfs works on GPT filesystems
-([MEN-4176](https://tracker.mender.io/browse/MEN-4176))
-* mender-client: Update LICENSE to include OpenSSL
-* Add a recipe for building 'mender-connect', remote shell support.
-([MEN-4083](https://tracker.mender.io/browse/MEN-4083))
-* meta-mender-demo: install mender-connect
-([MEN-4187](https://tracker.mender.io/browse/MEN-4187))
-* mender-connect: generate and install mender-connect.conf with
-required fields. `ServerURL` can be configured setting yocto variable
-`MENDER_SERVER_URL`, same as used by mender-client recipe. If a
-`mender-connect.conf` file is found in the `SRC_URI` the contents will be
-merged. ([MEN-4242](https://tracker.mender.io/browse/MEN-4242))
-* mender-connect: Add `User` to generated mender-connect.conf. The
-value of it is configured using `MENDER_CONNECT_USER` variable, which
-defaults to `nobody` for meta-mender-core and `root` for
-meta-mender-demo.
-([MEN-4242](https://tracker.mender.io/browse/MEN-4242))
-
-## meta-mender warrior-v2020.10
-
-_Released 10.05.2020_
-
-### Statistics
-
-A total of 86487 lines added, 100 removed (delta 86387)
-
-| Developers with the most changesets | |
-|---|---|
-| Drew Moseley | 7 (46.7%) |
-| Lluis Campos | 3 (20.0%) |
-| Peter Grzybowski | 1 (6.7%) |
-| Mirza Krak | 1 (6.7%) |
-| Kristian Amlie | 1 (6.7%) |
-| Michael Davis | 1 (6.7%) |
-| Kasper Føns | 1 (6.7%) |
-
-| Developers with the most changed lines | |
-|---|---|
-| Lluis Campos | 86463 (99.9%) |
-| Drew Moseley | 92 (0.1%) |
-| Peter Grzybowski | 9 (0.0%) |
-| Kristian Amlie | 4 (0.0%) |
-| Kasper Føns | 2 (0.0%) |
-| Mirza Krak | 1 (0.0%) |
-| Michael Davis | 1 (0.0%) |
-
-| Developers with the most lines removed | |
-|---|---|
-| Drew Moseley | 73 (73.0%) |
-
-| Top changeset contributors by employer | |
-|---|---|
-| Northern.tech | 13 (86.7%) |
-| Election Systems & Software | 1 (6.7%) |
-| Chora | 1 (6.7%) |
-
-| Top lines changed by employer | |
-|---|---|
-| Northern.tech | 86569 (100.0%) |
-| Chora | 2 (0.0%) |
-| Election Systems & Software | 1 (0.0%) |
-
-| Employers with the most signoffs (total 0) | |
-|---|---|
-
-| Employers with the most hackers (total 7) | |
-|---|---|
-| Northern.tech | 5 (71.4%) |
-| Chora | 1 (14.3%) |
-| Election Systems & Software | 1 (14.3%) |
-
-### Changelogs
-
-#### meta-mender (warrior-v2020.10)
-
-New changes in meta-mender since warrior-v2020.07:
-
-* initramfs-module-install-efi: Ensure variable changes are reflected on rebuild
-* mender-grub: Dynamically determine mender_grub_storage_device.
-* mender-grub: Add regexp module.
-* Deprecate MENDER_GRUB_STORAGE_DEVICE variable.
-* mender: Add sanity check to ensure partuuid with X86.
-* vexpress: Remove nonexistent kernel config options that issue warnings.
-* mender-commercial: Cleanup BBFILES.
-* mender: Add additonal x86 arch to partuuid sanity check
-* Warn when detecting U-Boot version without script '=' support.
-([MEN-3851](https://tracker.mender.io/browse/MEN-3851))
-* Add mender-client 2.4.0 recipe.
-* OpenSSL: qemu: set SECLEVEL=2 in /etc/ssl/openssl.cnf
-([MEN-3730](https://tracker.mender.io/browse/MEN-3730))
-* Add recipe go 1.14 from dunfell
-* Use golang 1.14 in meta-mender-core layer to support Ed25519
-public keys for signing and transport in the Mender client.
-
-## meta-mender warrior-v2020.07
-
-_Released 07.29.2020_
-
-### Statistics
-
-A total of 171 lines added, 54 removed (delta 117)
-
-| Developers with the most changesets | |
-|---|---|
-| Kristian Amlie | 4 (50.0%) |
-| Lluis Campos | 1 (12.5%) |
-| Ossian Riday | 1 (12.5%) |
-| Trevor Woerner | 1 (12.5%) |
-| Garrett Brown | 1 (12.5%) |
-
-| Developers with the most changed lines | |
-|---|---|
-| Garrett Brown | 147 (71.7%) |
-| Kristian Amlie | 51 (24.9%) |
-| Ossian Riday | 3 (1.5%) |
-| Lluis Campos | 2 (1.0%) |
-| Trevor Woerner | 2 (1.0%) |
-
-| Developers with the most lines removed | |
-|---|---|
-| Kristian Amlie | 33 (61.1%) |
-
-| Top changeset contributors by employer | |
-|---|---|
-| Northern.tech | 5 (62.5%) |
-| twoerner@gmail.com | 1 (12.5%) |
-| Aclima Inc. | 1 (12.5%) |
-| ossian.riday@gmail.com | 1 (12.5%) |
-
-| Top lines changed by employer | |
-|---|---|
-| Aclima Inc. | 147 (71.7%) |
-| Northern.tech | 53 (25.9%) |
-| ossian.riday@gmail.com | 3 (1.5%) |
-| twoerner@gmail.com | 2 (1.0%) |
-
-| Employers with the most hackers (total 5) | |
-|---|---|
-| Northern.tech | 2 (40.0%) |
-| Aclima Inc. | 1 (20.0%) |
-| ossian.riday@gmail.com | 1 (20.0%) |
-| twoerner@gmail.com | 1 (20.0%) |
-
-### Changelogs
-
-#### meta-mender (warrior-v2020.07)
-
-New changes in meta-mender since warrior-v2020.06:
-
-* Fix boot failure on ARM UEFI devices because of missing
-`regexp` module. A typical error log looks like this:
-```
-Welcome to GRUB!
-```
-* Fix EFI boot partition corruption with mtools 4.0.19
-* uboot_auto_configure: build U-Boot the same way Yocto does
-* Add mender_2.3.0 and mender-artifact_3.4.0 recipes.
-* Add mender-2.2.1 and mender-artifact-3.3.1 recipes.
-* Add mender-binary-delta-1.1.0 release.
-* MBR systems don't have a backup header, so always return true
-([MEN-3761](https://tracker.mender.io/browse/MEN-3761))
 
 ## meta-mender warrior-v2020.06
 
@@ -1350,6 +2417,180 @@ New changes in meta-mender since warrior-v2019.12:
 * In demo mode, put demo certificate in same directory as Debian package.
 ([MEN-3048](https://tracker.mender.io/browse/MEN-3048))
 
+## meta-mender thud-v2019.12
+
+_Released 12.17.2019_
+
+### Statistics
+
+A total of 597 lines added, 366 removed (delta 231)
+
+| Developers with the most changesets | |
+|---|---|
+| Kristian Amlie | 17 (39.5%) |
+| Lluis Campos | 10 (23.3%) |
+| Drew Moseley | 9 (20.9%) |
+| Mirza Krak | 4 (9.3%) |
+| Ole Petter Orhagen | 1 (2.3%) |
+| Joerg Hofrichter | 1 (2.3%) |
+| Pierre-Jean Texier | 1 (2.3%) |
+
+| Developers with the most changed lines | |
+|---|---|
+| Kristian Amlie | 370 (48.2%) |
+| Drew Moseley | 140 (18.3%) |
+| Ole Petter Orhagen | 113 (14.7%) |
+| Lluis Campos | 83 (10.8%) |
+| Mirza Krak | 58 (7.6%) |
+| Pierre-Jean Texier | 2 (0.3%) |
+| Joerg Hofrichter | 1 (0.1%) |
+
+| Developers with the most lines removed | |
+|---|---|
+| Ole Petter Orhagen | 82 (22.4%) |
+
+| Developers with the most signoffs (total 1) | |
+|---|---|
+| Kristian Amlie | 1 (100.0%) |
+
+| Top changeset contributors by employer | |
+|---|---|
+| Northern.tech | 41 (95.3%) |
+| KONCEPTO | 1 (2.3%) |
+| National Instruments | 1 (2.3%) |
+
+| Top lines changed by employer | |
+|---|---|
+| Northern.tech | 764 (99.6%) |
+| KONCEPTO | 2 (0.3%) |
+| National Instruments | 1 (0.1%) |
+
+| Employers with the most signoffs (total 1) | |
+|---|---|
+| Northern.tech | 1 (100.0%) |
+
+| Employers with the most hackers (total 7) | |
+|---|---|
+| Northern.tech | 5 (71.4%) |
+| KONCEPTO | 1 (14.3%) |
+| National Instruments | 1 (14.3%) |
+
+### Changelogs
+
+#### meta-mender (thud-v2019.12)
+
+New changes in meta-mender since thud-v2019.08:
+
+* Add meta-mender-commercial layer.
+This will host our mender-binary-delta Update Module.
+* Update recipe for mender-binary-delta pre-release v0.1.1
+* u-boot-fw-utils: set PACKAGE_ARCH as MACHINE_ARCH
+* Add mender-2.1.0 and mender-artifact-3.1.0.
+* Fix "set_image_size" errors when large files are installed
+in /data directory (staging area for data partition filesystem image)
+* mender-systemd: Maintain persistent machine-id across updates.
+* Start using Git SHA based grub-mender-grubenv versions.
+* Add grub-mender-grubenv 1.3.0 recipe.
+* Add support for initramfs when booting using GRUB.
+* grub-mender-grubenv: Setup debug option to drop to grub prompt.
+* Fix initramfs builds when using meta-mender layer
+* mender: Scan for devices with the live installer
+* `FILESEXTRAPATHS_prepend_pn-mender-binary-delta` now needs
+to point to the folder containing `arm`, `aarch64` and `x86_64`, not the folder
+containing the binary.
+* Update recipe for mender-binary-delta beta release v1.0.0b1
+* Update recipe for mender-binary-delta final release v1.0.0
+* Fix incorrect boot partition type for EFI boot partitions.
+* Fix issue where U-boot is not able to find a valid DTB on Raspberry Pi boards
+* Add mender 2.1.1 and mender-artifact 3.2.0b1 recipes.
+* Add mender-artifact 3.2.0 and remove beta.
+* mender-image: Add DEPENDS to include WKS_FILE_DEPENDS.
+* Add mender 2.1.2 recipe
+* Add mender-artifact 3.1.1 recipe
+* Add mender-artifact 3.2.1 recipe
+* Add mender-binar-delta 1.0.1 recipe
+* Removes the tests covering Mender-Artifact version 1.
+([MEN-2156](https://tracker.mender.io/browse/MEN-2156))
+
+## meta-mender sumo-v2019.12
+
+_Released 12.17.2019_
+
+### Statistics
+
+A total of 353 lines added, 241 removed (delta 112)
+
+| Developers with the most changesets | |
+|---|---|
+| Kristian Amlie | 10 (34.5%) |
+| Lluis Campos | 9 (31.0%) |
+| Drew Moseley | 6 (20.7%) |
+| Ole Petter Orhagen | 1 (3.4%) |
+| Joerg Hofrichter | 1 (3.4%) |
+| Mirza Krak | 1 (3.4%) |
+| Ajith P V | 1 (3.4%) |
+
+| Developers with the most changed lines | |
+|---|---|
+| Kristian Amlie | 168 (34.4%) |
+| Drew Moseley | 130 (26.6%) |
+| Ole Petter Orhagen | 113 (23.1%) |
+| Lluis Campos | 41 (8.4%) |
+| Mirza Krak | 35 (7.2%) |
+| Joerg Hofrichter | 1 (0.2%) |
+| Ajith P V | 1 (0.2%) |
+
+| Developers with the most lines removed | |
+|---|---|
+| Ole Petter Orhagen | 82 (34.0%) |
+
+| Top changeset contributors by employer | |
+|---|---|
+| Northern.tech | 27 (93.1%) |
+| National Instruments | 1 (3.4%) |
+| ajithpv@outlook.com | 1 (3.4%) |
+
+| Top lines changed by employer | |
+|---|---|
+| Northern.tech | 487 (99.6%) |
+| National Instruments | 1 (0.2%) |
+| ajithpv@outlook.com | 1 (0.2%) |
+
+| Employers with the most hackers (total 7) | |
+|---|---|
+| Northern.tech | 5 (71.4%) |
+| National Instruments | 1 (14.3%) |
+| ajithpv@outlook.com | 1 (14.3%) |
+
+### Changelogs
+
+#### meta-mender (sumo-v2019.12)
+
+New changes in meta-mender since sumo-v2019.08:
+
+* Add meta-mender-commercial layer.
+This will host our mender-binary-delta Update Module.
+* Update recipe for mender-binary-delta pre-release v0.1.1
+* `FILESEXTRAPATHS_prepend_pn-mender-binary-delta` now needs
+to point to the folder containing `arm`, `aarch64` and `x86_64`, not the folder
+containing the binary.
+* Update recipe for mender-binary-delta beta release v1.0.0b1
+* Update recipe for mender-binary-delta final release v1.0.0
+* mender-image: Add DEPENDS to include WKS_FILE_DEPENDS.
+* mender: Use += rather than _append for IMAGE_FSTYPES.
+* mender-systemd: Maintain persistent machine-id across updates.
+* Add 'datatar' as an image type.
+* Fix issue where U-boot is not able to find a valid DTB on Raspberry Pi boards
+* Add mender-2.1.0 and mender-artifact-3.1.0.
+* Add mender 2.1.1 and mender-artifact 3.2.0b1 recipes.
+* Add mender-artifact 3.2.0 and remove beta.
+* Add mender 2.1.2 recipe
+* Add mender-artifact 3.1.1 recipe
+* Add mender-artifact 3.2.1 recipe
+* Add mender-binar-delta 1.0.1 recipe
+* Removes the tests covering Mender-Artifact version 1.
+([MEN-2156](https://tracker.mender.io/browse/MEN-2156))
+
 ## meta-mender warrior-v2019.12
 
 _Released 12.10.2019_
@@ -1664,179 +2905,6 @@ parameters to migrate (at least the partition parameters) with
 * Add mender 2.1.1 and mender-artifact 3.2.0b1 recipes.
 * Update recipe for mender-binary-delta beta release v1.0.0b1
 
-## meta-mender thud-v2020.10
-
-_Released 10.05.2020_
-
-### Statistics
-
-A total of 82 lines added, 38 removed (delta 44)
-
-| Developers with the most changesets | |
-|---|---|
-| Drew Moseley | 7 (43.8%) |
-| Lluis Campos | 3 (18.8%) |
-| Gaurav Kalra | 2 (12.5%) |
-| Matthew Beckler | 2 (12.5%) |
-| Joerg Hofrichter | 1 (6.2%) |
-| Kristian Amlie | 1 (6.2%) |
-
-| Developers with the most changed lines | |
-|---|---|
-| Drew Moseley | 55 (63.2%) |
-| Lluis Campos | 16 (18.4%) |
-| Kristian Amlie | 10 (11.5%) |
-| Gaurav Kalra | 2 (2.3%) |
-| Matthew Beckler | 2 (2.3%) |
-| Joerg Hofrichter | 2 (2.3%) |
-
-| Top changeset contributors by employer | |
-|---|---|
-| Northern.tech | 11 (68.8%) |
-| Packet Power LLC | 2 (12.5%) |
-| National Instruments | 1 (6.2%) |
-| gvkalra@gmail.com | 1 (6.2%) |
-| SM Instruments Inc. | 1 (6.2%) |
-
-| Top lines changed by employer | |
-|---|---|
-| Northern.tech | 81 (93.1%) |
-| Packet Power LLC | 2 (2.3%) |
-| National Instruments | 2 (2.3%) |
-| gvkalra@gmail.com | 1 (1.1%) |
-| SM Instruments Inc. | 1 (1.1%) |
-
-| Employers with the most signoffs (total 1) | |
-|---|---|
-| Northern.tech | 1 (100.0%) |
-
-| Employers with the most hackers (total 7) | |
-|---|---|
-| Northern.tech | 3 (42.9%) |
-| Packet Power LLC | 1 (14.3%) |
-| National Instruments | 1 (14.3%) |
-| gvkalra@gmail.com | 1 (14.3%) |
-| SM Instruments Inc. | 1 (14.3%) |
-
-### Changelogs
-
-#### meta-mender (thud-v2020.10)
-
-New changes in meta-mender since thud-v2019.12:
-
-* grub-mender-grubenv: Fix broken debug-log PACKAGECONFIG.
-* grub-efi: Respect MENDER_BOOT_PART_MOUNT_LOCATION
-* mender-grub: Set EFI_PROVIDER to grub-efi.
-* remove stray '-' in IMAGE_NAME
-* systemd-boot: Respect MENDER_BOOT_PART_MOUNT_LOCATION
-* Add mender 2.2.0b1 recipe
-* Add mender-artifact 3.3.0b1 recipe
-* In demo mode, put demo certificate in same directory as Debian package.
-([MEN-3048](https://tracker.mender.io/browse/MEN-3048))
-* mender-helpers: Error out if copying different files to boot part.
-* Improve warning when multiple DTB files are in KERNEL_DEVICETREE
-* Add MENDER_DTB_NAME_FORCE to mender-vars.json to avoid unrecognized variable warning
-* rpi: fix rootfs cmdline trailing space
-* Add mender 2.2.1 recipe
-* Add mender-artifact 3.3.1 recipe
-* Remove mender 2.2.0b1 recipe
-* Remove mender-artifact 3.3.0b1 recipe
-
-## meta-mender thud-v2019.12
-
-_Released 12.17.2019_
-
-### Statistics
-
-A total of 597 lines added, 366 removed (delta 231)
-
-| Developers with the most changesets | |
-|---|---|
-| Kristian Amlie | 17 (39.5%) |
-| Lluis Campos | 10 (23.3%) |
-| Drew Moseley | 9 (20.9%) |
-| Mirza Krak | 4 (9.3%) |
-| Ole Petter Orhagen | 1 (2.3%) |
-| Joerg Hofrichter | 1 (2.3%) |
-| Pierre-Jean Texier | 1 (2.3%) |
-
-| Developers with the most changed lines | |
-|---|---|
-| Kristian Amlie | 370 (48.2%) |
-| Drew Moseley | 140 (18.3%) |
-| Ole Petter Orhagen | 113 (14.7%) |
-| Lluis Campos | 83 (10.8%) |
-| Mirza Krak | 58 (7.6%) |
-| Pierre-Jean Texier | 2 (0.3%) |
-| Joerg Hofrichter | 1 (0.1%) |
-
-| Developers with the most lines removed | |
-|---|---|
-| Ole Petter Orhagen | 82 (22.4%) |
-
-| Developers with the most signoffs (total 1) | |
-|---|---|
-| Kristian Amlie | 1 (100.0%) |
-
-| Top changeset contributors by employer | |
-|---|---|
-| Northern.tech | 41 (95.3%) |
-| KONCEPTO | 1 (2.3%) |
-| National Instruments | 1 (2.3%) |
-
-| Top lines changed by employer | |
-|---|---|
-| Northern.tech | 764 (99.6%) |
-| KONCEPTO | 2 (0.3%) |
-| National Instruments | 1 (0.1%) |
-
-| Employers with the most signoffs (total 1) | |
-|---|---|
-| Northern.tech | 1 (100.0%) |
-
-| Employers with the most hackers (total 7) | |
-|---|---|
-| Northern.tech | 5 (71.4%) |
-| KONCEPTO | 1 (14.3%) |
-| National Instruments | 1 (14.3%) |
-
-### Changelogs
-
-#### meta-mender (thud-v2019.12)
-
-New changes in meta-mender since thud-v2019.08:
-
-* Add meta-mender-commercial layer.
-This will host our mender-binary-delta Update Module.
-* Update recipe for mender-binary-delta pre-release v0.1.1
-* u-boot-fw-utils: set PACKAGE_ARCH as MACHINE_ARCH
-* Add mender-2.1.0 and mender-artifact-3.1.0.
-* Fix "set_image_size" errors when large files are installed
-in /data directory (staging area for data partition filesystem image)
-* mender-systemd: Maintain persistent machine-id across updates.
-* Start using Git SHA based grub-mender-grubenv versions.
-* Add grub-mender-grubenv 1.3.0 recipe.
-* Add support for initramfs when booting using GRUB.
-* grub-mender-grubenv: Setup debug option to drop to grub prompt.
-* Fix initramfs builds when using meta-mender layer
-* mender: Scan for devices with the live installer
-* `FILESEXTRAPATHS_prepend_pn-mender-binary-delta` now needs
-to point to the folder containing `arm`, `aarch64` and `x86_64`, not the folder
-containing the binary.
-* Update recipe for mender-binary-delta beta release v1.0.0b1
-* Update recipe for mender-binary-delta final release v1.0.0
-* Fix incorrect boot partition type for EFI boot partitions.
-* Fix issue where U-boot is not able to find a valid DTB on Raspberry Pi boards
-* Add mender 2.1.1 and mender-artifact 3.2.0b1 recipes.
-* Add mender-artifact 3.2.0 and remove beta.
-* mender-image: Add DEPENDS to include WKS_FILE_DEPENDS.
-* Add mender 2.1.2 recipe
-* Add mender-artifact 3.1.1 recipe
-* Add mender-artifact 3.2.1 recipe
-* Add mender-binar-delta 1.0.1 recipe
-* Removes the tests covering Mender-Artifact version 1.
-([MEN-2156](https://tracker.mender.io/browse/MEN-2156))
-
 ## meta-mender thud-v2019.09
 
 _Released 09.17.2019_
@@ -1887,6 +2955,126 @@ containing the binary.
 * Update recipe for mender-binary-delta pre-release v0.1.1
 * Add meta-mender-commercial layer.
 This will host our mender-binary-delta Update Module.
+
+## meta-mender rocko-v2019.08
+
+_Released 09.02.2019_
+
+### Statistics
+
+A total of 89 lines added, 121 removed (delta -32)
+
+| Developers with the most changesets | |
+|---|---|
+| Lluis Campos | 8 (44.4%) |
+| Kristian Amlie | 5 (27.8%) |
+| Drew Moseley | 3 (16.7%) |
+| Ole Petter Orhagen | 1 (5.6%) |
+| Jonas Norling | 1 (5.6%) |
+
+| Developers with the most changed lines | |
+|---|---|
+| Lluis Campos | 116 (63.7%) |
+| Kristian Amlie | 51 (28.0%) |
+| Drew Moseley | 13 (7.1%) |
+| Ole Petter Orhagen | 1 (0.5%) |
+| Jonas Norling | 1 (0.5%) |
+
+| Developers with the most lines removed | |
+|---|---|
+| Lluis Campos | 71 (58.7%) |
+
+| Top changeset contributors by employer | |
+|---|---|
+| Northern.tech | 17 (94.4%) |
+| GreenEggs AB | 1 (5.6%) |
+
+| Top lines changed by employer | |
+|---|---|
+| Northern.tech | 181 (99.5%) |
+| GreenEggs AB | 1 (0.5%) |
+
+| Employers with the most hackers (total 5) | |
+|---|---|
+| Northern.tech | 4 (80.0%) |
+| GreenEggs AB | 1 (20.0%) |
+
+### Changelogs
+
+#### meta-mender (rocko-v2019.08)
+
+New changes in meta-mender since rocko-v2019.05:
+
+* Fix build failing in do_image_ubimg task
+* Demo images now include Yocto LSB package.
+([MEN-2421](https://tracker.mender.io/browse/MEN-2421))
+* QEMU: Add inventory script for Docker IP and open port 80.
+([MEN-2574](https://tracker.mender.io/browse/MEN-2574))
+* u-boot-mender: Add define for MENDER_STORAGE_DEVICE
+* Add recipes for mender 2.0.1 and mender-artifact 3.0.1
+* Remap port 85 on host to 85 in qemu
+* Add mender 2.1.0b1 and mender-artifact 3.1.0b1 recipes.
+Part of Mender 2.1.0 Beta release.
+
+## meta-mender sumo-v2019.08
+
+_Released 09.02.2019_
+
+### Statistics
+
+A total of 93 lines added, 124 removed (delta -31)
+
+| Developers with the most changesets | |
+|---|---|
+| Lluis Campos | 7 (36.8%) |
+| Kristian Amlie | 6 (31.6%) |
+| Drew Moseley | 4 (21.1%) |
+| Ole Petter Orhagen | 1 (5.3%) |
+| Jonas Norling | 1 (5.3%) |
+
+| Developers with the most changed lines | |
+|---|---|
+| Lluis Campos | 111 (59.7%) |
+| Kristian Amlie | 57 (30.6%) |
+| Drew Moseley | 16 (8.6%) |
+| Ole Petter Orhagen | 1 (0.5%) |
+| Jonas Norling | 1 (0.5%) |
+
+| Developers with the most lines removed | |
+|---|---|
+| Lluis Campos | 71 (57.3%) |
+
+| Top changeset contributors by employer | |
+|---|---|
+| Northern.tech | 18 (94.7%) |
+| GreenEggs AB | 1 (5.3%) |
+
+| Top lines changed by employer | |
+|---|---|
+| Northern.tech | 185 (99.5%) |
+| GreenEggs AB | 1 (0.5%) |
+
+| Employers with the most hackers (total 5) | |
+|---|---|
+| Northern.tech | 4 (80.0%) |
+| GreenEggs AB | 1 (20.0%) |
+
+### Changelogs
+
+#### meta-mender (sumo-v2019.08)
+
+New changes in meta-mender since sumo-v2019.05:
+
+* Fix build failing in do_image_ubimg task
+* Demo images now include Yocto LSB package.
+([MEN-2421](https://tracker.mender.io/browse/MEN-2421))
+* QEMU: Add inventory script for Docker IP and open port 80.
+([MEN-2574](https://tracker.mender.io/browse/MEN-2574))
+* u-boot-mender: Add define for MENDER_STORAGE_DEVICE
+* Add recipes for mender 2.0.1 and mender-artifact 3.0.1
+* Remap port 85 on host to 85 in qemu
+* Add mender 2.1.0b1 and mender-artifact 3.1.0b1 recipes.
+Part of Mender 2.1.0 Beta release.
 
 ## meta-mender thud-v2019.08
 
@@ -2004,6 +3192,119 @@ New changes in meta-mender since thud-v2019.05:
 * u-boot-mender: Add define for MENDER_STORAGE_DEVICE
 * Add recipes for mender 2.0.1 and mender-artifact 3.0.1
 
+## meta-mender rocko-v2019.05
+
+_Released 05.15.2019_
+
+### Statistics
+
+A total of 14 lines added, 12 removed (delta 2)
+
+| Developers with the most changesets | |
+|---|---|
+| Kristian Amlie | 2 (40.0%) |
+| Mirza Krak | 1 (20.0%) |
+| Ajith P Venugopal | 1 (20.0%) |
+| Lluis Campos | 1 (20.0%) |
+
+| Developers with the most changed lines | |
+|---|---|
+| Kristian Amlie | 9 (64.3%) |
+| Ajith P Venugopal | 2 (14.3%) |
+| Lluis Campos | 2 (14.3%) |
+| Mirza Krak | 1 (7.1%) |
+
+| Top changeset contributors by employer | |
+|---|---|
+| Northern.tech | 4 (80.0%) |
+| ajithpv@outlook.com | 1 (20.0%) |
+
+| Top lines changed by employer | |
+|---|---|
+| Northern.tech | 12 (85.7%) |
+| ajithpv@outlook.com | 2 (14.3%) |
+
+| Employers with the most hackers (total 4) | |
+|---|---|
+| Northern.tech | 3 (75.0%) |
+| ajithpv@outlook.com | 1 (25.0%) |
+
+
+### Changelogs
+
+#### meta-mender (rocko-v2019.05)
+
+New changes in meta-mender since rocko-v2019.04:
+
+* Fix mender 2.0.x and mender-artifact 3.0.x recipes to use the
+correct branches when fetching the source.
+* Add missing build dependency on "xz" in Mender Artifact recipe for 3.0.0b1 version
+* Add recipes for mender-1.7.1 and mender-artifact-2.4.1.
+* Add recipes for mender-2.0.0 and mender-artifact-3.0.0.
+Note that these recipes are not enabled by default in thud. If you
+want to use them, you have to add this to your build configuration:
+```
+PREFERRED_VERSION_pn-mender = "2.%"
+PREFERRED_VERSION_pn-mender-artifact = "3.%"
+PREFERRED_VERSION_pn-mender-artifact-native = "3.%"
+```
+* Fix GRUB start-up on x86 by renaming "boot.efi" to "bootia32.efi"
+
+## meta-mender sumo-v2019.05
+
+_Released 05.15.2019_
+
+### Statistics
+
+A total of 13 lines added, 11 removed (delta 2)
+
+| Developers with the most changesets | |
+|---|---|
+| Kristian Amlie | 2 (50.0%) |
+| Lluis Campos | 1 (25.0%) |
+| Ajith P Venugopal | 1 (25.0%) |
+
+| Developers with the most changed lines | |
+|---|---|
+| Kristian Amlie | 9 (69.2%) |
+| Lluis Campos | 2 (15.4%) |
+| Ajith P Venugopal | 2 (15.4%) |
+
+| Top changeset contributors by employer | |
+|---|---|
+| Northern.tech | 3 (75.0%) |
+| ajithpv@outlook.com | 1 (25.0%) |
+
+| Top lines changed by employer | |
+|---|---|
+| Northern.tech | 11 (84.6%) |
+| ajithpv@outlook.com | 2 (15.4%) |
+
+| Employers with the most hackers (total 3) | |
+|---|---|
+| Northern.tech | 2 (66.7%) |
+| ajithpv@outlook.com | 1 (33.3%) |
+
+
+### Changelogs
+
+#### meta-mender (sumo-v2019.05)
+
+New changes in meta-mender since sumo-v2019.04:
+
+* Add missing build dependency on "xz" in Mender Artifact recipe for 3.0.0b1 version
+* Fix mender 2.0.x and mender-artifact 3.0.x recipes to use the
+correct branches when fetching the source.
+* Add recipes for mender-1.7.1 and mender-artifact-2.4.1.
+* Add recipes for mender-2.0.0 and mender-artifact-3.0.0.
+Note that these recipes are not enabled by default in thud. If you
+want to use them, you have to add this to your build configuration:
+```
+PREFERRED_VERSION_pn-mender = "2.%"
+PREFERRED_VERSION_pn-mender-artifact = "3.%"
+PREFERRED_VERSION_pn-mender-artifact-native = "3.%"
+```
+
 ## meta-mender thud-v2019.05
 
 _Released 05.07.2019_
@@ -2066,6 +3367,181 @@ PREFERRED_VERSION_pn-mender-artifact-native = "3.%"
 * linux-raspberrypi-rt: Add mender settings for the PREEMPT_RT kernel.
 * Fix mender 2.0.x and mender-artifact 3.0.x recipes to use the
 correct branches when fetching the source.
+
+## meta-mender rocko-v2019.04
+
+_Released 04.25.2019_
+
+### Statistics
+
+A total of 582 lines added, 209 removed (delta 373)
+
+| Developers with the most changesets | |
+|---|---|
+| Kristian Amlie | 19 (67.9%) |
+| Lluis Campos | 5 (17.9%) |
+| Drew Moseley | 1 (3.6%) |
+| Ole Petter Orhagen | 1 (3.6%) |
+| Stoyan Bogdanov | 1 (3.6%) |
+| Mirza Krak | 1 (3.6%) |
+
+| Developers with the most changed lines | |
+|---|---|
+| Kristian Amlie | 575 (85.2%) |
+| Lluis Campos | 56 (8.3%) |
+| Mirza Krak | 21 (3.1%) |
+| Drew Moseley | 14 (2.1%) |
+| Stoyan Bogdanov | 8 (1.2%) |
+| Ole Petter Orhagen | 1 (0.1%) |
+
+| Developers with the most lines removed | |
+|---|---|
+| Lluis Campos | 35 (16.7%) |
+
+| Developers with the most signoffs (total 2) | |
+|---|---|
+| Maciej Borzecki | 1 (50.0%) |
+| Drew Moseley | 1 (50.0%) |
+
+| Developers with the most report credits (total 1) | |
+|---|---|
+| Denis Mosolov | 1 (100.0%) |
+
+| Developers who gave the most report credits (total 1) | |
+|---|---|
+| Kristian Amlie | 1 (100.0%) |
+
+| Top changeset contributors by employer | |
+|---|---|
+| Northern.tech | 27 (96.4%) |
+| Konsulko Group | 1 (3.6%) |
+
+| Top lines changed by employer | |
+|---|---|
+| Northern.tech | 667 (98.8%) |
+| Konsulko Group | 8 (1.2%) |
+
+| Employers with the most signoffs (total 2) | |
+|---|---|
+| Northern.tech | 1 (50.0%) |
+| RnDity | 1 (50.0%) |
+
+| Employers with the most hackers (total 6) | |
+|---|---|
+| Northern.tech | 5 (83.3%) |
+| Konsulko Group | 1 (16.7%) |
+
+
+### Changelogs
+
+#### meta-mender (rocko-v2019.04)
+
+New changes in meta-mender since rocko-v2018.11.2:
+
+* allow IMAGE_BOOTLOADER_BOOTSECTOR_OFFSET to be aligend to 512 bytes
+([MEN-1845](https://tracker.mender.io/browse/MEN-1845))
+* Fix missing wpa_supplicant in Raspberry Pi demo images.
+* Add mender 1.6.1 and 1.7.0 recipes.
+* Add mender-artifact 2.3.1 and 2.4.0 recipes.
+* mender-helpers.bbclass: Add NVMe support
+* Adapt to new flags in mender-artifact-3.0.0.
+* Some core update modules can now be installed by adding
+`modules` to the `PACKAGECONFIG` variable of `mender`. They are
+included by default when using the meta-mender-demo layer.
+([MEN-2383](https://tracker.mender.io/browse/MEN-2383))
+* Install `mender-data-dir.service` to create `/data/mender` directory.
+* Add mender-2.0.0b1 and mender-artifact-3.0.0b1.
+* Add canary value to U-Boot env to catch bootloader/user-space mismatch.
+* Fix error message `Incorrect Usage: flag provided but not defined: -f`
+
+## meta-mender sumo-v2019.04
+
+_Released 04.25.2019_
+
+### Statistics
+
+A total of 545 lines added, 720 removed (delta -175)
+
+| Developers with the most changesets | |
+|---|---|
+| Kristian Amlie | 17 (63.0%) |
+| Lluis Campos | 4 (14.8%) |
+| Mirza Krak | 2 (7.4%) |
+| Drew Moseley | 1 (3.7%) |
+| Manuel Dipolt | 1 (3.7%) |
+| Ole Petter Orhagen | 1 (3.7%) |
+| Stoyan Bogdanov | 1 (3.7%) |
+
+| Developers with the most changed lines | |
+|---|---|
+| Mirza Krak | 551 (47.4%) |
+| Kristian Amlie | 533 (45.8%) |
+| Lluis Campos | 55 (4.7%) |
+| Drew Moseley | 14 (1.2%) |
+| Stoyan Bogdanov | 8 (0.7%) |
+| Manuel Dipolt | 1 (0.1%) |
+| Ole Petter Orhagen | 1 (0.1%) |
+
+| Developers with the most lines removed | |
+|---|---|
+| Mirza Krak | 550 (76.4%) |
+| Lluis Campos | 36 (5.0%) |
+
+| Developers with the most signoffs (total 1) | |
+|---|---|
+| Drew Moseley | 1 (100.0%) |
+
+| Developers with the most report credits (total 1) | |
+|---|---|
+| Denis Mosolov | 1 (100.0%) |
+
+| Developers who gave the most report credits (total 1) | |
+|---|---|
+| Kristian Amlie | 1 (100.0%) |
+
+| Top changeset contributors by employer | |
+|---|---|
+| Northern.tech | 25 (92.6%) |
+| Konsulko Group | 1 (3.7%) |
+| manuel@linux-home.at | 1 (3.7%) |
+
+| Top lines changed by employer | |
+|---|---|
+| Northern.tech | 1154 (99.2%) |
+| Konsulko Group | 8 (0.7%) |
+| manuel@linux-home.at | 1 (0.1%) |
+
+| Employers with the most signoffs (total 1) | |
+|---|---|
+| Northern.tech | 1 (100.0%) |
+
+| Employers with the most hackers (total 7) | |
+|---|---|
+| Northern.tech | 5 (71.4%) |
+| Konsulko Group | 1 (14.3%) |
+| manuel@linux-home.at | 1 (14.3%) |
+
+
+### Changelogs
+
+#### meta-mender (sumo-v2019.04)
+
+New changes in meta-mender since sumo-v2018.12:
+
+* mender-helpers.bbclass: Add NVMe support
+* add 'rootwait' to bootargs
+* Fix data directory not being empty on rootfs.
+([MEN-2290](https://tracker.mender.io/browse/MEN-2290))
+* Adapt to new flags in mender-artifact-3.0.0.
+* Some core update modules can now be installed by adding
+`modules` to the `PACKAGECONFIG` variable of `mender`. They are
+included by default when using the meta-mender-demo layer.
+([MEN-2383](https://tracker.mender.io/browse/MEN-2383))
+* Install `mender-data-dir.service` to create `/data/mender` directory.
+* Change variable to access ubi dataimg, points now to the symlink to prevent yocto rebuild error when timestamp/name of ubimg have changed
+* Add mender-2.0.0b1 and mender-artifact-3.0.0b1.
+* Add canary value to U-Boot env to catch bootloader/user-space mismatch.
+* Fix error message `Incorrect Usage: flag provided but not defined: -f`
 
 ## meta-mender thud-v2019.03
 
@@ -2224,6 +3700,56 @@ New changes in meta-mender since thud-v2018.12:
 grub2-editenv.
 * Fix data directory not being empty on rootfs.
 ([MEN-2290](https://tracker.mender.io/browse/MEN-2290))
+
+## meta-mender sumo-v2018.12
+
+_Released 12.14.2018_
+
+### Statistics
+
+A total of 31 lines added, 39 removed (delta -8)
+
+| Developers with the most changesets |            |
+|-------------------------------------|------------|
+| Kristian Amlie                      | 3 (100.0%) |
+
+| Developers with the most changed lines |             |
+|----------------------------------------|-------------|
+| Kristian Amlie                         | 56 (100.0%) |
+
+| Developers with the most lines removed |           |
+|----------------------------------------|-----------|
+| Kristian Amlie                         | 8 (20.5%) |
+
+| Developers with the most signoffs (total 3) |            |
+|---------------------------------------------|------------|
+| Kristian Amlie                              | 3 (100.0%) |
+
+| Top changeset contributors by employer |            |
+|----------------------------------------|------------|
+| Northern.tech                          | 3 (100.0%) |
+
+| Top lines changed by employer |             |
+|-------------------------------|-------------|
+| Northern.tech                 | 56 (100.0%) |
+
+| Employers with the most signoffs (total 3) |            |
+|--------------------------------------------|------------|
+| Northern.tech                              | 3 (100.0%) |
+
+| Employers with the most hackers (total 1) |            |
+|-------------------------------------------|------------|
+| Northern.tech                             | 1 (100.0%) |
+
+### Changelogs
+
+#### meta-mender (sumo-v2018.12)
+
+New changes in meta-mender since sumo-v2018.11.2:
+
+* Fix missing wpa_supplicant in Raspberry Pi demo images.
+* Add mender 1.6.1 and 1.7.0 recipes.
+* Add mender-artifact 2.3.1 and 2.4.0 recipes.
 
 ## meta-mender thud-v2018.12
 
@@ -2462,407 +3988,6 @@ and have systemd log to serial port (last "console" argument,
 apparently it cannot log to both).
 * Add support for GPT BIOS images
 * Boot script recipe for demoing OTA updates
-
-## meta-mender sumo-v2020.10
-
-_Released 10.05.2020_
-
-### Statistics
-
-A total of 52 lines added, 60 removed (delta -8)
-
-| Developers with the most changesets | |
-|---|---|
-| Drew Moseley | 5 (45.5%) |
-| Lluis Campos | 2 (18.2%) |
-| Matthew Beckler | 2 (18.2%) |
-| Gaurav Kalra | 1 (9.1%) |
-| Kristian Amlie | 1 (9.1%) |
-
-| Developers with the most changed lines | |
-|---|---|
-| Lluis Campos | 49 (55.1%) |
-| Drew Moseley | 27 (30.3%) |
-| Kristian Amlie | 10 (11.2%) |
-| Matthew Beckler | 2 (2.2%) |
-| Gaurav Kalra | 1 (1.1%) |
-
-| Developers with the most lines removed | |
-|---|---|
-| Lluis Campos | 35 (58.3%) |
-
-| Top changeset contributors by employer | |
-|---|---|
-| Northern.tech | 8 (72.7%) |
-| Packet Power LLC | 2 (18.2%) |
-| SM Instruments Inc. | 1 (9.1%) |
-
-| Top lines changed by employer | |
-|---|---|
-| Northern.tech | 86 (96.6%) |
-| Packet Power LLC | 2 (2.2%) |
-| SM Instruments Inc. | 1 (1.1%) |
-
-| Employers with the most hackers (total 5) | |
-|---|---|
-| Northern.tech | 3 (60.0%) |
-| Packet Power LLC | 1 (20.0%) |
-| SM Instruments Inc. | 1 (20.0%) |
-
-### Changelogs
-
-#### meta-mender (sumo-v2020.10)
-
-New changes in meta-mender since sumo-v2019.12:
-
-* grub-mender-grubenv: Fix broken debug-log PACKAGECONFIG.
-* grub-efi: Respect MENDER_BOOT_PART_MOUNT_LOCATION
-* mender-grub: Set EFI_PROVIDER to grub-efi.
-* systemd-boot: Respect MENDER_BOOT_PART_MOUNT_LOCATION
-* Add mender 2.2.0b1 recipe
-* Add mender-artifact 3.3.0b1 recipe
-* In demo mode, put demo certificate in same directory as Debian package.
-([MEN-3048](https://tracker.mender.io/browse/MEN-3048))
-* Improve warning when multiple DTB files are in KERNEL_DEVICETREE
-* Add MENDER_DTB_NAME_FORCE to mender-vars.json to avoid unrecognized variable warning
-* rpi: fix rootfs cmdline trailing space
-* Add mender 2.2.1 recipe
-* Add mender-artifact 3.3.1 recipe
-* Remove mender 2.2.0b1 recipe
-* Remove mender-artifact 3.3.0b1 recipe
-
-## meta-mender sumo-v2019.12
-
-_Released 12.17.2019_
-
-### Statistics
-
-A total of 353 lines added, 241 removed (delta 112)
-
-| Developers with the most changesets | |
-|---|---|
-| Kristian Amlie | 10 (34.5%) |
-| Lluis Campos | 9 (31.0%) |
-| Drew Moseley | 6 (20.7%) |
-| Ole Petter Orhagen | 1 (3.4%) |
-| Joerg Hofrichter | 1 (3.4%) |
-| Mirza Krak | 1 (3.4%) |
-| Ajith P V | 1 (3.4%) |
-
-| Developers with the most changed lines | |
-|---|---|
-| Kristian Amlie | 168 (34.4%) |
-| Drew Moseley | 130 (26.6%) |
-| Ole Petter Orhagen | 113 (23.1%) |
-| Lluis Campos | 41 (8.4%) |
-| Mirza Krak | 35 (7.2%) |
-| Joerg Hofrichter | 1 (0.2%) |
-| Ajith P V | 1 (0.2%) |
-
-| Developers with the most lines removed | |
-|---|---|
-| Ole Petter Orhagen | 82 (34.0%) |
-
-| Top changeset contributors by employer | |
-|---|---|
-| Northern.tech | 27 (93.1%) |
-| National Instruments | 1 (3.4%) |
-| ajithpv@outlook.com | 1 (3.4%) |
-
-| Top lines changed by employer | |
-|---|---|
-| Northern.tech | 487 (99.6%) |
-| National Instruments | 1 (0.2%) |
-| ajithpv@outlook.com | 1 (0.2%) |
-
-| Employers with the most hackers (total 7) | |
-|---|---|
-| Northern.tech | 5 (71.4%) |
-| National Instruments | 1 (14.3%) |
-| ajithpv@outlook.com | 1 (14.3%) |
-
-### Changelogs
-
-#### meta-mender (sumo-v2019.12)
-
-New changes in meta-mender since sumo-v2019.08:
-
-* Add meta-mender-commercial layer.
-This will host our mender-binary-delta Update Module.
-* Update recipe for mender-binary-delta pre-release v0.1.1
-* `FILESEXTRAPATHS_prepend_pn-mender-binary-delta` now needs
-to point to the folder containing `arm`, `aarch64` and `x86_64`, not the folder
-containing the binary.
-* Update recipe for mender-binary-delta beta release v1.0.0b1
-* Update recipe for mender-binary-delta final release v1.0.0
-* mender-image: Add DEPENDS to include WKS_FILE_DEPENDS.
-* mender: Use += rather than _append for IMAGE_FSTYPES.
-* mender-systemd: Maintain persistent machine-id across updates.
-* Add 'datatar' as an image type.
-* Fix issue where U-boot is not able to find a valid DTB on Raspberry Pi boards
-* Add mender-2.1.0 and mender-artifact-3.1.0.
-* Add mender 2.1.1 and mender-artifact 3.2.0b1 recipes.
-* Add mender-artifact 3.2.0 and remove beta.
-* Add mender 2.1.2 recipe
-* Add mender-artifact 3.1.1 recipe
-* Add mender-artifact 3.2.1 recipe
-* Add mender-binar-delta 1.0.1 recipe
-* Removes the tests covering Mender-Artifact version 1.
-([MEN-2156](https://tracker.mender.io/browse/MEN-2156))
-
-## meta-mender sumo-v2019.08
-
-_Released 09.02.2019_
-
-### Statistics
-
-A total of 93 lines added, 124 removed (delta -31)
-
-| Developers with the most changesets | |
-|---|---|
-| Lluis Campos | 7 (36.8%) |
-| Kristian Amlie | 6 (31.6%) |
-| Drew Moseley | 4 (21.1%) |
-| Ole Petter Orhagen | 1 (5.3%) |
-| Jonas Norling | 1 (5.3%) |
-
-| Developers with the most changed lines | |
-|---|---|
-| Lluis Campos | 111 (59.7%) |
-| Kristian Amlie | 57 (30.6%) |
-| Drew Moseley | 16 (8.6%) |
-| Ole Petter Orhagen | 1 (0.5%) |
-| Jonas Norling | 1 (0.5%) |
-
-| Developers with the most lines removed | |
-|---|---|
-| Lluis Campos | 71 (57.3%) |
-
-| Top changeset contributors by employer | |
-|---|---|
-| Northern.tech | 18 (94.7%) |
-| GreenEggs AB | 1 (5.3%) |
-
-| Top lines changed by employer | |
-|---|---|
-| Northern.tech | 185 (99.5%) |
-| GreenEggs AB | 1 (0.5%) |
-
-| Employers with the most hackers (total 5) | |
-|---|---|
-| Northern.tech | 4 (80.0%) |
-| GreenEggs AB | 1 (20.0%) |
-
-### Changelogs
-
-#### meta-mender (sumo-v2019.08)
-
-New changes in meta-mender since sumo-v2019.05:
-
-* Fix build failing in do_image_ubimg task
-* Demo images now include Yocto LSB package.
-([MEN-2421](https://tracker.mender.io/browse/MEN-2421))
-* QEMU: Add inventory script for Docker IP and open port 80.
-([MEN-2574](https://tracker.mender.io/browse/MEN-2574))
-* u-boot-mender: Add define for MENDER_STORAGE_DEVICE
-* Add recipes for mender 2.0.1 and mender-artifact 3.0.1
-* Remap port 85 on host to 85 in qemu
-* Add mender 2.1.0b1 and mender-artifact 3.1.0b1 recipes.
-Part of Mender 2.1.0 Beta release.
-
-## meta-mender sumo-v2019.05
-
-_Released 05.15.2019_
-
-### Statistics
-
-A total of 13 lines added, 11 removed (delta 2)
-
-| Developers with the most changesets | |
-|---|---|
-| Kristian Amlie | 2 (50.0%) |
-| Lluis Campos | 1 (25.0%) |
-| Ajith P Venugopal | 1 (25.0%) |
-
-| Developers with the most changed lines | |
-|---|---|
-| Kristian Amlie | 9 (69.2%) |
-| Lluis Campos | 2 (15.4%) |
-| Ajith P Venugopal | 2 (15.4%) |
-
-| Top changeset contributors by employer | |
-|---|---|
-| Northern.tech | 3 (75.0%) |
-| ajithpv@outlook.com | 1 (25.0%) |
-
-| Top lines changed by employer | |
-|---|---|
-| Northern.tech | 11 (84.6%) |
-| ajithpv@outlook.com | 2 (15.4%) |
-
-| Employers with the most hackers (total 3) | |
-|---|---|
-| Northern.tech | 2 (66.7%) |
-| ajithpv@outlook.com | 1 (33.3%) |
-
-
-### Changelogs
-
-#### meta-mender (sumo-v2019.05)
-
-New changes in meta-mender since sumo-v2019.04:
-
-* Add missing build dependency on "xz" in Mender Artifact recipe for 3.0.0b1 version
-* Fix mender 2.0.x and mender-artifact 3.0.x recipes to use the
-correct branches when fetching the source.
-* Add recipes for mender-1.7.1 and mender-artifact-2.4.1.
-* Add recipes for mender-2.0.0 and mender-artifact-3.0.0.
-Note that these recipes are not enabled by default in thud. If you
-want to use them, you have to add this to your build configuration:
-```
-PREFERRED_VERSION_pn-mender = "2.%"
-PREFERRED_VERSION_pn-mender-artifact = "3.%"
-PREFERRED_VERSION_pn-mender-artifact-native = "3.%"
-```
-
-## meta-mender sumo-v2019.04
-
-_Released 04.25.2019_
-
-### Statistics
-
-A total of 545 lines added, 720 removed (delta -175)
-
-| Developers with the most changesets | |
-|---|---|
-| Kristian Amlie | 17 (63.0%) |
-| Lluis Campos | 4 (14.8%) |
-| Mirza Krak | 2 (7.4%) |
-| Drew Moseley | 1 (3.7%) |
-| Manuel Dipolt | 1 (3.7%) |
-| Ole Petter Orhagen | 1 (3.7%) |
-| Stoyan Bogdanov | 1 (3.7%) |
-
-| Developers with the most changed lines | |
-|---|---|
-| Mirza Krak | 551 (47.4%) |
-| Kristian Amlie | 533 (45.8%) |
-| Lluis Campos | 55 (4.7%) |
-| Drew Moseley | 14 (1.2%) |
-| Stoyan Bogdanov | 8 (0.7%) |
-| Manuel Dipolt | 1 (0.1%) |
-| Ole Petter Orhagen | 1 (0.1%) |
-
-| Developers with the most lines removed | |
-|---|---|
-| Mirza Krak | 550 (76.4%) |
-| Lluis Campos | 36 (5.0%) |
-
-| Developers with the most signoffs (total 1) | |
-|---|---|
-| Drew Moseley | 1 (100.0%) |
-
-| Developers with the most report credits (total 1) | |
-|---|---|
-| Denis Mosolov | 1 (100.0%) |
-
-| Developers who gave the most report credits (total 1) | |
-|---|---|
-| Kristian Amlie | 1 (100.0%) |
-
-| Top changeset contributors by employer | |
-|---|---|
-| Northern.tech | 25 (92.6%) |
-| Konsulko Group | 1 (3.7%) |
-| manuel@linux-home.at | 1 (3.7%) |
-
-| Top lines changed by employer | |
-|---|---|
-| Northern.tech | 1154 (99.2%) |
-| Konsulko Group | 8 (0.7%) |
-| manuel@linux-home.at | 1 (0.1%) |
-
-| Employers with the most signoffs (total 1) | |
-|---|---|
-| Northern.tech | 1 (100.0%) |
-
-| Employers with the most hackers (total 7) | |
-|---|---|
-| Northern.tech | 5 (71.4%) |
-| Konsulko Group | 1 (14.3%) |
-| manuel@linux-home.at | 1 (14.3%) |
-
-
-### Changelogs
-
-#### meta-mender (sumo-v2019.04)
-
-New changes in meta-mender since sumo-v2018.12:
-
-* mender-helpers.bbclass: Add NVMe support
-* add 'rootwait' to bootargs
-* Fix data directory not being empty on rootfs.
-([MEN-2290](https://tracker.mender.io/browse/MEN-2290))
-* Adapt to new flags in mender-artifact-3.0.0.
-* Some core update modules can now be installed by adding
-`modules` to the `PACKAGECONFIG` variable of `mender`. They are
-included by default when using the meta-mender-demo layer.
-([MEN-2383](https://tracker.mender.io/browse/MEN-2383))
-* Install `mender-data-dir.service` to create `/data/mender` directory.
-* Change variable to access ubi dataimg, points now to the symlink to prevent yocto rebuild error when timestamp/name of ubimg have changed
-* Add mender-2.0.0b1 and mender-artifact-3.0.0b1.
-* Add canary value to U-Boot env to catch bootloader/user-space mismatch.
-* Fix error message `Incorrect Usage: flag provided but not defined: -f`
-
-## meta-mender sumo-v2018.12
-
-_Released 12.14.2018_
-
-### Statistics
-
-A total of 31 lines added, 39 removed (delta -8)
-
-| Developers with the most changesets |            |
-|-------------------------------------|------------|
-| Kristian Amlie                      | 3 (100.0%) |
-
-| Developers with the most changed lines |             |
-|----------------------------------------|-------------|
-| Kristian Amlie                         | 56 (100.0%) |
-
-| Developers with the most lines removed |           |
-|----------------------------------------|-----------|
-| Kristian Amlie                         | 8 (20.5%) |
-
-| Developers with the most signoffs (total 3) |            |
-|---------------------------------------------|------------|
-| Kristian Amlie                              | 3 (100.0%) |
-
-| Top changeset contributors by employer |            |
-|----------------------------------------|------------|
-| Northern.tech                          | 3 (100.0%) |
-
-| Top lines changed by employer |             |
-|-------------------------------|-------------|
-| Northern.tech                 | 56 (100.0%) |
-
-| Employers with the most signoffs (total 3) |            |
-|--------------------------------------------|------------|
-| Northern.tech                              | 3 (100.0%) |
-
-| Employers with the most hackers (total 1) |            |
-|-------------------------------------------|------------|
-| Northern.tech                             | 1 (100.0%) |
-
-### Changelogs
-
-#### meta-mender (sumo-v2018.12)
-
-New changes in meta-mender since sumo-v2018.11.2:
-
-* Fix missing wpa_supplicant in Raspberry Pi demo images.
-* Add mender 1.6.1 and 1.7.0 recipes.
-* Add mender-artifact 2.3.1 and 2.4.0 recipes.
 
 ## meta-mender sumo-v2018.11.2
 
@@ -3118,267 +4243,6 @@ partition alignment.
 * mender: Cleanup IMAGE_FSTYPES.
 * uboot_auto_configure: Handle tabs in defines correctly.
 
-## meta-mender rocko-v2020.10
-
-_Released 10.05.2020_
-
-### Statistics
-
-A total of 201 lines added, 147 removed (delta 54)
-
-| Developers with the most changesets | |
-|---|---|
-| Lluis Campos | 6 (46.2%) |
-| Kristian Amlie | 6 (46.2%) |
-| Ole Petter Orhagen | 1 (7.7%) |
-
-| Developers with the most changed lines | |
-|---|---|
-| Kristian Amlie | 157 (55.5%) |
-| Ole Petter Orhagen | 113 (39.9%) |
-| Lluis Campos | 13 (4.6%) |
-
-| Developers with the most lines removed | |
-|---|---|
-| Ole Petter Orhagen | 82 (55.8%) |
-
-| Top changeset contributors by employer | |
-|---|---|
-| Northern.tech | 13 (100.0%) |
-
-| Top lines changed by employer | |
-|---|---|
-| Northern.tech | 283 (100.0%) |
-
-| Employers with the most hackers (total 3) | |
-|---|---|
-| Northern.tech | 3 (100.0%) |
-
-### Changelogs
-
-#### meta-mender (rocko-v2020.10)
-
-New changes in meta-mender since rocko-v2019.08:
-
-* Add meta-mender-commercial layer.
-This will host our mender-binary-delta Update Module.
-* Update recipe for mender-binary-delta pre-release v0.1.1
-* `FILESEXTRAPATHS_prepend_pn-mender-binary-delta` now needs
-to point to the folder containing `arm`, `aarch64` and `x86_64`, not the folder
-containing the binary.
-* Update recipe for mender-binary-delta beta release v1.0.0b1
-* Update recipe for mender-binary-delta final release v1.0.0
-* Add mender 2.2.1 recipe
-* Add mender-artifact 3.3.1 recipe
-* Remove mender 2.1.0b1 recipe
-* Remove mender-artifact 3.1.0b1 recipe
-* Removes the tests covering Mender-Artifact version 1.
-([MEN-2156](https://tracker.mender.io/browse/MEN-2156))
-
-## meta-mender rocko-v2019.08
-
-_Released 09.02.2019_
-
-### Statistics
-
-A total of 89 lines added, 121 removed (delta -32)
-
-| Developers with the most changesets | |
-|---|---|
-| Lluis Campos | 8 (44.4%) |
-| Kristian Amlie | 5 (27.8%) |
-| Drew Moseley | 3 (16.7%) |
-| Ole Petter Orhagen | 1 (5.6%) |
-| Jonas Norling | 1 (5.6%) |
-
-| Developers with the most changed lines | |
-|---|---|
-| Lluis Campos | 116 (63.7%) |
-| Kristian Amlie | 51 (28.0%) |
-| Drew Moseley | 13 (7.1%) |
-| Ole Petter Orhagen | 1 (0.5%) |
-| Jonas Norling | 1 (0.5%) |
-
-| Developers with the most lines removed | |
-|---|---|
-| Lluis Campos | 71 (58.7%) |
-
-| Top changeset contributors by employer | |
-|---|---|
-| Northern.tech | 17 (94.4%) |
-| GreenEggs AB | 1 (5.6%) |
-
-| Top lines changed by employer | |
-|---|---|
-| Northern.tech | 181 (99.5%) |
-| GreenEggs AB | 1 (0.5%) |
-
-| Employers with the most hackers (total 5) | |
-|---|---|
-| Northern.tech | 4 (80.0%) |
-| GreenEggs AB | 1 (20.0%) |
-
-### Changelogs
-
-#### meta-mender (rocko-v2019.08)
-
-New changes in meta-mender since rocko-v2019.05:
-
-* Fix build failing in do_image_ubimg task
-* Demo images now include Yocto LSB package.
-([MEN-2421](https://tracker.mender.io/browse/MEN-2421))
-* QEMU: Add inventory script for Docker IP and open port 80.
-([MEN-2574](https://tracker.mender.io/browse/MEN-2574))
-* u-boot-mender: Add define for MENDER_STORAGE_DEVICE
-* Add recipes for mender 2.0.1 and mender-artifact 3.0.1
-* Remap port 85 on host to 85 in qemu
-* Add mender 2.1.0b1 and mender-artifact 3.1.0b1 recipes.
-Part of Mender 2.1.0 Beta release.
-
-## meta-mender rocko-v2019.05
-
-_Released 05.15.2019_
-
-### Statistics
-
-A total of 14 lines added, 12 removed (delta 2)
-
-| Developers with the most changesets | |
-|---|---|
-| Kristian Amlie | 2 (40.0%) |
-| Mirza Krak | 1 (20.0%) |
-| Ajith P Venugopal | 1 (20.0%) |
-| Lluis Campos | 1 (20.0%) |
-
-| Developers with the most changed lines | |
-|---|---|
-| Kristian Amlie | 9 (64.3%) |
-| Ajith P Venugopal | 2 (14.3%) |
-| Lluis Campos | 2 (14.3%) |
-| Mirza Krak | 1 (7.1%) |
-
-| Top changeset contributors by employer | |
-|---|---|
-| Northern.tech | 4 (80.0%) |
-| ajithpv@outlook.com | 1 (20.0%) |
-
-| Top lines changed by employer | |
-|---|---|
-| Northern.tech | 12 (85.7%) |
-| ajithpv@outlook.com | 2 (14.3%) |
-
-| Employers with the most hackers (total 4) | |
-|---|---|
-| Northern.tech | 3 (75.0%) |
-| ajithpv@outlook.com | 1 (25.0%) |
-
-
-### Changelogs
-
-#### meta-mender (rocko-v2019.05)
-
-New changes in meta-mender since rocko-v2019.04:
-
-* Fix mender 2.0.x and mender-artifact 3.0.x recipes to use the
-correct branches when fetching the source.
-* Add missing build dependency on "xz" in Mender Artifact recipe for 3.0.0b1 version
-* Add recipes for mender-1.7.1 and mender-artifact-2.4.1.
-* Add recipes for mender-2.0.0 and mender-artifact-3.0.0.
-Note that these recipes are not enabled by default in thud. If you
-want to use them, you have to add this to your build configuration:
-```
-PREFERRED_VERSION_pn-mender = "2.%"
-PREFERRED_VERSION_pn-mender-artifact = "3.%"
-PREFERRED_VERSION_pn-mender-artifact-native = "3.%"
-```
-* Fix GRUB start-up on x86 by renaming "boot.efi" to "bootia32.efi"
-
-## meta-mender rocko-v2019.04
-
-_Released 04.25.2019_
-
-### Statistics
-
-A total of 582 lines added, 209 removed (delta 373)
-
-| Developers with the most changesets | |
-|---|---|
-| Kristian Amlie | 19 (67.9%) |
-| Lluis Campos | 5 (17.9%) |
-| Drew Moseley | 1 (3.6%) |
-| Ole Petter Orhagen | 1 (3.6%) |
-| Stoyan Bogdanov | 1 (3.6%) |
-| Mirza Krak | 1 (3.6%) |
-
-| Developers with the most changed lines | |
-|---|---|
-| Kristian Amlie | 575 (85.2%) |
-| Lluis Campos | 56 (8.3%) |
-| Mirza Krak | 21 (3.1%) |
-| Drew Moseley | 14 (2.1%) |
-| Stoyan Bogdanov | 8 (1.2%) |
-| Ole Petter Orhagen | 1 (0.1%) |
-
-| Developers with the most lines removed | |
-|---|---|
-| Lluis Campos | 35 (16.7%) |
-
-| Developers with the most signoffs (total 2) | |
-|---|---|
-| Maciej Borzecki | 1 (50.0%) |
-| Drew Moseley | 1 (50.0%) |
-
-| Developers with the most report credits (total 1) | |
-|---|---|
-| Denis Mosolov | 1 (100.0%) |
-
-| Developers who gave the most report credits (total 1) | |
-|---|---|
-| Kristian Amlie | 1 (100.0%) |
-
-| Top changeset contributors by employer | |
-|---|---|
-| Northern.tech | 27 (96.4%) |
-| Konsulko Group | 1 (3.6%) |
-
-| Top lines changed by employer | |
-|---|---|
-| Northern.tech | 667 (98.8%) |
-| Konsulko Group | 8 (1.2%) |
-
-| Employers with the most signoffs (total 2) | |
-|---|---|
-| Northern.tech | 1 (50.0%) |
-| RnDity | 1 (50.0%) |
-
-| Employers with the most hackers (total 6) | |
-|---|---|
-| Northern.tech | 5 (83.3%) |
-| Konsulko Group | 1 (16.7%) |
-
-
-### Changelogs
-
-#### meta-mender (rocko-v2019.04)
-
-New changes in meta-mender since rocko-v2018.11.2:
-
-* allow IMAGE_BOOTLOADER_BOOTSECTOR_OFFSET to be aligend to 512 bytes
-([MEN-1845](https://tracker.mender.io/browse/MEN-1845))
-* Fix missing wpa_supplicant in Raspberry Pi demo images.
-* Add mender 1.6.1 and 1.7.0 recipes.
-* Add mender-artifact 2.3.1 and 2.4.0 recipes.
-* mender-helpers.bbclass: Add NVMe support
-* Adapt to new flags in mender-artifact-3.0.0.
-* Some core update modules can now be installed by adding
-`modules` to the `PACKAGECONFIG` variable of `mender`. They are
-included by default when using the meta-mender-demo layer.
-([MEN-2383](https://tracker.mender.io/browse/MEN-2383))
-* Install `mender-data-dir.service` to create `/data/mender` directory.
-* Add mender-2.0.0b1 and mender-artifact-3.0.0b1.
-* Add canary value to U-Boot env to catch bootloader/user-space mismatch.
-* Fix error message `Incorrect Usage: flag provided but not defined: -f`
-
 ## meta-mender rocko-v2018.07
 
 _Released 07.10.2018_
@@ -3531,687 +4395,3 @@ _Released 11.14.2017_
 * Upstream image has grown significantly, increase to 608MB sdimg.
 The noticeably non-round number is to make sure the calculated rootfs
 size is divisible by the partition alignment.
-
-## meta-mender dunfell-v2021.04
-
-_Released 04.16.2021_
-
-### Statistics
-
-A total of 271 lines added, 85 removed (delta 186)
-
-| Developers with the most changesets | |
-|---|---|
-| Kristian Amlie | 12 (50.0%) |
-| Ole Petter Orhagen | 7 (29.2%) |
-| Lluis Campos | 5 (20.8%) |
-
-| Developers with the most changed lines | |
-|---|---|
-| Kristian Amlie | 143 (52.6%) |
-| Lluis Campos | 92 (33.8%) |
-| Ole Petter Orhagen | 37 (13.6%) |
-
-| Top changeset contributors by employer | |
-|---|---|
-| Northern.tech | 24 (100.0%) |
-
-| Top lines changed by employer | |
-|---|---|
-| Northern.tech | 272 (100.0%) |
-
-| Employers with the most hackers (total 3) | |
-|---|---|
-| Northern.tech | 3 (100.0%) |
-
-### Changelogs
-
-#### meta-mender (dunfell-v2021.04)
-
-New changes in meta-mender since dunfell-v2021.03:
-
-* Add mender-configure git recipe
-([MEN-4420](https://tracker.mender.io/browse/MEN-4420))
-* Include a recipe for building dosfstools 4.2
-This is due to an error in older versions, which can leave the Vfat boot
-partitions bricked.
-See for more information.
-([MEN-4497](https://tracker.mender.io/browse/MEN-4497))
-* Add mender-configure-scripts package, which provides
-timezone configuration out of the box.
-* Add mender-configure-demo package, which provides led
-manipulation on Raspberry Pi devices, for demo purposes.
-* If the `mender-systemd` class is set (the default),
-mender-configure now provides a service file for systemd which will
-automatically apply the stored configuration on startup.
-* Fix `EFI_PROVIDER` being set incorrectly when using certain layers.
-* Prepopulate the device config in mender-configure-demo.
-([MEN-4594](https://tracker.mender.io/browse/MEN-4594))
-* mender-client: Split concatenated certificates in ca-certificates.
-Multiple certificates in one file are necessary to split in
-order for `update-ca-certificates` to produce a hashed symlink to
-them, which is required by some programs, such as curl.
-([MEN-4580](https://tracker.mender.io/browse/MEN-4580))
-* Add mender-client 2.6.0.
-* Add mender-connect 1.1.0.
-* Add mender-artifact 3.5.1.
-* Add mender-configure 1.0.0.
-* Add mender-client 2.5.1
-* Add mender-connect 1.0.1
-* Add mender-binary-delta 1.1.2
-* Add mender-binary-delta-1.2.1 recipe.
-* Add mender-client 2.3.3
-* Add mender-artifact 3.4.2
-
-## meta-mender dunfell-v2021.03
-
-_Released 03.05.2021_
-
-### Statistics
-
-A total of 29 lines added, 23 removed (delta 6)
-
-| Developers with the most changesets | |
-|---|---|
-| Lluis Campos | 5 (62.5%) |
-| Kristian Amlie | 2 (25.0%) |
-| Leon Anavi | 1 (12.5%) |
-
-| Developers with the most changed lines | |
-|---|---|
-| Kristian Amlie | 16 (47.1%) |
-| Lluis Campos | 12 (35.3%) |
-| Leon Anavi | 6 (17.6%) |
-
-| Developers with the most lines removed | |
-|---|---|
-| Lluis Campos | 2 (8.7%) |
-
-| Top changeset contributors by employer | |
-|---|---|
-| Northern.tech | 7 (87.5%) |
-| Konsulko Group | 1 (12.5%) |
-
-| Top lines changed by employer | |
-|---|---|
-| Northern.tech | 28 (82.4%) |
-| Konsulko Group | 6 (17.6%) |
-
-| Employers with the most hackers (total 3) | |
-|---|---|
-| Northern.tech | 2 (66.7%) |
-| Konsulko Group | 1 (33.3%) |
-
-
-### Changelogs
-
-#### meta-mender (dunfell-v2021.03)
-
-New changes in meta-mender since dunfell-v2021.01:
-
-* Fix Mender installation from a USB stick for BIOS
-* Fixes build warnings: "MENDER_CONNECT_..." is not a
-recognized MENDER_ variable
-* mender-connect: Correct ShellCommand key in config file
-* mender-connect.conf: Remove unnecessary field ServerURL
-
-## meta-mender dunfell-v2021.01
-
-_Released 01.26.2021_
-
-### Statistics
-
-A total of 959 lines added, 405 removed (delta 554)
-
-| Developers with the most changesets | |
-|---|---|
-| Lluis Campos | 28 (43.1%) |
-| Kristian Amlie | 21 (32.3%) |
-| Fabio Tranchitella | 14 (21.5%) |
-| Drew Moseley | 1 (1.5%) |
-| Ole Petter Orhagen | 1 (1.5%) |
-
-| Developers with the most changed lines | |
-|---|---|
-| Lluis Campos | 439 (41.6%) |
-| Fabio Tranchitella | 408 (38.6%) |
-| Kristian Amlie | 186 (17.6%) |
-| Ole Petter Orhagen | 20 (1.9%) |
-| Drew Moseley | 3 (0.3%) |
-
-| Developers with the most lines removed | |
-|---|---|
-| Ole Petter Orhagen | 20 (4.9%) |
-
-| Developers with the most signoffs (total 2) | |
-|---|---|
-| Lluis Campos | 2 (100.0%) |
-
-| Top changeset contributors by employer | |
-|---|---|
-| Northern.tech | 65 (100.0%) |
-
-| Top lines changed by employer | |
-|---|---|
-| Northern.tech | 1056 (100.0%) |
-
-| Employers with the most signoffs (total 2) | |
-|---|---|
-| Northern.tech | 2 (100.0%) |
-
-| Employers with the most hackers (total 5) | |
-|---|---|
-| Northern.tech | 5 (100.0%) |
-
-
-### Changelogs
-
-#### meta-mender (dunfell-v2021.01)
-
-New changes in meta-mender since dunfell-v2020.12:
-
-* Make DBus support optional in Mender client with `PACKAGECONFIG`.
-It defaults to on, but can be turned off with:
-```
-PACKAGECONFIG_remove = "dbus"
-```
-Backported to dunfell, modifying the PACKAGECONFIG defaults and amending
-the test. ([MEN-4014](https://tracker.mender.io/browse/MEN-4014))
-* mender-client: Add DBus busconfig files.
-([MEN-4030](https://tracker.mender.io/browse/MEN-4030))
-* mender-client: The self-signed Mender server certificate, if
-present, is copied to ca-certificates in addition to
-`MENDER_CERT_LOCATION` to be trusted by other services running in the
-device. ([MEN-4273](https://tracker.mender.io/browse/MEN-4273))
-* meta-mender-demo: install mender-shell
-([MEN-4187](https://tracker.mender.io/browse/MEN-4187))
-* Revert "mender: Reestablish labels on the root filesystems."
-* mender-client: fix QA Issue: invalid PACKAGECONFIG: inventory-network-scripts
-* mender-shell: generate and install mender-shell.conf with
-required fields. `ServerURL` can be configured setting yocto variable
-`MENDER_SERVER_URL`, same as used by mender-client recipe. If a
-`mender-shell.conf` file is found in the `SRC_URI` the contents will be
-merged. ([MEN-4242](https://tracker.mender.io/browse/MEN-4242))
-* mender-shell: Add `User` to generated mender-shell.conf. The
-value of it is configured using `MENDER_SHELL_USER` variable, which
-defaults to `nobody` for meta-mender-core and `root` for
-meta-mender-demo.
-([MEN-4242](https://tracker.mender.io/browse/MEN-4242))
-* Rename mender-shell to mender-connect
-([MEN-4292](https://tracker.mender.io/browse/MEN-4292))
-* mender-raspberrypi: Make kernel settings conditional
-* Remove mender-binary-delta 1.0.0, 1.0.1, and 1.1.0.
-All three of these have turned out to be incompatible with
-libubootenv, which is used on dunfell and later Yocto branches.
-* Add mender-binary-delta 1.1.1 and 1.2.0.
-* Add the MENDER_CONNECT_SHELL to meta-mender-core, defaults to /bin/sh
-* Add recipe mender-connect 1.0.0
-* Add recipe mender-client 2.5.0
-* Add recipe mender-artifact 3.5.0
-* Add mender-artifact 3.4.1 recipe.
-* Add mender-client 2.3.2 and 2.4.2 recipes.
-* Fix broken demo certificate in production recipes.
-* Aggregated Dependabot Changelogs:
-* Bumps alpine from 3.7 to 3.12.0.
-* Bumps [ubi-reader](https://github.com/jrspruitt/ubi_reader) from 0.6.5 to 0.7.0.
-- [Release notes](https://github.com/jrspruitt/ubi_reader/releases)
-- [Commits](https://github.com/jrspruitt/ubi_reader/commits)
-* Bumps [requests](https://github.com/psf/requests) from 2.22.0 to 2.24.0.
-- [Release notes](https://github.com/psf/requests/releases)
-- [Changelog](https://github.com/psf/requests/blob/master/HISTORY.md)
-- [Commits](https://github.com/psf/requests/compare/v2.22.0...v2.24.0)
-* Bumps [pytest-html](https://github.com/pytest-dev/pytest-html) from 2.0.1 to 2.1.1.
-- [Release notes](https://github.com/pytest-dev/pytest-html/releases)
-- [Changelog](https://github.com/pytest-dev/pytest-html/blob/master/CHANGES.rst)
-- [Commits](https://github.com/pytest-dev/pytest-html/compare/v2.0.1...v2.1.1)
-* Bumps [pytest](https://github.com/pytest-dev/pytest) from 5.3.2 to 6.1.1.
-- [Release notes](https://github.com/pytest-dev/pytest/releases)
-- [Changelog](https://github.com/pytest-dev/pytest/blob/master/CHANGELOG.rst)
-- [Commits](https://github.com/pytest-dev/pytest/compare/5.3.2...6.1.1)
-* Bumps [paramiko](https://github.com/paramiko/paramiko) from 2.7.1 to 2.7.2.
-- [Release notes](https://github.com/paramiko/paramiko/releases)
-- [Changelog](https://github.com/paramiko/paramiko/blob/master/NEWS)
-- [Commits](https://github.com/paramiko/paramiko/compare/2.7.1...2.7.2)
-* Bumps alpine from 3.12.0 to 3.12.1.
-* Bumps [pytest](https://github.com/pytest-dev/pytest) from 6.1.1 to 6.1.2.
-- [Release notes](https://github.com/pytest-dev/pytest/releases)
-- [Changelog](https://github.com/pytest-dev/pytest/blob/master/CHANGELOG.rst)
-- [Commits](https://github.com/pytest-dev/pytest/compare/6.1.1...6.1.2)
-* Bumps [requests](https://github.com/psf/requests) from 2.24.0 to 2.25.0.
-- [Release notes](https://github.com/psf/requests/releases)
-- [Changelog](https://github.com/psf/requests/blob/master/HISTORY.md)
-- [Commits](https://github.com/psf/requests/compare/v2.24.0...v2.25.0)
-* Bumps [pytest-html](https://github.com/pytest-dev/pytest-html) from 2.1.1 to 3.0.0.
-- [Release notes](https://github.com/pytest-dev/pytest-html/releases)
-- [Changelog](https://github.com/pytest-dev/pytest-html/blob/master/CHANGES.rst)
-- [Commits](https://github.com/pytest-dev/pytest-html/compare/v2.1.1...v3.0.0)
-* Bumps [pytest-html](https://github.com/pytest-dev/pytest-html) from 3.0.0 to 3.1.0.
-- [Release notes](https://github.com/pytest-dev/pytest-html/releases)
-- [Changelog](https://github.com/pytest-dev/pytest-html/blob/master/CHANGES.rst)
-- [Commits](https://github.com/pytest-dev/pytest-html/compare/v3.0.0...v3.1.0)
-* Bumps alpine from 3.12.1 to 3.12.2.
-* Bumps [pytest-html](https://github.com/pytest-dev/pytest-html) from 3.1.0 to 3.1.1.
-- [Release notes](https://github.com/pytest-dev/pytest-html/releases)
-- [Changelog](https://github.com/pytest-dev/pytest-html/blob/master/CHANGES.rst)
-- [Commits](https://github.com/pytest-dev/pytest-html/compare/v3.1.0...v3.1.1)
-* Bumps [pytest](https://github.com/pytest-dev/pytest) from 6.1.2 to 6.2.0.
-- [Release notes](https://github.com/pytest-dev/pytest/releases)
-- [Changelog](https://github.com/pytest-dev/pytest/blob/master/CHANGELOG.rst)
-- [Commits](https://github.com/pytest-dev/pytest/compare/6.1.2...6.2.0)
-* Bumps alpine from 3.12.2 to 3.12.3.
-* Bumps [psutil](https://github.com/giampaolo/psutil) from 5.7.2 to 5.8.0.
-- [Release notes](https://github.com/giampaolo/psutil/releases)
-- [Changelog](https://github.com/giampaolo/psutil/blob/master/HISTORY.rst)
-- [Commits](https://github.com/giampaolo/psutil/compare/release-5.7.2...release-5.8.0)
-* Bumps [requests](https://github.com/psf/requests) from 2.25.0 to 2.25.1.
-- [Release notes](https://github.com/psf/requests/releases)
-- [Changelog](https://github.com/psf/requests/blob/master/HISTORY.md)
-- [Commits](https://github.com/psf/requests/compare/v2.25.0...v2.25.1)
-* Bumps [pytest](https://github.com/pytest-dev/pytest) from 6.2.0 to 6.2.1.
-- [Release notes](https://github.com/pytest-dev/pytest/releases)
-- [Changelog](https://github.com/pytest-dev/pytest/blob/master/CHANGELOG.rst)
-- [Commits](https://github.com/pytest-dev/pytest/compare/6.2.0...6.2.1)
-
-## meta-mender dunfell-v2020.12
-
-_Released 12.08.2020_
-
-### Statistics
-
-A total of 547 lines added, 1726 removed (delta -1179)
-
-| Developers with the most changesets | |
-|---|---|
-| Kristian Amlie | 7 (38.9%) |
-| Ole Petter Orhagen | 5 (27.8%) |
-| Lluis Campos | 3 (16.7%) |
-| Kasper Føns | 2 (11.1%) |
-| Drew Moseley | 1 (5.6%) |
-
-| Developers with the most changed lines | |
-|---|---|
-| Ole Petter Orhagen | 1823 (87.5%) |
-| Kristian Amlie | 143 (6.9%) |
-| Lluis Campos | 111 (5.3%) |
-| Kasper Føns | 5 (0.2%) |
-| Drew Moseley | 2 (0.1%) |
-
-| Developers with the most lines removed | |
-|---|---|
-| Ole Petter Orhagen | 1275 (73.9%) |
-
-| Developers with the most signoffs (total 2) | |
-|---|---|
-| Kristian Amlie | 2 (100.0%) |
-
-| Top changeset contributors by employer | |
-|---|---|
-| Northern.tech | 16 (88.9%) |
-| Chora | 2 (11.1%) |
-
-| Top lines changed by employer | |
-|---|---|
-| Northern.tech | 2079 (99.8%) |
-| Chora | 5 (0.2%) |
-
-| Employers with the most signoffs (total 2) | |
-|---|---|
-| Northern.tech | 2 (100.0%) |
-
-| Employers with the most hackers (total 5) | |
-|---|---|
-| Northern.tech | 4 (80.0%) |
-| Chora | 1 (20.0%) |
-
-### Changelogs
-
-#### meta-mender (dunfell-v2020.12)
-
-New changes in meta-mender since dunfell-v2020.11:
-
-* mender: Reestablish labels on the root filesystems.
-* New Mender-client configuration option: 'inventory-network-scripts'.
-This option, if enabled, installs the inventory-network-scripts in the client.
-This is enabled as an option, because the inventory-geo script relies on a
-third-party network service to figure out the geographic location of the device,
-which may not be something that everyone wants installed on their devices. The
-feature is enabled in the standard 'PACKAGECONFIG' for the Mender-client, and is
-included unless overridded. To remove it, add
-'PACKAGECONFIG_remove_pn-mender-client = "inventory-network-scripts"' to your
-local.conf file.
-* mender-client: Do not keep resizing if a little space is left unused
-([MEN-4176](https://tracker.mender.io/browse/MEN-4176))
-* mender-client: Ensure growfs works on GPT filesystems
-([MEN-4176](https://tracker.mender.io/browse/MEN-4176))
-* mender-client: Update LICENSE to include OpenSSL
-* mender-client: Include OpenSSL license from 2.4.x onwards.
-* Add a recipe for building 'mender-connect', remote shell support.
-([MEN-4083](https://tracker.mender.io/browse/MEN-4083))
-* Fix a parsing issue where `inherit` could not be used with
-variables that had been defined with overrides that depended on
-`MENDER_FEATURES_ENABLE`. One example would be:
-```
-MYVAR_mender-grub = "grub-efi"
-inherit ${MYVAR}
-```
-
-## meta-mender dunfell-v2020.11
-
-_Released 11.16.2020_
-
-### Statistics
-
-A total of 6 lines added, 1067 removed (delta -1061)
-
-| Developers with the most changesets | |
-|---|---|
-| Ole Petter Orhagen | 3 (50.0%) |
-| Lluis Campos | 2 (33.3%) |
-| Drew Moseley | 1 (16.7%) |
-
-| Developers with the most changed lines | |
-|---|---|
-| Lluis Campos | 922 (86.4%) |
-| Ole Petter Orhagen | 142 (13.3%) |
-| Drew Moseley | 3 (0.3%) |
-
-| Developers with the most lines removed | |
-|---|---|
-| Lluis Campos | 921 (86.3%) |
-| Ole Petter Orhagen | 138 (12.9%) |
-| Drew Moseley | 2 (0.2%) |
-
-| Top changeset contributors by employer | |
-|---|---|
-| Northern.tech | 6 (100.0%) |
-
-| Top lines changed by employer | |
-|---|---|
-| Northern.tech | 1067 (100.0%) |
-
-| Employers with the most hackers (total 3) | |
-|---|---|
-| Northern.tech | 3 (100.0%) |
-
-### Changelogs
-
-#### meta-mender (dunfell-v2020.11)
-
-New changes in meta-mender since dunfell-v2020.10:
-
-* mender: Fix broken patch for mender-systemd-machine-id.
-* Remove recipe mender-client 2.3.0
-* Add recipe mender-client 2.3.1
-* Remove recipe mender-client 2.4.0
-* Add recipe mender-client 2.4.1
-* Aggregated Dependabot Changelogs:
-* Bumps [tests/acceptance/image-tests](https://github.com/mendersoftware/mender-image-tests) from `457ea99` to `713c563`.
-- [Release notes](https://github.com/mendersoftware/mender-image-tests/releases)
-- [Commits](https://github.com/mendersoftware/mender-image-tests/compare/457ea99937642ec29da53a9a2d30a51067cf8dc0...713c56364b79a18ad86e6731b1a602f0f3d9d233)
-* Bump tests/acceptance/image-tests from `457ea99` to `713c563`
-
-## meta-mender dunfell-v2020.10
-
-_Released 10.13.2020_
-
-### Statistics
-
-A total of 334 lines added, 431 removed (delta -97)
-
-| Developers with the most changesets | |
-|---|---|
-| Drew Moseley | 17 (53.1%) |
-| Kristian Amlie | 8 (25.0%) |
-| Lluis Campos | 2 (6.2%) |
-| Ole Petter Orhagen | 2 (6.2%) |
-| Fabio Tranchitella | 2 (6.2%) |
-| Peter Grzybowski | 1 (3.1%) |
-
-| Developers with the most changed lines | |
-|---|---|
-| Drew Moseley | 315 (65.9%) |
-| Kristian Amlie | 129 (27.0%) |
-| Ole Petter Orhagen | 15 (3.1%) |
-| Fabio Tranchitella | 12 (2.5%) |
-| Lluis Campos | 6 (1.3%) |
-| Peter Grzybowski | 1 (0.2%) |
-
-| Developers with the most lines removed | |
-|---|---|
-| Drew Moseley | 114 (26.5%) |
-
-| Developers with the most signoffs (total 5) | |
-|---|---|
-| Lluis Campos | 5 (100.0%) |
-
-| Top changeset contributors by employer | |
-|---|---|
-| Northern.tech | 32 (100.0%) |
-
-| Top lines changed by employer | |
-|---|---|
-| Northern.tech | 478 (100.0%) |
-
-| Employers with the most signoffs (total 5) | |
-|---|---|
-| Northern.tech | 5 (100.0%) |
-
-| Employers with the most hackers (total 6) | |
-|---|---|
-| Northern.tech | 6 (100.0%) |
-
-### Changelogs
-
-#### meta-mender (dunfell-v2020.10)
-
-New changes in meta-mender since dunfell-v2020.09:
-
-* Disable filesystem journal on read-only-rootfs, which
-sometimes causes unstable rootfs checksum together with fsck.
-([MEN-3912](https://tracker.mender.io/browse/MEN-3912))
-* mender: Make Mender settings conditional.
-* meta-mender-demo: Make Mender settings conditional.
-* meta-mender-raspberrypi-demo: Make Mender settings conditional.
-* meta-mender-qemu: Make Mender settings conditional.
-* tests/mender: Make Mender settings conditional.
-* mender-grub: Rework to use conditional includes.
-* mender-uboot: Conditionally include settings.
-* mender: Only include full mender-setup if features are enabled.
-* mender-binary-delta: Only add SRC_URI entries for existing binaries.
-* grub-mender-grubenv: Cleanup PROVIDES and RPROVIDES.
-* mender: Switch from include to require.
-* Fix PACKAGECONFIG not propagating RDEPENDS properly.
-
-## meta-mender dunfell-v2020.09
-
-_Released 09.17.2020_
-
-### Statistics
-
-A total of 70 lines added, 136 removed (delta -66)
-
-| Developers with the most changesets | |
-|---|---|
-| Drew Moseley | 5 (26.3%) |
-| Peter Grzybowski | 3 (15.8%) |
-| Lluis Campos | 2 (10.5%) |
-| Kurt Kiefer | 2 (10.5%) |
-| Daniel Selvan D | 1 (5.3%) |
-| Kristian Amlie | 1 (5.3%) |
-| Ole Petter Orhagen | 1 (5.3%) |
-| Marek Belisko | 1 (5.3%) |
-| Mirza Krak | 1 (5.3%) |
-| Kasper Føns | 1 (5.3%) |
-
-| Developers with the most changed lines | |
-|---|---|
-| Marek Belisko | 64 (36.2%) |
-| Drew Moseley | 45 (25.4%) |
-| Peter Grzybowski | 35 (19.8%) |
-| Lluis Campos | 12 (6.8%) |
-| Kurt Kiefer | 9 (5.1%) |
-| Kristian Amlie | 4 (2.3%) |
-| Ossian Riday | 3 (1.7%) |
-| Kasper Føns | 2 (1.1%) |
-| Daniel Selvan D | 1 (0.6%) |
-| Ole Petter Orhagen | 1 (0.6%) |
-
-| Developers with the most lines removed | |
-|---|---|
-| Marek Belisko | 64 (47.1%) |
-| Drew Moseley | 34 (25.0%) |
-| Lluis Campos | 6 (4.4%) |
-
-| Developers with the most signoffs (total 1) | |
-|---|---|
-| Kristian Amlie | 1 (100.0%) |
-
-| Top changeset contributors by employer | |
-|---|---|
-| Northern.tech | 13 (68.4%) |
-| kekiefer@gmail.com | 2 (10.5%) |
-| danilselvan@gmail.com | 1 (5.3%) |
-| ossian.riday@gmail.com | 1 (5.3%) |
-| Chora | 1 (5.3%) |
-| open-nandra | 1 (5.3%) |
-
-| Top lines changed by employer | |
-|---|---|
-| Northern.tech | 98 (55.4%) |
-| open-nandra | 64 (36.2%) |
-| kekiefer@gmail.com | 9 (5.1%) |
-| ossian.riday@gmail.com | 3 (1.7%) |
-| Chora | 2 (1.1%) |
-| danilselvan@gmail.com | 1 (0.6%) |
-
-| Employers with the most signoffs (total 1) | |
-|---|---|
-| Northern.tech | 1 (100.0%) |
-
-| Employers with the most hackers (total 11) | |
-|---|---|
-| Northern.tech | 6 (54.5%) |
-| open-nandra | 1 (9.1%) |
-| kekiefer@gmail.com | 1 (9.1%) |
-| ossian.riday@gmail.com | 1 (9.1%) |
-| Chora | 1 (9.1%) |
-| danilselvan@gmail.com | 1 (9.1%) |
-
-### Changelogs
-
-#### meta-mender (dunfell-v2020.09)
-
-New changes in meta-mender since dunfell-v2020.07:
-
-* []MBR systems don't have a backup header, so always return true
-([MEN-3761](https://tracker.mender.io/browse/MEN-3761))
-* Fix error that no recipe provides bcm2835-bootfiles.
-* mender-client: fix install of systemd-machine-id.service
-* initramfs-module-install-efi: Ensure variable changes are reflected on rebuild
-* vexpress: Remove nonexistent kernel config options that issue warnings.
-* mender-commercial: Cleanup BBFILES.
-* libubootenv: Drop bbappend file
-* libubootenv: add RPROVIDES for u-boot-default-env
-* Add mender-client 2.4.0 recipe.
-* OpenSSL: qemu: set SECLEVEL=2 in /etc/ssl/openssl.cnf
-([MEN-3730](https://tracker.mender.io/browse/MEN-3730))
-* Fixed key extraction by skipping new lines in defconfig.
-The `add_kconfig_option_with_depends.py` file throws `Not sure how to
-handle Kconfig option that doesn't start with 'CONFIG_'` when the
-provided defconfig file contains blank lines. It has been fixed by
-checking for empty lines before processing for keys.
-* Add mender-client 2.4.0 recipe.
-
-## meta-mender dunfell-v2020.07
-
-_Released 07.28.2020_
-
-### Statistics
-
-A total of 895 lines added, 2274 removed (delta -1379)
-
-| Developers with the most changesets | |
-|---|---|
-| Kristian Amlie | 26 (83.9%) |
-| Peter Grzybowski | 1 (3.2%) |
-| Lluis Campos | 1 (3.2%) |
-| Corey Cothrum | 1 (3.2%) |
-| Ole Petter Orhagen | 1 (3.2%) |
-| Trevor Woerner | 1 (3.2%) |
-
-| Developers with the most changed lines | |
-|---|---|
-| Kristian Amlie | 2435 (96.4%) |
-| Corey Cothrum | 72 (2.8%) |
-| Ole Petter Orhagen | 14 (0.6%) |
-| Peter Grzybowski | 2 (0.1%) |
-| Lluis Campos | 2 (0.1%) |
-| Trevor Woerner | 2 (0.1%) |
-
-| Developers with the most lines removed | |
-|---|---|
-| Kristian Amlie | 1459 (64.2%) |
-
-| Top changeset contributors by employer | |
-|---|---|
-| Northern.tech | 29 (93.5%) |
-| twoerner@gmail.com | 1 (3.2%) |
-| contact@coreycothrum.com | 1 (3.2%) |
-
-| Top lines changed by employer | |
-|---|---|
-| Northern.tech | 2453 (97.1%) |
-| contact@coreycothrum.com | 72 (2.8%) |
-| twoerner@gmail.com | 2 (0.1%) |
-
-| Employers with the most hackers (total 6) | |
-|---|---|
-| Northern.tech | 4 (66.7%) |
-| contact@coreycothrum.com | 1 (16.7%) |
-| twoerner@gmail.com | 1 (16.7%) |
-
-### Changelogs
-
-#### meta-mender (dunfell-v2020.07)
-
-New changes in meta-mender since zeus-v2020.06:
-
-* uboot_auto_configure: build U-Boot the same way Yocto does
-* Fix error message about `CONFIG_ENV_OFFSET` being wrong,
-such as:
-```
-ERROR: u-boot-fw-utils-mender-auto-provided-1.0-r0 do_configure: U-Boot configuration rpi_4_config has setting:
-CONFIG_ENV_OFFSET=0x400000
-CONFIG_ENV_OFFSET_REDUND=0x800000
-but Mender expects:
-CONFIG_ENV_OFFSET=0x800000
-Please fix U-Boot’s configuration file.
-```
-* add support for separate A/B kernel partitions
-* Add MENDER_EXTRA_PARTS_SIZES_MB variable
-* U-Boot auto-configuration: Better algorithm for removing
-options from defconfig files. This increases board compatibility.
-* Start using libubootenv for U-Boot environment manipulation.
-This deprecates the u-boot-fw-utils tools, which have been removed
-from upstream. The functionality and command line API is the same.
-* `libubootenv` is now used instead of `u-boot-fw-utils`. If
-you have a "fw-utils" type recipe in your layer, you probably need to
-remove it, particularly if it references `u-boot-mender-common.inc`.
-* Patch broken UBI support in libubootenv_0.2.
-* chmod 600 on mender.conf
-([MEN-3762](https://tracker.mender.io/browse/MEN-3762))
-* Add mender-2.2.1 and mender-artifact-3.3.1 recipes.
-* Add mender-2.3.0 and mender-artifact-3.4.0 recipes.
-* Add mender-binary-delta-1.1.0 release.
-* Remove mender-client recipes that are incompatible with dunfell.
-([MEN-3764](https://tracker.mender.io/browse/MEN-3764))
-* Fix incorrect BOOTENV_SIZE value being used in libubootenv
-recipe. The symptom of this was a non-working set of `fw_printenv` and
-`fw_setenv` tools:
-```
-root@raspberrypi4:~# fw_printenv
-Cannot read environment, using default
-Cannot read default environment from file
-```
-([MEN-3834](https://tracker.mender.io/browse/MEN-3834))
-* Fix fsck running on every boot in dunfell.
