@@ -6,6 +6,44 @@ shortcode-core:
     active: false
 ---
 
+## meta-mender dunfell-v2021.06
+
+_Released 05.28.2021_
+
+### Statistics
+
+A total of 55 lines added, 1 removed (delta 54)
+
+| Developers with the most changesets | |
+|---|---|
+| Fabio Tranchitella | 2 (100.0%) |
+
+| Developers with the most changed lines | |
+|---|---|
+| Fabio Tranchitella | 55 (100.0%) |
+
+| Top changeset contributors by employer | |
+|---|---|
+| Northern.tech | 2 (100.0%) |
+
+| Top lines changed by employer | |
+|---|---|
+| Northern.tech | 55 (100.0%) |
+
+| Employers with the most hackers (total 1) | |
+|---|---|
+| Northern.tech | 1 (100.0%) |
+
+### Changelogs
+
+#### meta-mender (dunfell-v2021.06)
+
+New changes in meta-mender since dunfell-v2021.04:
+
+* mender-client-dev package to distribute D-Bus API specs
+  ([MEN-4106](https://tracker.mender.io/browse/MEN-4106))
+
+
 ## meta-mender zeus-v2021.04
 
 _Released 04.23.2021_
