@@ -4,6 +4,7 @@ taxonomy:
     category: docs
 shortcode-core:
     active: false
+github: false
 ---
 
 ## mender-connect 1.1.0

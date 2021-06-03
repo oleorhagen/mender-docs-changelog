@@ -4,6 +4,7 @@ taxonomy:
     category: docs
 shortcode-core:
     active: false
+github: false
 ---
 
 ## mender-binary-delta 1.2.1
