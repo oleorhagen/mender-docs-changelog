@@ -4,6 +4,7 @@ taxonomy:
     category: docs
 shortcode-core:
     active: false
+github: false
 ---
 
 ## mender-cli 1.7.0
