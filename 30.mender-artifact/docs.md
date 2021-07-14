@@ -7,6 +7,91 @@ shortcode-core:
 github: false
 ---
 
+## mender-artifact 3.6.0
+
+_Released 07.14.2021_
+
+### Statistics
+
+A total of 482 lines added, 451 removed (delta 31)
+
+| Developers with the most changesets | |
+|---|---|
+| Ole Petter Orhagen | 7 (58.3%) |
+| Lluis Campos | 3 (25.0%) |
+| Alf-Rune Siqveland | 1 (8.3%) |
+| Kristian Amlie | 1 (8.3%) |
+
+| Developers with the most changed lines | |
+|---|---|
+| Ole Petter Orhagen | 462 (86.7%) |
+| Alf-Rune Siqveland | 43 (8.1%) |
+| Lluis Campos | 27 (5.1%) |
+| Kristian Amlie | 1 (0.2%) |
+
+| Top changeset contributors by employer | |
+|---|---|
+| Northern.tech | 12 (100.0%) |
+
+| Top lines changed by employer | |
+|---|---|
+| Northern.tech | 533 (100.0%) |
+
+| Employers with the most hackers (total 4) | |
+|---|---|
+| Northern.tech | 4 (100.0%) |
+
+### Changelogs
+
+#### mender-artifact (3.6.0)
+
+New changes in mender-artifact since 3.5.1:
+
+* Do not change the underlying Artifact unnecessarily
+  Previously the commands modifying an Artifact would always repack an Artifact,
+  no matter whether or not that modifications had actually been made to the
+  Artifact. As an example of this, if you had a signed Artifact compressed with
+  lzma, running `mender-artifact cat <artifact>:/<path-to-file>` would then cat
+  the file, and repack the Artifact with the standard compression, which is
+  `gzip`. Along the way the signature would also be lost.
+  This fix adds the following changes to the tooling:
+  * Modified images are no longer repacked, unless the command run has changed the
+  underlying image. This means that cat and copying out of an image will keep your
+  image intact. While copying into, installing, and removing files from the image
+  will repack the image.
+  * If an image is modified, and needs to be repacked, the existing compression
+  will be respected when repacking. The only exception is the `--compression` flag
+  for `mender-artifact modify` which can override the existing compression when repacking.
+  * `mender-artifact {cat,install,cp,rm}` do not respect the `--compression` flag,
+  but rather prints a warning, that the flag is ignored. If you want to change the
+  compression of your Artifact, run `mender-artifact modify <Artifact>
+  --compression <type>`
+  ([MEN-4502](https://tracker.mender.io/browse/MEN-4502))
+* Add a note about the proper usage of the 'compression' flag in the
+  global help text.
+* In case of a user trying to add a script with an invalid name, the
+  error message now says just so: Invalid script name, instead of simply: Invalid script.
+* Remove the 'scripter' prefix in the error messages when adding a
+  State Script to an Artifact.
+* [] Fix sending on closed signal channel
+  ([MEN-4832](https://tracker.mender.io/browse/MEN-4832))
+* Aggregated Dependabot Changelogs:
+  * Bumps [github.com/stretchr/testify](https://github.com/stretchr/testify) from 1.6.1 to 1.7.0.
+    - [Release notes](https://github.com/stretchr/testify/releases)
+    - [Commits](https://github.com/stretchr/testify/compare/v1.6.1...v1.7.0)
+  * Bumps alpine from 3.12.3 to 3.13.1.
+  * Bumps alpine from 3.13.1 to 3.13.2.
+  * Bumps alpine from 3.13.2 to 3.13.3.
+  * Bumps alpine from 3.13.3 to 3.13.4.
+  * Bumps alpine from 3.13.4 to 3.13.5.
+  * Bumps alpine from 3.13.5 to 3.14.0.
+    ---
+    updated-dependencies:
+    - dependency-name: alpine
+      dependency-type: direct:production
+      update-type: version-update:semver-minor
+    ...
+
 ## mender-artifact 3.5.1
 
 _Released 04.16.2021_

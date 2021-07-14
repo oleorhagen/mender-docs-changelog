@@ -7,6 +7,46 @@ shortcode-core:
 github: false
 ---
 
+## mender-configure-module 1.0.1
+
+_Released 07.14.2021_
+
+### Statistics
+
+A total of 39 lines added, 10 removed (delta 29)
+
+| Developers with the most changesets | |
+|---|---|
+| Lluis Campos | 2 (66.7%) |
+| Fabio Tranchitella | 1 (33.3%) |
+
+| Developers with the most changed lines | |
+|---|---|
+| Fabio Tranchitella | 22 (56.4%) |
+| Lluis Campos | 17 (43.6%) |
+
+| Top changeset contributors by employer | |
+|---|---|
+| Northern.tech | 3 (100.0%) |
+
+| Top lines changed by employer | |
+|---|---|
+| Northern.tech | 39 (100.0%) |
+
+| Employers with the most hackers (total 2) | |
+|---|---|
+| Northern.tech | 2 (100.0%) |
+
+
+### Changelogs
+
+#### mender-configure-module (1.0.1)
+
+New changes in mender-configure-module since 1.0.0:
+
+* include the current JWT token in the reported config checksum
+  ([MEN-4769](https://tracker.mender.io/browse/MEN-4769))
+
 ## mender-configure-module 1.0.0
 
 _Released 04.16.2021_

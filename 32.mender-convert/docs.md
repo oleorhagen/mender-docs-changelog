@@ -7,6 +7,89 @@ shortcode-core:
 github: false
 ---
 
+## mender-convert 2.5.0
+
+_Released 07.14.2021_
+
+### Statistics
+
+A total of 167 lines added, 219 removed (delta -52)
+
+| Developers with the most changesets | |
+|---|---|
+| Lluis Campos | 9 (37.5%) |
+| Ole Petter Orhagen | 9 (37.5%) |
+| Kristian Amlie | 4 (16.7%) |
+| Fabio Tranchitella | 2 (8.3%) |
+
+| Developers with the most changed lines | |
+|---|---|
+| Ole Petter Orhagen | 154 (51.9%) |
+| Lluis Campos | 81 (27.3%) |
+| Kristian Amlie | 50 (16.8%) |
+| Fabio Tranchitella | 12 (4.0%) |
+
+| Developers with the most lines removed | |
+|---|---|
+| Kristian Amlie | 38 (17.4%) |
+| Ole Petter Orhagen | 13 (5.9%) |
+| Lluis Campos | 12 (5.5%) |
+
+| Developers with the most signoffs (total 2) | |
+|---|---|
+| Lluis Campos | 2 (100.0%) |
+
+| Top changeset contributors by employer | |
+|---|---|
+| Northern.tech | 24 (100.0%) |
+
+| Top lines changed by employer | |
+|---|---|
+| Northern.tech | 297 (100.0%) |
+
+| Employers with the most signoffs (total 2) | |
+|---|---|
+| Northern.tech | 2 (100.0%) |
+
+| Employers with the most hackers (total 4) | |
+|---|---|
+| Northern.tech | 4 (100.0%) |
+
+### Changelogs
+
+#### mender-convert (2.5.0)
+
+New changes in mender-convert since 2.4.0:
+
+* Switch to stable version of mender-configure.
+* Always create symlinks from `/var/lib/mender-configure` to
+  `/data/mender-configure`. They always need to installed in a
+  rootfs-image prepared image, even if the software isn't, because if
+  the package is installed later, the links must be present or it will
+  act as if it is a non-rootfs image, and store the settings on the
+  rootfs partition, when they should be stored on the data partition.
+* Raspberry Pi: create symbolic links from /boot to /uboot for
+  all existing files in boot partition. Some Raspberry Pi apps, like Pi
+  Camera, expect firmware files at /boot.
+  ([MEN-4658](https://tracker.mender.io/browse/MEN-4658))
+* Added an option `MENDER_CLIENT_INSTALL=y/n`, in order to
+  configure the installation of the Mender client into the converted image.
+  Defaults to `yes`.
+  ([MEN-4256](https://tracker.mender.io/browse/MEN-4256))
+* Add a demo configuration in configs/mender_convert_demo_config which
+  when added at run time creates a Mender demo setup in the converted image. This
+  includes short polling intervals, and all add-on's installed by default.
+  ([MEN-4462](https://tracker.mender.io/browse/MEN-4462))
+* Aggregated Dependabot Changelogs:
+  * Bumps [jsdom](https://github.com/jsdom/jsdom) from 16.4.0 to 16.5.3.
+    - [Release notes](https://github.com/jsdom/jsdom/releases)
+    - [Changelog](https://github.com/jsdom/jsdom/blob/master/Changelog.md)
+    - [Commits](https://github.com/jsdom/jsdom/compare/16.4.0...16.5.3)
+  * Bumps [jsdom](https://github.com/jsdom/jsdom) from 16.5.3 to 16.6.0.
+    - [Release notes](https://github.com/jsdom/jsdom/releases)
+    - [Changelog](https://github.com/jsdom/jsdom/blob/master/Changelog.md)
+    - [Commits](https://github.com/jsdom/jsdom/compare/16.5.3...16.6.0)
+
 ## mender-convert 2.4.0
 
 _Released 04.19.2021_
