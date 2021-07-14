@@ -7,6 +7,153 @@ shortcode-core:
 github: false
 ---
 
+## mender 3.0.0
+
+_Released 07.14.2021_
+
+### Statistics
+
+A total of 7715 lines added, 3584 removed (delta 4131)
+
+| Developers with the most changesets | |
+|---|---|
+| Kristian Amlie | 51 (48.6%) |
+| Ole Petter Orhagen | 22 (21.0%) |
+| Lluis Campos | 19 (18.1%) |
+| Alf-Rune Siqveland | 3 (2.9%) |
+| Fabio Tranchitella | 3 (2.9%) |
+| Manuel Zedel | 2 (1.9%) |
+| Nils Olav Kvelvane Johansen | 2 (1.9%) |
+| Prashanth Joseph Babu | 2 (1.9%) |
+| Grant Sloman | 1 (1.0%) |
+
+| Developers with the most changed lines | |
+|---|---|
+| Ole Petter Orhagen | 4160 (51.9%) |
+| Kristian Amlie | 2479 (30.9%) |
+| Lluis Campos | 1175 (14.7%) |
+| Alf-Rune Siqveland | 80 (1.0%) |
+| Nils Olav Kvelvane Johansen | 43 (0.5%) |
+| Manuel Zedel | 35 (0.4%) |
+| Prashanth Joseph Babu | 25 (0.3%) |
+| Fabio Tranchitella | 22 (0.3%) |
+| Grant Sloman | 1 (0.0%) |
+
+| Developers with the most signoffs (total 4) | |
+|---|---|
+| Ole Petter Orhagen | 3 (75.0%) |
+| Lluis Campos | 1 (25.0%) |
+
+| Developers with the most report credits (total 1) | |
+|---|---|
+| Alex Stout | 1 (100.0%) |
+
+| Developers who gave the most report credits (total 1) | |
+|---|---|
+| Kristian Amlie | 1 (100.0%) |
+
+| Top changeset contributors by employer | |
+|---|---|
+| Northern.tech | 102 (97.1%) |
+| prashanthjbabu@gmail.com | 2 (1.9%) |
+| Violet Ultra Ltd | 1 (1.0%) |
+
+| Top lines changed by employer | |
+|---|---|
+| Northern.tech | 7994 (99.7%) |
+| prashanthjbabu@gmail.com | 25 (0.3%) |
+| Violet Ultra Ltd | 1 (0.0%) |
+
+| Employers with the most signoffs (total 4) | |
+|---|---|
+| Northern.tech | 4 (100.0%) |
+
+| Employers with the most hackers (total 9) | |
+|---|---|
+| Northern.tech | 7 (77.8%) |
+| prashanthjbabu@gmail.com | 1 (11.1%) |
+| Violet Ultra Ltd | 1 (11.1%) |
+
+### Changelogs
+
+#### mender (3.0.0)
+
+New changes in mender since 2.6.0:
+
+* mender setup: when configuring for demo using self-signed
+  certificate, install the certificate in the local trust store so that
+  all components in the system (namely, Mender addons) can trust the
+  Mender server without extra configuration.
+  ([MEN-4580](https://tracker.mender.io/browse/MEN-4580))
+* Warn in the log when the system certificates contain the demo cert.
+* Dont Verify SSL if skip verify is set
+  If skip verify is set , then we shouldnt call VerifyResult
+* Fix infinite carriage return output when running in ADB shell
+* Add a DBus endpoint for the UpdateControlMap, which allows
+  a user to set the `ID` and `Priority` of a given update process.
+  ([MEN-4535](https://tracker.mender.io/browse/MEN-4535))
+* The daemon will no longer crash if mender check-update or send-inventory is used before the daemon has finished its set up.
+  ([MEN-4074](https://tracker.mender.io/browse/MEN-4074))
+* Update Modules Artifact generators: correct --software-version flag
+* single-file-artifact-gen: Support concurrent executions
+* single-file Update Module: fix rollback functionality
+* Add UpdateControlMapBootExpirationTimeSeconds to mender.conf.
+* The location of the device type file is now determined by the mender.conf file. If the device type file is not used in mender.conf, the device type file is determined by the --data flag and if the flag is not used, the device type file is set to default. In addition, the scripts and modules directories location is consistent with the --data flag now.
+  ([MEN-4669](https://tracker.mender.io/browse/MEN-4669))
+* Implement the continue/pause/fail state machine logic
+  This adds support for the explit control of the Mender state machine through the
+  update control maps functionality.
+  The state machine can be controlled through the verbs, puase/continue/fail in
+  the states:
+  * ArtifactInstall_Enter
+  * ArtifactCommit_Enter
+  * ArtifactReboot_Enter
+  ([MEN-4549](https://tracker.mender.io/browse/MEN-4549))
+* Fix D-Bus timeout on errors by finishing handling
+  ([MEN-4703](https://tracker.mender.io/browse/MEN-4703))
+* Report to deployments/status when pausing in any state
+  ([MEN-4624](https://tracker.mender.io/browse/MEN-4624))
+* Fix race condition in menderAuthManagerService due to
+  concurrent map access. This could manifest either as a crash, or as a
+  failure to deliver the JwtToken to dependent processes, such as
+  mender-connect.
+* Fix race condition in `dbus.RegisterMethodCallCallback` due
+  to concurrent map access. This could manifest either as a crash, or as
+  a failure to deliver the JwtToken to dependent processes, such as
+  mender-connect.
+* Fix: Correctly log the error response message from server errors
+* Fix occasional crash when exiting using SIGTERM.
+* Fix: `mender-client.service` and the old `mender.service`
+  services can no longer run at the same time. If anyone has both, then
+  `mender.service` should be removed from the system.
+* Previously the Mender client would hide output from the
+  child processes it ran, leading to errors from tools such as
+  `fw_printenv`, not showing up in the logs.
+  Now default to showing all output from the child processes called in
+  the client logs.
+* The client now supports the HTTP Device API v2.
+  ([MEN-4785](https://tracker.mender.io/browse/MEN-4785))
+* Mark deployment as failed on bad signature instead of retrying.
+* CLI commands prefixed with hyphen are now deprecated, use
+  instead directly the command name. For example `mender daemon`, `mender
+  commit`, `mender show-artifact`, etc.
+  ([MEN-4808](https://tracker.mender.io/browse/MEN-4808))
+* Remove deprecated flag --log-modules
+  ([MEN-4808](https://tracker.mender.io/browse/MEN-4808))
+* Fix a bug which could sometimes lead the client to do a
+  rollback after it had already committed. This could happen if the
+  client happened to spontaneously reboot or fail during the status
+  update to the server. Doing this is not correct according to the state
+  flow, and can have unexpected consequences depending on the
+  combination of Update Modules and State Scripts.
+  ([MEN-4830](https://tracker.mender.io/browse/MEN-4830))
+* mender-inventory-network: Fix incompatibility with busybox,
+  by using short command line options in grep command.
+  ([MEN-4851](https://tracker.mender.io/browse/MEN-4851))
+* Do not put useless and sometimes even incorrect zero values
+  in the configuration file when running `mender setup`.
+  ([MEN-4857](https://tracker.mender.io/browse/MEN-4857))
+
 ## mender 2.6.0
 
 _Released 04.16.2021_
