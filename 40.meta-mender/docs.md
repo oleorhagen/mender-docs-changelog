@@ -7,6 +7,51 @@ shortcode-core:
 github: false
 ---
 
+## meta-mender dunfell-v2021.07.02
+
+_Released 07.15.2021_
+
+### Statistics
+
+A total of 10 lines added, 1 removed (delta 9)
+
+| Developers with the most changesets | |
+|---|---|
+| Ole Petter Orhagen | 1 (100.0%) |
+
+| Developers with the most changed lines | |
+|---|---|
+| Ole Petter Orhagen | 10 (100.0%) |
+
+| Developers with the most signoffs (total 2) | |
+|---|---|
+| Lluis Campos | 2 (100.0%) |
+
+| Top changeset contributors by employer | |
+|---|---|
+| Northern.tech | 1 (100.0%) |
+
+| Top lines changed by employer | |
+|---|---|
+| Northern.tech | 10 (100.0%) |
+
+| Employers with the most signoffs (total 2) | |
+|---|---|
+| Northern.tech | 2 (100.0%) |
+
+| Employers with the most hackers (total 1) | |
+|---|---|
+| Northern.tech | 1 (100.0%) |
+
+### Changelogs
+
+#### meta-mender (dunfell-v2021.07.02)
+
+New changes in meta-mender since dunfell-v2021.07:
+
+* Increase Update Control Map timeout values in demo to avoid
+  Update Control malfunctioning on slow boards.
+
 ## meta-mender dunfell-v2021.07
 
 _Released 07.15.2021_
