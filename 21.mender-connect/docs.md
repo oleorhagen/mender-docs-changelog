@@ -62,6 +62,54 @@ New changes in mender-connect since 1.1.0:
   no new JWT token from the Mender client
   ([MEN-4694](https://tracker.mender.io/browse/MEN-4694))
 
+## mender-connect 1.1.1
+
+_Released 07.14.2021_
+
+### Statistics
+
+A total of 183 lines added, 47 removed (delta 136)
+
+| Developers with the most changesets | |
+|---|---|
+| Ole Petter Orhagen | 3 (75.0%) |
+| Peter Grzybowski | 1 (25.0%) |
+
+| Developers with the most changed lines | |
+|---|---|
+| Ole Petter Orhagen | 132 (72.1%) |
+| Peter Grzybowski | 51 (27.9%) |
+
+| Top changeset contributors by employer | |
+|---|---|
+| Northern.tech | 4 (100.0%) |
+
+| Top lines changed by employer | |
+|---|---|
+| Northern.tech | 183 (100.0%) |
+
+| Employers with the most signoffs (total 0) | |
+|---|---|
+
+| Employers with the most hackers (total 2) | |
+|---|---|
+| Northern.tech | 2 (100.0%) |
+
+### Changelogs
+
+#### mender-connect (1.1.1)
+
+New changes in mender-connect since 1.1.0:
+
+* Fix the terminal PATH issues in the standard shell by defaulting to
+  starting a 'login' shell with the '--login' option. This can be controlled
+  through the new configuration field 'ShellArguments', which you can set to
+  whatever arguments you want passed to the shell on startup.
+  ([MEN-4505](https://tracker.mender.io/browse/MEN-4505))
+* Handle the re-connection request even if there is
+  no new JWT token from the Mender client
+  ([MEN-4694](https://tracker.mender.io/browse/MEN-4694))
+
 ## mender-connect 1.1.0
 
 _Released 04.16.2021_
@@ -80,6 +128,54 @@ New changes in mender-connect since 1.0.0:
 * New feature: TCP and UDP port-forwarding
 * stat(2) file path and verify conditions before starting upload
 * Add option to pass src_path to file upload requests
+
+## mender-connect 1.0.2
+
+_Released 07.14.2021_
+
+### Statistics
+
+A total of 184 lines added, 47 removed (delta 137)
+
+| Developers with the most changesets | |
+|---|---|
+| Ole Petter Orhagen | 2 (66.7%) |
+| Peter Grzybowski | 1 (33.3%) |
+
+| Developers with the most changed lines | |
+|---|---|
+| Ole Petter Orhagen | 133 (72.3%) |
+| Peter Grzybowski | 51 (27.7%) |
+
+| Top changeset contributors by employer | |
+|---|---|
+| Northern.tech | 3 (100.0%) |
+
+| Top lines changed by employer | |
+|---|---|
+| Northern.tech | 184 (100.0%) |
+
+| Employers with the most signoffs (total 0) | |
+|---|---|
+
+| Employers with the most hackers (total 2) | |
+|---|---|
+| Northern.tech | 2 (100.0%) |
+
+### Changelogs
+
+#### mender-connect (1.0.2)
+
+New changes in mender-connect since 1.0.1:
+
+* Fix the terminal PATH issues in the standard shell by defaulting to
+  starting a 'login' shell with the '--login' option. This can be controlled
+  through the new configuration field 'ShellArguments', which you can set to
+  whatever arguments you want passed to the shell on startup.
+  ([MEN-4505](https://tracker.mender.io/browse/MEN-4505))
+* Handle the re-connection request even if there is
+  no new JWT token from the Mender client
+  ([MEN-4694](https://tracker.mender.io/browse/MEN-4694))
 
 ## mender-connect 1.0.1
 
