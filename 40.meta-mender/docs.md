@@ -7,6 +7,92 @@ shortcode-core:
 github: false
 ---
 
+## meta-mender dunfell-v2021.07
+
+_Released 07.15.2021_
+
+### Statistics
+
+A total of 1172 lines added, 227 removed (delta 945)
+
+| Developers with the most changesets | |
+|---|---|
+| Kristian Amlie | 11 (50.0%) |
+| Lluis Campos | 7 (31.8%) |
+| Ole Petter Orhagen | 1 (4.5%) |
+| Pierre-Jean Texier | 1 (4.5%) |
+| Corey Cothrum | 1 (4.5%) |
+| Alan Martinovic | 1 (4.5%) |
+
+| Developers with the most changed lines | |
+|---|---|
+| Kristian Amlie | 956 (81.4%) |
+| Lluis Campos | 213 (18.1%) |
+| Ole Petter Orhagen | 2 (0.2%) |
+| Pierre-Jean Texier | 1 (0.1%) |
+| Corey Cothrum | 1 (0.1%) |
+| Alan Martinovic | 1 (0.1%) |
+
+| Developers with the most signoffs (total 1) | |
+|---|---|
+| Lluis Campos | 1 (100.0%) |
+
+| Top changeset contributors by employer | |
+|---|---|
+| Northern.tech | 20 (90.9%) |
+| texier.pj2@gmail.com | 1 (4.5%) |
+| contact@coreycothrum.com | 1 (4.5%) |
+
+| Top lines changed by employer | |
+|---|---|
+| Northern.tech | 1172 (99.8%) |
+| texier.pj2@gmail.com | 1 (0.1%) |
+| contact@coreycothrum.com | 1 (0.1%) |
+
+| Employers with the most signoffs (total 1) | |
+|---|---|
+| Northern.tech | 1 (100.0%) |
+
+| Employers with the most hackers (total 6) | |
+|---|---|
+| Northern.tech | 4 (66.7%) |
+| texier.pj2@gmail.com | 1 (16.7%) |
+| contact@coreycothrum.com | 1 (16.7%) |
+
+### Changelogs
+
+#### meta-mender (dunfell-v2021.07)
+
+New changes in meta-mender since dunfell-v2021.06:
+
+* Add meta-oe as dependency to mender-demo
+* fix grub chownboot task ordering
+* Add io.mender.UpdateManager to D-Bus policy files.
+* Fix build error when trying to build mender-configure
+  without systemd:
+  ```
+  mender-configure-1.0.0-r0 do_package: SYSTEMD_SERVICE_mender-configure value mender-configure-apply-device-config.service does not exist.
+  ```
+* u-boot-mender: Ignore case when checking variables in mender_Kconfig_fragment
+* Add mender-client-3.0.0 recipe. Note that it has to be
+  enabled specifically, since it is not perfectly compatible with the
+  2.x series:
+  ```
+  PREFERRED_VERSION_mender-client = "3.%"
+  ```
+  In particular, the single dash flags have been removed and replaced
+  with commands. It is no longer possible to use `mender -install`, it
+  must be replaced with `mender install`, and likewise for similar
+  commands.
+* Add mender-artifact-3.6.0 recipe.
+* Add mender-connect-1.2.0 recipe.
+* Add mender-configure-1.0.1 recipe.
+* Add mender-artifact-3.5.2 recipe.
+* Add mender-client-2.5.2 recipe.
+* Add mender-client-2.6.1 recipe.
+* Add mender-connect-1.0.2 recipe.
+* Add mender-connect-1.1.1 recipe.
+
 ## meta-mender dunfell-v2021.06
 
 _Released 05.28.2021_
