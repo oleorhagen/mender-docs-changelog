@@ -2253,6 +2253,98 @@ New changes in integration since 2.7.0:
       update-type: version-update:semver-major
     ...
 
+## Mender 2.7.1
+
+_Released 07.14.2021_
+
+### Statistics
+
+A total of 779 lines added, 504 removed (delta 275)
+
+| Developers with the most changesets | |
+|---|---|
+| Fabio Tranchitella | 7 (33.3%) |
+| Lluis Campos | 5 (23.8%) |
+| Peter Grzybowski | 3 (14.3%) |
+| Alf-Rune Siqveland | 2 (9.5%) |
+| Kristian Amlie | 2 (9.5%) |
+| Krzysztof Jaskiewicz | 1 (4.8%) |
+| Ole Petter Orhagen | 1 (4.8%) |
+
+| Developers with the most changed lines | |
+|---|---|
+| Fabio Tranchitella | 554 (70.3%) |
+| Kristian Amlie | 153 (19.4%) |
+| Krzysztof Jaskiewicz | 31 (3.9%) |
+| Lluis Campos | 19 (2.4%) |
+| Peter Grzybowski | 18 (2.3%) |
+| Alf-Rune Siqveland | 12 (1.5%) |
+| Ole Petter Orhagen | 1 (0.1%) |
+
+| Developers with the most lines removed | |
+|---|---|
+| Alf-Rune Siqveland | 3 (0.6%) |
+
+| Top changeset contributors by employer | |
+|---|---|
+| Northern.tech | 20 (95.2%) |
+| RnDity | 1 (4.8%) |
+
+| Top lines changed by employer | |
+|---|---|
+| Northern.tech | 757 (96.1%) |
+| RnDity | 31 (3.9%) |
+
+| Employers with the most signoffs (total 0) | |
+|---|---|
+
+| Employers with the most hackers (total 7) | |
+|---|---|
+| Northern.tech | 6 (85.7%) |
+| RnDity | 1 (14.3%) |
+
+### Changelogs
+
+#### deviceauth (2.6.1)
+
+New changes in deviceauth since 2.6.0:
+
+* Increase robustness when propagating status to inventory for pending devices, making sure the database remains consistent
+  ([MEN-4604](https://tracker.mender.io/browse/MEN-4604))
+
+#### deviceconnect (1.1.1)
+
+New changes in deviceconnect since 1.1.0:
+
+* [] Limit size of messages transferred over websockets
+  ([MEN-4803](https://tracker.mender.io/browse/MEN-4803))
+
+#### useradm-enterprise (1.14.1)
+
+New changes in useradm-enterprise since 1.14.0:
+
+* security fix: invalidate user JWT token cache on logout
+  ([MEN-4754](https://tracker.mender.io/browse/MEN-4754))
+
+#### integration (2.7.1)
+
+New changes in integration since 2.7.0:
+
+* Enforce userauth middleware on non-signup tenantadm endpoints
+  ([MEN-4657](https://tracker.mender.io/browse/MEN-4657))
+* Fix mender-configure install in Docker image
+  mendersoftware/mender-client-docker-addons
+* fix ad improve the the production template
+  ([MEN-4790](https://tracker.mender.io/browse/MEN-4790))
+* Upgrade deviceauth to 2.6.1.
+* Upgrade deviceconnect to 1.1.1.
+* Upgrade integration to 2.7.1.
+* Upgrade mender to 2.6.1.
+* Upgrade mender-artifact to 3.5.2.
+* Upgrade mender-connect to 1.1.1.
+* Upgrade useradm to 1.14.1.
+* Upgrade useradm-enterprise to 1.14.1.
+
 ## Mender 2.7.0
 
 _Released 04.16.2021_
@@ -3320,6 +3412,88 @@ requests to Mender support
 - [Commits](https://github.com/mongodb/mongo-go-driver/compare/v1.4.5...1.4.6)
 * Bumps alpine from 3.13.0 to 3.13.1.
 * Bumps alpine from 3.13.1 to 3.13.2.
+
+## Mender 2.6.2
+
+_Released 07.14.2021_
+
+### Statistics
+
+A total of 732 lines added, 415 removed (delta 317)
+
+| Developers with the most changesets | |
+|---|---|
+| Kristian Amlie | 5 (31.2%) |
+| Lluis Campos | 5 (31.2%) |
+| Fabio Tranchitella | 3 (18.8%) |
+| Alf-Rune Siqveland | 1 (6.2%) |
+| Ole Petter | 1 (6.2%) |
+| Peter Grzybowski | 1 (6.2%) |
+
+| Developers with the most changed lines | |
+|---|---|
+| Fabio Tranchitella | 501 (68.4%) |
+| Kristian Amlie | 177 (24.2%) |
+| Alf-Rune Siqveland | 30 (4.1%) |
+| Lluis Campos | 22 (3.0%) |
+| Ole Petter | 1 (0.1%) |
+| Peter Grzybowski | 1 (0.1%) |
+
+| Developers with the most signoffs (total 1) | |
+|---|---|
+| Ole Petter | 1 (100.0%) |
+
+| Top changeset contributors by employer | |
+|---|---|
+| Northern.tech | 16 (100.0%) |
+
+| Top lines changed by employer | |
+|---|---|
+| Northern.tech | 732 (100.0%) |
+
+| Employers with the most signoffs (total 1) | |
+|---|---|
+| Northern.tech | 1 (100.0%) |
+
+| Employers with the most hackers (total 6) | |
+|---|---|
+| Northern.tech | 6 (100.0%) |
+
+### Changelogs
+
+#### deployments-enterprise (2.2.2)
+
+New changes in deployments-enterprise since 2.2.1:
+
+* docs: Fix naming conflict in v1 and v2 NewDeployment definitions.
+* docs: Document missing parameters for NewDeploymentForGroup schema.
+
+#### deviceconnect (1.0.1)
+
+New changes in deviceconnect since 1.0.0:
+
+* [] Limit size of messages transferred over websockets
+  ([MEN-4803](https://tracker.mender.io/browse/MEN-4803))
+
+#### useradm-enterprise (1.13.1)
+
+New changes in useradm-enterprise since 1.13.0:
+
+* security fix: invalidate user JWT token cache on logout
+  ([MEN-4754](https://tracker.mender.io/browse/MEN-4754))
+
+#### integration (2.6.2)
+
+New changes in integration since 2.6.1:
+
+* Upgrade deployments to 2.2.2.
+* Upgrade deployments-enterprise to 2.2.2.
+* Upgrade deviceconnect to 1.0.1.
+* Upgrade mender to 2.5.2.
+* Upgrade mender-artifact to 3.5.2.
+* Upgrade mender-connect to 1.0.2.
+* Upgrade useradm to 1.13.1.
+* Upgrade useradm-enterprise to 1.13.1.
 
 ## Mender 2.6.1
 

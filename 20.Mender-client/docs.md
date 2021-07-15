@@ -154,6 +154,95 @@ New changes in mender since 2.6.0:
   in the configuration file when running `mender setup`.
   ([MEN-4857](https://tracker.mender.io/browse/MEN-4857))
 
+## mender 2.6.1
+
+_Released 07.14.2021_
+
+### Statistics
+
+A total of 506 lines added, 215 removed (delta 291)
+
+| Developers with the most changesets | |
+|---|---|
+| Lluis Campos | 6 (37.5%) |
+| Kristian Amlie | 5 (31.2%) |
+| Ole Petter Orhagen | 2 (12.5%) |
+| Nils Olav Kvelvane Johansen | 2 (12.5%) |
+| Prashanth Joseph Babu | 1 (6.2%) |
+
+| Developers with the most changed lines | |
+|---|---|
+| Lluis Campos | 290 (49.9%) |
+| Kristian Amlie | 186 (32.0%) |
+| Ole Petter Orhagen | 58 (10.0%) |
+| Nils Olav Kvelvane Johansen | 44 (7.6%) |
+| Prashanth Joseph Babu | 3 (0.5%) |
+
+| Developers with the most lines removed | |
+|---|---|
+| Kristian Amlie | 47 (21.9%) |
+
+| Developers with the most signoffs (total 2) | |
+|---|---|
+| Ole Petter Orhagen | 2 (100.0%) |
+
+| Top changeset contributors by employer | |
+|---|---|
+| Northern.tech | 15 (93.8%) |
+| prashanthjbabu@gmail.com | 1 (6.2%) |
+
+| Top lines changed by employer | |
+|---|---|
+| Northern.tech | 578 (99.5%) |
+| prashanthjbabu@gmail.com | 3 (0.5%) |
+
+| Employers with the most signoffs (total 2) | |
+|---|---|
+| Northern.tech | 2 (100.0%) |
+
+| Employers with the most hackers (total 5) | |
+|---|---|
+| Northern.tech | 4 (80.0%) |
+| prashanthjbabu@gmail.com | 1 (20.0%) |
+
+### Changelogs
+
+#### mender (2.6.1)
+
+New changes in mender since 2.6.0:
+
+* Dont Verify SSL if skip verify is set
+  If skip verify is set , then we shouldnt call VerifyResult
+* Update Modules Artifact generators: correct --software-version flag
+* single-file-artifact-gen: Support concurrent executions
+* single-file Update Module: fix rollback functionality
+* The daemon will no longer crash if mender check-update or send-inventory is used before the daemon has finished its set up.
+  ([MEN-4074](https://tracker.mender.io/browse/MEN-4074))
+* Fix D-Bus timeout on errors by finishing handling
+  ([MEN-4703](https://tracker.mender.io/browse/MEN-4703))
+* The location of the device type file is now determined by the mender.conf file. If the device type file is not used in mender.conf, the device type file is determined by the --data flag and if the flag is not used, the device type file is set to default. In addition, the scripts and modules directories location is consistent with the --data flag now.
+  ([MEN-4669](https://tracker.mender.io/browse/MEN-4669))
+* Fix race condition in menderAuthManagerService due to
+  concurrent map access. This could manifest either as a crash, or as a
+  failure to deliver the JwtToken to dependent processes, such as
+  mender-connect.
+* Fix race condition in `dbus.RegisterMethodCallCallback` due
+  to concurrent map access. This could manifest either as a crash, or as
+  a failure to deliver the JwtToken to dependent processes, such as
+  mender-connect.
+* Fix occasional crash when exiting using SIGTERM.
+* Fix: Correctly log the error response message from server errors
+* Fix a bug which could sometimes lead the client to do a
+  rollback after it had already committed. This could happen if the
+  client happened to spontaneously reboot or fail during the status
+  update to the server. Doing this is not correct according to the state
+  flow, and can have unexpected consequences depending on the
+  combination of Update Modules and State Scripts.
+  ([MEN-4830](https://tracker.mender.io/browse/MEN-4830))
+* mender-inventory-network: Fix incompatibility with busybox,
+  by using short command line options in grep command.
+  ([MEN-4851](https://tracker.mender.io/browse/MEN-4851))
+
 ## mender 2.6.0
 
 _Released 04.16.2021_
@@ -198,6 +287,92 @@ Mender server without extra configuration.
 * Bumps [github.com/stretchr/testify](https://github.com/stretchr/testify) from 1.6.1 to 1.7.0.
 - [Release notes](https://github.com/stretchr/testify/releases)
 - [Commits](https://github.com/stretchr/testify/compare/v1.6.1...v1.7.0)
+
+## mender 2.5.2
+
+_Released 07.14.2021_
+
+### Statistics
+
+A total of 506 lines added, 215 removed (delta 291)
+
+| Developers with the most changesets | |
+|---|---|
+| Kristian Amlie | 5 (33.3%) |
+| Lluis Campos | 5 (33.3%) |
+| Ole Petter Orhagen | 2 (13.3%) |
+| Nils Olav Kvelvane Johansen | 2 (13.3%) |
+| Prashanth Joseph Babu | 1 (6.7%) |
+
+| Developers with the most changed lines | |
+|---|---|
+| Lluis Campos | 289 (49.7%) |
+| Kristian Amlie | 186 (32.0%) |
+| Ole Petter Orhagen | 58 (10.0%) |
+| Nils Olav Kvelvane Johansen | 45 (7.7%) |
+| Prashanth Joseph Babu | 3 (0.5%) |
+
+| Developers with the most lines removed | |
+|---|---|
+| Kristian Amlie | 47 (21.9%) |
+
+| Developers with the most signoffs (total 2) | |
+|---|---|
+| Ole Petter Orhagen | 2 (100.0%) |
+
+| Top changeset contributors by employer | |
+|---|---|
+| Northern.tech | 14 (93.3%) |
+| prashanthjbabu@gmail.com | 1 (6.7%) |
+
+| Top lines changed by employer | |
+|---|---|
+| Northern.tech | 578 (99.5%) |
+| prashanthjbabu@gmail.com | 3 (0.5%) |
+
+| Employers with the most signoffs (total 2) | |
+|---|---|
+| Northern.tech | 2 (100.0%) |
+
+| Employers with the most hackers (total 5) | |
+|---|---|
+| Northern.tech | 4 (80.0%) |
+| prashanthjbabu@gmail.com | 1 (20.0%) |
+
+### Changelogs
+
+#### mender (2.5.2)
+
+New changes in mender since 2.5.1:
+
+* Dont Verify SSL if skip verify is set
+  If skip verify is set , then we shouldnt call VerifyResult
+* Update Modules Artifact generators: correct --software-version flag
+* single-file-artifact-gen: Support concurrent executions
+* single-file Update Module: fix rollback functionality
+* The daemon will no longer crash if mender check-update or send-inventory is used before the daemon has finished its set up.
+  ([MEN-4074](https://tracker.mender.io/browse/MEN-4074))
+* Fix D-Bus timeout on errors by finishing handling
+  ([MEN-4703](https://tracker.mender.io/browse/MEN-4703))
+* The location of the device type file is now determined by the mender.conf file. If the device type file is not used in mender.conf, the device type file is determined by the --data flag and if the flag is not used, the device type file is set to default. In addition, the scripts and modules directories location is consistent with the --data flag now.
+  ([MEN-4669](https://tracker.mender.io/browse/MEN-4669))
+* Fix race condition in menderAuthManagerService due to
+  concurrent map access. This could manifest either as a crash, or as a
+  failure to deliver the JwtToken to dependent processes, such as
+  mender-connect.
+* Fix race condition in `dbus.RegisterMethodCallCallback` due
+  to concurrent map access. This could manifest either as a crash, or as
+  a failure to deliver the JwtToken to dependent processes, such as
+  mender-connect.
+* Fix occasional crash when exiting using SIGTERM.
+* Fix: Correctly log the error response message from server errors
+* Fix a bug which could sometimes lead the client to do a
+  rollback after it had already committed. This could happen if the
+  client happened to spontaneously reboot or fail during the status
+  update to the server. Doing this is not correct according to the state
+  flow, and can have unexpected consequences depending on the
+  combination of Update Modules and State Scripts.
+  ([MEN-4830](https://tracker.mender.io/browse/MEN-4830))
 
 ## mender 2.5.1
 

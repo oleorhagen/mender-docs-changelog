@@ -92,6 +92,44 @@ New changes in mender-artifact since 3.5.1:
       update-type: version-update:semver-minor
     ...
 
+## mender-artifact 3.5.2
+
+_Released 07.14.2021_
+
+### Statistics
+
+A total of 45 lines added, 40 removed (delta 5)
+
+| Developers with the most changesets | |
+|---|---|
+| Alf-Rune Siqveland | 1 (100.0%) |
+
+| Developers with the most changed lines | |
+|---|---|
+| Alf-Rune Siqveland | 45 (100.0%) |
+
+| Top changeset contributors by employer | |
+|---|---|
+| Northern.tech | 1 (100.0%) |
+
+| Top lines changed by employer | |
+|---|---|
+| Northern.tech | 45 (100.0%) |
+
+| Employers with the most hackers (total 1) | |
+|---|---|
+| Northern.tech | 1 (100.0%) |
+
+
+### Changelogs
+
+#### mender-artifact (3.5.2)
+
+New changes in mender-artifact since 3.5.1:
+
+* [] Fix sending on closed signal channel
+  ([MEN-4832](https://tracker.mender.io/browse/MEN-4832))
+
 ## mender-artifact 3.5.1
 
 _Released 04.16.2021_
