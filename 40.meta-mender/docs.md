@@ -7,6 +7,98 @@ shortcode-core:
 github: false
 ---
 
+## meta-mender zeus-v2021.07
+
+_Released 07.23.2021_
+
+### Statistics
+
+A total of 1314 lines added, 298 removed (delta 1016)
+
+| Developers with the most changesets | |
+|---|---|
+| Kristian Amlie | 12 (40.0%) |
+| Lluis Campos | 11 (36.7%) |
+| Ole Petter Orhagen | 2 (6.7%) |
+| Fabio Tranchitella | 2 (6.7%) |
+| Pierre-Jean Texier | 1 (3.3%) |
+| Corey Cothrum | 1 (3.3%) |
+| Alan Martinovic | 1 (3.3%) |
+
+| Developers with the most changed lines | |
+|---|---|
+| Kristian Amlie | 1009 (76.6%) |
+| Lluis Campos | 238 (18.1%) |
+| Fabio Tranchitella | 55 (4.2%) |
+| Ole Petter Orhagen | 12 (0.9%) |
+| Pierre-Jean Texier | 1 (0.1%) |
+| Corey Cothrum | 1 (0.1%) |
+| Alan Martinovic | 1 (0.1%) |
+
+| Developers with the most signoffs (total 6) | |
+|---|---|
+| Lluis Campos | 6 (100.0%) |
+
+| Top changeset contributors by employer | |
+|---|---|
+| Northern.tech | 28 (93.3%) |
+| texier.pj2@gmail.com | 1 (3.3%) |
+| contact@coreycothrum.com | 1 (3.3%) |
+
+| Top lines changed by employer | |
+|---|---|
+| Northern.tech | 1315 (99.8%) |
+| texier.pj2@gmail.com | 1 (0.1%) |
+| contact@coreycothrum.com | 1 (0.1%) |
+
+| Employers with the most signoffs (total 6) | |
+|---|---|
+| Northern.tech | 6 (100.0%) |
+
+| Employers with the most hackers (total 7) | |
+|---|---|
+| Northern.tech | 5 (71.4%) |
+| texier.pj2@gmail.com | 1 (14.3%) |
+| contact@coreycothrum.com | 1 (14.3%) |
+
+### Changelogs
+
+#### meta-mender (zeus-v2021.07)
+
+New changes in meta-mender since zeus-v2021.04:
+
+* Add meta-oe as dependency to mender-demo
+* mender-client-dev package to distribute D-Bus API specs
+  ([MEN-4106](https://tracker.mender.io/browse/MEN-4106))
+* fix grub chownboot task ordering
+* Add io.mender.UpdateManager to D-Bus policy files.
+* Fix build error when trying to build mender-configure
+  without systemd:
+  ```
+  mender-configure-1.0.0-r0 do_package: SYSTEMD_SERVICE_mender-configure value mender-configure-apply-device-config.service does not exist.
+  ```
+* u-boot-mender: Ignore case when checking variables in mender_Kconfig_fragment
+* Add mender-client-3.0.0 recipe. Note that it has to be
+  enabled specifically, since it is not perfectly compatible with the
+  2.x series:
+  ```
+  PREFERRED_VERSION_mender-client = "3.%"
+  ```
+  In particular, the single dash flags have been removed and replaced
+  with commands. It is no longer possible to use `mender -install`, it
+  must be replaced with `mender install`, and likewise for similar
+  commands.
+* Add mender-artifact-3.6.0 recipe.
+* Add mender-connect-1.2.0 recipe.
+* Add mender-configure-1.0.1 recipe.
+* Add mender-artifact-3.5.2 recipe.
+* Add mender-client-2.5.2 recipe.
+* Add mender-client-2.6.1 recipe.
+* Add mender-connect-1.0.2 recipe.
+* Add mender-connect-1.1.1 recipe.
+* Increase Update Control Map timeout values in demo to avoid
+  Update Control malfunctioning on slow boards.
+
 ## meta-mender dunfell-v2021.07.02
 
 _Released 07.15.2021_
