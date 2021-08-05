@@ -7,6 +7,55 @@ shortcode-core:
 github: false
 ---
 
+## meta-mender dunfell-v2021.08
+
+_Released 08.05.2021_
+
+### Statistics
+
+A total of 179 lines added, 99 removed (delta 80)
+
+| Developers with the most changesets | |
+|---|---|
+| Lluis Campos | 7 (77.8%) |
+| Peter Grzybowski | 1 (11.1%) |
+| Kristian Amlie | 1 (11.1%) |
+
+| Developers with the most changed lines | |
+|---|---|
+| Lluis Campos | 109 (60.6%) |
+| Kristian Amlie | 55 (30.6%) |
+| Peter Grzybowski | 16 (8.9%) |
+
+| Top changeset contributors by employer | |
+|---|---|
+| Northern.tech | 9 (100.0%) |
+
+| Top lines changed by employer | |
+|---|---|
+| Northern.tech | 180 (100.0%) |
+
+| Employers with the most hackers (total 3) | |
+|---|---|
+| Northern.tech | 3 (100.0%) |
+
+
+### Changelogs
+
+#### meta-mender (dunfell-v2021.08)
+
+New changes in meta-mender since dunfell-v2021.07.02:
+
+* Fix: mender-client-dev package contains D-Bus interface files
+  only when "dbus" is enabled in PACKAGECONFIG.
+  ([MEN-4811](https://tracker.mender.io/browse/MEN-4811))
+* meta-mender-commercial: Add mender-monitor git recipe
+  ([MEN-4712](https://tracker.mender.io/browse/MEN-4712))
+* Add new image mender-monitor-image-full-cmdline for internal testing
+  ([MEN-4712](https://tracker.mender.io/browse/MEN-4712))
+* Monitoring wrapper alignment
+  ([MEN-4737](https://tracker.mender.io/browse/MEN-4737))
+
 ## meta-mender zeus-v2021.07
 
 _Released 07.23.2021_
