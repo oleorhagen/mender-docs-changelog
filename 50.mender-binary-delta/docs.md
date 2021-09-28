@@ -7,6 +7,37 @@ shortcode-core:
 github: false
 ---
 
+## mender-binary-delta 1.3.0
+
+_Released 09.28.2021_
+
+### Changelogs
+
+#### mender-binary-delta (1.3.0)
+
+New changes in mender-binary-delta since 1.2.0:
+
+* Remove harmless warning message about unhandled states.
+* Fix failed rollback status when bootloader is the one to roll back.
+* Fix integer overflow bug in the Artifact creation logic, where the
+  `rootfs_image_checksum` would get truncated through the use of the 32-bit
+  interface for JSON values in the JSON libary used.
+  ([MEN-4516](https://tracker.mender.io/browse/MEN-4516))
+* Detect mismatches between `mender_boot_part` and `RootfsPart(A|B)` variables.
+* Support for new grub-mender-grubenv tool names.
+  ([MEN-3978](https://tracker.mender.io/browse/MEN-3978))
+* Aggregated Dependabot Changelogs:
+  * Bumps tests/unit/cmocka from `314602b` to `5a4b158`.
+  * Bumps [libntech](https://github.com/cfengine/libntech) from `4b59844` to `f49189e`.
+    - [Release notes](https://github.com/cfengine/libntech/releases)
+    - [Commits](https://github.com/cfengine/libntech/compare/4b598446c54fd9e784a6dd86be99a317c3531dff...f49189eba92f7a0c9bb37141a7a84dfca7d6ba75)
+    ---
+    updated-dependencies:
+    - dependency-name: libntech
+      dependency-type: direct:production
+    ...
+
+
 ## mender-binary-delta 1.2.1
 
 _Released 04.16.2021_
