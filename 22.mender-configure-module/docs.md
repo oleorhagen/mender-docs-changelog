@@ -7,6 +7,47 @@ shortcode-core:
 github: false
 ---
 
+## mender-configure-module 1.0.2
+
+_Released 09.28.2021_
+
+### Statistics
+
+A total of 5 lines added, 3 removed (delta 2)
+
+| Developers with the most changesets | |
+|---|---|
+| Ole Petter Orhagen | 3 (75.0%) |
+| Lluis Campos | 1 (25.0%) |
+
+| Developers with the most changed lines | |
+|---|---|
+| Ole Petter Orhagen | 4 (80.0%) |
+| Lluis Campos | 1 (20.0%) |
+
+| Top changeset contributors by employer | |
+|---|---|
+| Northern.tech | 4 (100.0%) |
+
+| Top lines changed by employer | |
+|---|---|
+| Northern.tech | 5 (100.0%) |
+
+| Employers with the most hackers (total 2) | |
+|---|---|
+| Northern.tech | 2 (100.0%) |
+
+## Changelogs
+
+#### mender-configure-module (1.0.2)
+
+New changes in mender-configure-module since 1.0.1:
+
+* Mute the `curl` request progress bar in the
+  `mender-inventory-mender-configure` script.
+  ([MEN-4949](https://tracker.mender.io/browse/MEN-4949))
+
+
 ## mender-configure-module 1.0.1
 
 _Released 07.14.2021_

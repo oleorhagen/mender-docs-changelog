@@ -7,6 +7,95 @@ shortcode-core:
 github: false
 ---
 
+## mender-convert 2.6.0
+
+_Released 09.28.2021_
+
+### Statistics
+
+A total of 194 lines added, 88 removed (delta 106)
+
+| Developers with the most changesets | |
+|---|---|
+| Kristian Amlie | 7 (36.8%) |
+| Lluis Campos | 6 (31.6%) |
+| Ole Petter Orhagen | 5 (26.3%) |
+| Andrey Basov | 1 (5.3%) |
+
+| Developers with the most changed lines | |
+|---|---|
+| Kristian Amlie | 91 (45.7%) |
+| Lluis Campos | 79 (39.7%) |
+| Ole Petter Orhagen | 25 (12.6%) |
+| Andrey Basov | 4 (2.0%) |
+
+| Developers with the most signoffs (total 1) | |
+|---|---|
+| Kristian Amlie | 1 (100.0%) |
+
+| Top changeset contributors by employer | |
+|---|---|
+| Northern.tech | 18 (94.7%) |
+| dev.basov@gmail.com | 1 (5.3%) |
+
+| Top lines changed by employer | |
+|---|---|
+| Northern.tech | 195 (98.0%) |
+| dev.basov@gmail.com | 4 (2.0%) |
+
+| Employers with the most signoffs (total 1) | |
+|---|---|
+| Northern.tech | 1 (100.0%) |
+
+| Employers with the most hackers (total 4) | |
+|---|---|
+| Northern.tech | 3 (75.0%) |
+| dev.basov@gmail.com | 1 (25.0%) |
+
+### Changelogs
+
+#### mender-convert (2.6.0)
+
+New changes in mender-convert since 2.5.0:
+
+* configs/images/raspberrypi_raspbian_config: Allow APT Suite change
+  ([MEN-5057](https://tracker.mender.io/browse/MEN-5057))
+* Fix broken download of packages when `*_VERSION` are set to
+  `master`.
+* grub-mender-grubenv: User space tools, "fw_printenv" and
+  "fw_setenv" have been renamed to "grub-mender-grubenv-print" and
+  "grub-mender-grubenv-set", respectively. This has been done in order
+  to avoid conflict with U-Boot's user space tools, which have the same
+  names.
+* RPi pre-converted images: remove Mender client version from
+  Artifact name.
+* Create symlink from `/var/lib/mender-monitor` to
+  `/data/mender-configure`
+  ([MEN-5086](https://tracker.mender.io/browse/MEN-5086))
+* Closing curly brace added in bootstrap-rootfs-overlay-production-server.sh
+* Aggregated Dependabot Changelogs:
+  * Bumps [jsdom](https://github.com/jsdom/jsdom) from 16.6.0 to 16.7.0.
+    - [Release notes](https://github.com/jsdom/jsdom/releases)
+    - [Changelog](https://github.com/jsdom/jsdom/blob/master/Changelog.md)
+    - [Commits](https://github.com/jsdom/jsdom/compare/16.6.0...16.7.0)
+    ---
+    updated-dependencies:
+    - dependency-name: jsdom
+      dependency-type: direct:production
+      update-type: version-update:semver-minor
+    ...
+  * Bumps [jsdom](https://github.com/jsdom/jsdom) from 16.7.0 to 17.0.0.
+    - [Release notes](https://github.com/jsdom/jsdom/releases)
+    - [Changelog](https://github.com/jsdom/jsdom/blob/master/Changelog.md)
+    - [Commits](https://github.com/jsdom/jsdom/compare/16.7.0...17.0.0)
+    ---
+    updated-dependencies:
+    - dependency-name: jsdom
+      dependency-type: direct:production
+      update-type: version-update:semver-major
+    ...
+
+
 ## mender-convert 2.5.0
 
 _Released 07.14.2021_
