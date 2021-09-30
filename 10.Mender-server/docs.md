@@ -2208,6 +2208,11 @@ A total of 585 lines added, 265 removed (delta 320)
 
 ### Changelogs
 
+
+#### deployments (3.0.1)
+
+Bumped version to align with the enterprise fork.
+
 #### deployments-enterprise (3.0.1)
 
 New changes in deployments-enterprise since 3.0.0:
