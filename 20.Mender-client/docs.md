@@ -69,7 +69,7 @@ A total of 588 lines added, 396 removed (delta 192)
 | prashanthjbabu@gmail.com | 1 (11.1%) |
 | Complete Solution Robotics, LLC | 1 (11.1%) |
 
-## Changelogs
+### Changelogs
 
 #### mender (3.1.0)
 
