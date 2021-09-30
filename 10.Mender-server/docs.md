@@ -2166,6 +2166,90 @@ New changes in integration since 3.0.0:
     ...
 
 
+## Mender 3.0.1
+
+_Release date 09.29.2021_
+
+### Statistics
+
+A total of 585 lines added, 265 removed (delta 320)
+
+| Developers with the most changesets | |
+|---|---|
+| Manuel Zedel | 9 (42.9%) |
+| Fabio Tranchitella | 6 (28.6%) |
+| Kristian Amlie | 4 (19.0%) |
+| Ole Petter Orhagen | 1 (4.8%) |
+| Alf-Rune Siqveland | 1 (4.8%) |
+
+| Developers with the most changed lines | |
+|---|---|
+| Fabio Tranchitella | 437 (72.2%) |
+| Alf-Rune Siqveland | 55 (9.1%) |
+| Manuel Zedel | 51 (8.4%) |
+| Ole Petter Orhagen | 43 (7.1%) |
+| Kristian Amlie | 19 (3.1%) |
+
+| Developers with the most lines removed | |
+|---|---|
+| Kristian Amlie | 3 (1.1%) |
+
+| Top changeset contributors by employer | |
+|---|---|
+| Northern.tech | 21 (100.0%) |
+
+| Top lines changed by employer | |
+|---|---|
+| Northern.tech | 605 (100.0%) |
+
+| Employers with the most hackers (total 5) | |
+|---|---|
+| Northern.tech | 5 (100.0%) |
+
+### Changelogs
+
+#### deployments-enterprise (3.0.1)
+
+New changes in deployments-enterprise since 3.0.0:
+
+* add update control map eevaluation
+  ([MEN-4906](https://tracker.mender.io/browse/MEN-4906))
+
+#### deviceconnect (1.2.1)
+
+New changes in deviceconnect since 1.2.0:
+
+* store the correct offset in the recordings control messages
+  ([MEN-4770](https://tracker.mender.io/browse/MEN-4770))
+
+#### gui (3.0.1)
+
+New changes in gui since 3.0.0:
+
+* Adjust help text to say that RPi image is merely Mender ready.
+* fixed an issue that caused the deployment report to crash due to missing update control information
+* fixed an issue that caused the page selection in the device list to change unintended
+* require the current one when updating the user's password
+  ([MEN-4922](https://tracker.mender.io/browse/MEN-4922))
+* fixed an issue that prevented getting to devices based on their software in the overall device distribution
+
+#### integration (3.0.1)
+
+New changes in integration since 3.0.0:
+
+* Fix: Traefik is proxying minio requests on (80,443) ports, not on 9000
+* [] Fix demo script user creation race condition
+  ([MEN-4852](https://tracker.mender.io/browse/MEN-4852))
+* Upgrade deployments-enterprise to 3.0.1.
+* Upgrade deployments to 3.0.1.
+* Upgrade deviceconnect to 1.2.1.
+* Upgrade gui to 3.0.1.
+* Upgrade integration to 3.0.1.
+* Upgrade mender-artifact to 3.6.1.
+* Upgrade mender to 3.0.1.
+
+
+
 ## Mender 3.0.0
 
 _Released 07.14.2021_
