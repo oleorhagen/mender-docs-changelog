@@ -204,7 +204,7 @@ New changes in deployments since 3.0.0:
 New changes in deployments-enterprise since 3.0.0:
 
 * datastore_mongo: fix nil pointer dereference
-* add update control map eevaluation
+* add update control map evaluation
   ([MEN-4906](https://tracker.mender.io/browse/MEN-4906))
 * remove the CORS middleware, rely on the API gateway instead
   ([MEN-4921](https://tracker.mender.io/browse/MEN-4921))
@@ -2212,7 +2212,7 @@ A total of 585 lines added, 265 removed (delta 320)
 
 New changes in deployments-enterprise since 3.0.0:
 
-* add update control map eevaluation
+* add update control map evaluation
   ([MEN-4906](https://tracker.mender.io/browse/MEN-4906))
 
 #### deviceconnect (1.2.1)
