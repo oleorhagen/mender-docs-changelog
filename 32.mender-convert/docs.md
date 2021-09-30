@@ -96,6 +96,62 @@ New changes in mender-convert since 2.5.0:
     ...
 
 
+## mender-convert 2.5.2
+
+_Released 09.30.2021_
+
+### Statistics
+
+A total of 107 lines added, 38 removed (delta 69)
+
+| Developers with the most changesets | |
+|---|---|
+| Kristian Amlie | 5 (71.4%) |
+| Lluis Campos | 1 (14.3%) |
+| Andrey Basov | 1 (14.3%) |
+
+| Developers with the most changed lines | |
+|---|---|
+| Kristian Amlie | 89 (83.2%) |
+| Lluis Campos | 14 (13.1%) |
+| Andrey Basov | 4 (3.7%) |
+
+| Developers with the most signoffs (total 1) | |
+|---|---|
+| Kristian Amlie | 1 (100.0%) |
+
+| Top changeset contributors by employer | |
+|---|---|
+| Northern.tech | 6 (85.7%) |
+| dev.basov@gmail.com | 1 (14.3%) |
+
+| Top lines changed by employer | |
+|---|---|
+| Northern.tech | 103 (96.3%) |
+| dev.basov@gmail.com | 4 (3.7%) |
+
+| Employers with the most signoffs (total 1) | |
+|---|---|
+| Northern.tech | 1 (100.0%) |
+
+| Employers with the most hackers (total 3) | |
+|---|---|
+| Northern.tech | 2 (66.7%) |
+| dev.basov@gmail.com | 1 (33.3%) |
+
+### Changelogs
+
+## mender-convert 2.5.2
+
+#### mender-convert (2.5.2)
+
+New changes in mender-convert since 2.5.0:
+
+* Closing curly brace added in bootstrap-rootfs-overlay-production-server.sh
+* Fix broken download of packages when `*_VERSION` are set to
+  `master`.
+
+
 ## mender-convert 2.5.1
 
 _Released 09.30.2021_
