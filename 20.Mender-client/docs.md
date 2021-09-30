@@ -69,7 +69,7 @@ A total of 588 lines added, 396 removed (delta 192)
 | prashanthjbabu@gmail.com | 1 (11.1%) |
 | Complete Solution Robotics, LLC | 1 (11.1%) |
 
-## Changelogs
+### Changelogs
 
 #### mender (3.1.0)
 
@@ -114,6 +114,65 @@ New changes in mender since 3.0.0:
   the dameon, and hence respect the new configuration, as opposed to letting it
   expire, which was the old functionality.
   ([MEN-3420](https://tracker.mender.io/browse/MEN-3420))
+* [FIX] Fetch geo location data once per power cycle
+
+## mender 3.0.1
+
+_Released 09.29.2021_
+
+### Statistics
+
+A total of 94 lines added, 48 removed (delta 46)
+
+| Developers with the most changesets | |
+|---|---|
+| Kristian Amlie | 4 (50.0%) |
+| Prashanth Joseph Babu | 2 (25.0%) |
+| Alf-Rune Siqveland | 1 (12.5%) |
+| Lluis Campos | 1 (12.5%) |
+
+| Developers with the most changed lines | |
+|---|---|
+| Prashanth Joseph Babu | 46 (48.9%) |
+| Kristian Amlie | 31 (33.0%) |
+| Alf-Rune Siqveland | 9 (9.6%) |
+| Lluis Campos | 8 (8.5%) |
+
+| Developers with the most signoffs (total 1) | |
+|---|---|
+| Kristian Amlie | 1 (100.0%) |
+
+| Top changeset contributors by employer | |
+|---|---|
+| Northern.tech | 6 (75.0%) |
+| prashanthjbabu@gmail.com | 2 (25.0%) |
+
+| Top lines changed by employer | |
+|---|---|
+| Northern.tech | 48 (51.1%) |
+| prashanthjbabu@gmail.com | 46 (48.9%) |
+
+| Employers with the most signoffs (total 1) | |
+|---|---|
+| Northern.tech | 1 (100.0%) |
+
+| Employers with the most hackers (total 4) | |
+|---|---|
+| Northern.tech | 3 (75.0%) |
+| prashanthjbabu@gmail.com | 1 (25.0%) |
+
+
+### Changelogs
+
+#### mender (3.0.1)
+
+New changes in mender since 3.0.0:
+
+* Add artifact_name to device provides if not found in store
+* Add missing filesystem sync which could produce an empty or
+  corrupted Update Module file tree in
+  `/var/lib/mender/modules/v3/payloads/0000/tree/files/` after an
+  unexpected reboot.
 * [FIX] Fetch geo location data once per power cycle
 
 
