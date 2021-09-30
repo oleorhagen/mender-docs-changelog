@@ -100,71 +100,7 @@ New changes in mender-convert since 2.5.0:
 
 _Released 09.30.2021_
 
-### Statistics
-
-A total of 181 lines added, 81 removed (delta 100)
-
-| Developers with the most changesets | |
-|---|---|
-| Kristian Amlie | 7 (43.8%) |
-| Ole Petter Orhagen | 5 (31.2%) |
-| Lluis Campos | 4 (25.0%) |
-
-| Developers with the most changed lines | |
-|---|---|
-| Kristian Amlie | 91 (48.9%) |
-| Lluis Campos | 70 (37.6%) |
-| Ole Petter Orhagen | 25 (13.4%) |
-
-| Top changeset contributors by employer | |
-|---|---|
-| Northern.tech | 16 (100.0%) |
-
-| Top lines changed by employer | |
-|---|---|
-| Northern.tech | 186 (100.0%) |
-
-| Employers with the most hackers (total 3) | |
-|---|---|
-| Northern.tech | 3 (100.0%) |
-
-
-#### Changelogs
-
-New changes in mender-convert since 2.5.0:
-
-* configs/images/raspberrypi_raspbian_config: Allow APT Suite change
-  ([MEN-5057](https://tracker.mender.io/browse/MEN-5057))
-* Fix broken download of packages when `*_VERSION` are set to
-  `master`.
-* grub-mender-grubenv: User space tools, "fw_printenv" and
-  "fw_setenv" have been renamed to "grub-mender-grubenv-print" and
-  "grub-mender-grubenv-set", respectively. This has been done in order
-  to avoid conflict with U-Boot's user space tools, which have the same
-  names.
-* RPi pre-converted images: remove Mender client version from
-  Artifact name.
-* Aggregated Dependabot Changelogs:
-  * Bumps [jsdom](https://github.com/jsdom/jsdom) from 16.6.0 to 16.7.0.
-    - [Release notes](https://github.com/jsdom/jsdom/releases)
-    - [Changelog](https://github.com/jsdom/jsdom/blob/master/Changelog.md)
-    - [Commits](https://github.com/jsdom/jsdom/compare/16.6.0...16.7.0)
-    ---
-    updated-dependencies:
-    - dependency-name: jsdom
-      dependency-type: direct:production
-      update-type: version-update:semver-minor
-    ...
-  * Bumps [jsdom](https://github.com/jsdom/jsdom) from 16.7.0 to 17.0.0.
-    - [Release notes](https://github.com/jsdom/jsdom/releases)
-    - [Changelog](https://github.com/jsdom/jsdom/blob/master/Changelog.md)
-    - [Commits](https://github.com/jsdom/jsdom/compare/16.7.0...17.0.0)
-    ---
-    updated-dependencies:
-    - dependency-name: jsdom
-      dependency-type: direct:production
-      update-type: version-update:semver-major
-    ...
+    mender-convert 2.5.1 was a faulty release, and has been removed.
 
 
 ## mender-convert 2.5.0
