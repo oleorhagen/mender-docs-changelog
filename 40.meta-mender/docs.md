@@ -7,6 +7,72 @@ shortcode-core:
 github: false
 ---
 
+## meta-mender dunfell-v2021.10
+
+_Released 10.04.2021_
+
+### Statistics
+
+A total of 231 lines added, 33 removed (delta 198)
+
+| Developers with the most changesets | |
+|---|---|
+| Ole Petter Orhagen | 4 (26.7%) |
+| Lluis Campos | 4 (26.7%) |
+| Kristian Amlie | 3 (20.0%) |
+| Peter Grzybowski | 3 (20.0%) |
+| Alf-Rune Siqveland | 1 (6.7%) |
+
+| Developers with the most changed lines | |
+|---|---|
+| Lluis Campos | 123 (53.2%) |
+| Ole Petter Orhagen | 71 (30.7%) |
+| Peter Grzybowski | 15 (6.5%) |
+| Alf-Rune Siqveland | 15 (6.5%) |
+| Kristian Amlie | 7 (3.0%) |
+
+| Developers with the most signoffs (total 1) | |
+|---|---|
+| Kristian Amlie | 1 (100.0%) |
+
+| Top changeset contributors by employer | |
+|---|---|
+| Northern.tech | 15 (100.0%) |
+
+| Top lines changed by employer | |
+|---|---|
+| Northern.tech | 231 (100.0%) |
+
+| Employers with the most signoffs (total 1) | |
+|---|---|
+| Northern.tech | 1 (100.0%) |
+
+| Employers with the most hackers (total 5) | |
+|---|---|
+| Northern.tech | 5 (100.0%) |
+
+### Changelogs
+
+#### meta-mender (dunfell-v2021.10)
+
+New changes in meta-mender since dunfell-v2021.08:
+
+* Use ${localstatedir} in mender-configure
+* Monitoring: ln -s /data/mender-monitor /var/lib/mender-monitor
+  ([MEN-4710](https://tracker.mender.io/browse/MEN-4710))
+* Include mender-monitorctl in mender-monitor recipe.
+  ([MEN-4893](https://tracker.mender.io/browse/MEN-4893))
+* Add lmdb as a runtime depency to the mender-monitor recipe
+* Add recipe for mender-client 3.1.0
+* Add recipe for mender-artifact 3.6.1
+* Add recipe for mender-monitor 1.0.0
+* Add recipe for mender-binary-delta 1.3.0
+* Add recipe for mender-configure 1.0.2
+* Add recipe for mender-client 2.5.3
+* Add recipe for mender-artifact 3.5.3
+* Add recipe for mender-client 3.0.1
+
+
 ## meta-mender dunfell-v2021.08
 
 _Released 08.05.2021_
