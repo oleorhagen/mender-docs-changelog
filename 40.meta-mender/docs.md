@@ -7,6 +7,81 @@ shortcode-core:
 github: false
 ---
 
+## meta-mender zeus-v2021.10
+
+_Released 10.05.2021_
+
+### Statistics
+
+A total of 331 lines added, 61 removed (delta 270)
+
+| Developers with the most changesets | |
+|---|---|
+| Lluis Campos | 7 (36.8%) |
+| Ole Petter Orhagen | 4 (21.1%) |
+| Peter Grzybowski | 4 (21.1%) |
+| Kristian Amlie | 3 (15.8%) |
+| Alf-Rune Siqveland | 1 (5.3%) |
+
+| Developers with the most changed lines | |
+|---|---|
+| Lluis Campos | 207 (62.5%) |
+| Ole Petter Orhagen | 71 (21.5%) |
+| Peter Grzybowski | 31 (9.4%) |
+| Alf-Rune Siqveland | 15 (4.5%) |
+| Kristian Amlie | 7 (2.1%) |
+
+| Developers with the most signoffs (total 1) | |
+|---|---|
+| Kristian Amlie | 1 (100.0%) |
+
+| Top changeset contributors by employer | |
+|---|---|
+| Northern.tech | 19 (100.0%) |
+
+| Top lines changed by employer | |
+|---|---|
+| Northern.tech | 331 (100.0%) |
+
+| Employers with the most signoffs (total 1) | |
+|---|---|
+| Northern.tech | 1 (100.0%) |
+
+| Employers with the most hackers (total 5) | |
+|---|---|
+| Northern.tech | 5 (100.0%) |
+
+### Changelogs
+
+#### meta-mender (zeus-v2021.10)
+
+New changes in meta-mender since zeus-v2021.07:
+
+* Fix: mender-client-dev package contains D-Bus interface files
+  only when "dbus" is enabled in PACKAGECONFIG.
+  ([MEN-4811](https://tracker.mender.io/browse/MEN-4811))
+* meta-mender-commercial: Add mender-monitor git recipe
+  ([MEN-4712](https://tracker.mender.io/browse/MEN-4712))
+* Add new image mender-monitor-image-full-cmdline for internal testing
+  ([MEN-4712](https://tracker.mender.io/browse/MEN-4712))
+* Monitoring wrapper alignment
+  ([MEN-4737](https://tracker.mender.io/browse/MEN-4737))
+* Use ${localstatedir} in mender-configure
+* Monitoring: ln -s /data/mender-monitor /var/lib/mender-monitor
+  ([MEN-4710](https://tracker.mender.io/browse/MEN-4710))
+* Include mender-monitorctl in mender-monitor recipe.
+  ([MEN-4893](https://tracker.mender.io/browse/MEN-4893))
+* Add lmdb as a runtime depency to the mender-monitor recipe
+* Add recipe for mender-client 3.1.0
+* Add recipe for mender-artifact 3.6.1
+* Add recipe for mender-monitor 1.0.0
+* Add recipe for mender-binary-delta 1.3.0
+* Add recipe for mender-configure 1.0.2
+* Add recipe for mender-client 2.5.3
+* Add recipe for mender-artifact 3.5.3
+* Add recipe for mender-client 3.0.1
+
+
 ## meta-mender dunfell-v2021.10
 
 _Released 10.04.2021_
