@@ -7,6 +7,60 @@ shortcode-core:
 github: false
 ---
 
+## meta-mender dunfell-v2021.11
+
+_Released 11.02.2021_
+
+### Statistics
+
+A total of 19 lines added, 17 removed (delta 2)
+
+| Developers with the most changesets | |
+|---|---|
+| Clément Péron | 1 (33.3%) |
+| Ole Petter Orhagen | 1 (33.3%) |
+| Kristian Amlie | 1 (33.3%) |
+
+| Developers with the most changed lines | |
+|---|---|
+| Ole Petter Orhagen | 17 (89.5%) |
+| Clément Péron | 1 (5.3%) |
+| Kristian Amlie | 1 (5.3%) |
+
+| Developers with the most signoffs (total 1) | |
+|---|---|
+| Kristian Amlie | 1 (100.0%) |
+
+| Top changeset contributors by employer | |
+|---|---|
+| Northern.tech | 2 (66.7%) |
+| peron.clem@gmail.com | 1 (33.3%) |
+
+| Top lines changed by employer | |
+|---|---|
+| Northern.tech | 18 (94.7%) |
+| peron.clem@gmail.com | 1 (5.3%) |
+
+| Employers with the most signoffs (total 1) | |
+|---|---|
+| Northern.tech | 1 (100.0%) |
+
+| Employers with the most hackers (total 3) | |
+|---|---|
+| Northern.tech | 2 (66.7%) |
+| peron.clem@gmail.com | 1 (33.3%) |
+
+### Changelogs
+
+#### meta-mender (dunfell-v2021.11)
+
+New changes in meta-mender since dunfell-v2021.10:
+
+* u-boot: Fix save_mender_auto_configured_patch when recipe
+  version contains a `+`.
+* Add support for VirtIO disk drives
+
+
 ## meta-mender zeus-v2021.10
 
 _Released 10.05.2021_
