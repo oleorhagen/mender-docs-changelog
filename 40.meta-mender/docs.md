@@ -7,6 +7,64 @@ shortcode-core:
 github: false
 ---
 
+## meta-mender zeus-v2021.11
+
+_Released 11.19.2021_
+
+### Statistics
+
+A total of 5 lines added, 4 removed (delta 1)
+
+| Developers with the most changesets | |
+|---|---|
+| Peter Hatina | 1 (33.3%) |
+| Kristian Amlie | 1 (33.3%) |
+| Clément Péron | 1 (33.3%) |
+
+| Developers with the most changed lines | |
+|---|---|
+| Peter Hatina | 2 (40.0%) |
+| Clément Péron | 2 (40.0%) |
+| Kristian Amlie | 1 (20.0%) |
+
+| Developers with the most signoffs (total 1) | |
+|---|---|
+| Lluis Campos | 1 (100.0%) |
+
+| Top changeset contributors by employer | |
+|---|---|
+| Northern.tech | 1 (33.3%) |
+| peter@hatina.eu | 1 (33.3%) |
+| peron.clem@gmail.com | 1 (33.3%) |
+
+| Top lines changed by employer | |
+|---|---|
+| peter@hatina.eu | 2 (40.0%) |
+| peron.clem@gmail.com | 2 (40.0%) |
+| Northern.tech | 1 (20.0%) |
+
+| Employers with the most signoffs (total 1) | |
+|---|---|
+| Northern.tech | 1 (100.0%) |
+
+| Employers with the most hackers (total 3) | |
+|---|---|
+| Northern.tech | 1 (33.3%) |
+| peter@hatina.eu | 1 (33.3%) |
+| peron.clem@gmail.com | 1 (33.3%) |
+
+### Changelogs
+
+#### meta-mender (zeus-v2021.11)
+
+New changes in meta-mender since zeus-v2021.10:
+
+* Add support for VirtIO disk drives
+* u-boot: Fix save_mender_auto_configured_patch when recipe
+  version contains a `+`.
+* Fix FTBFS due to host contamination with secure boot enabled
+
+
 ## meta-mender dunfell-v2021.11
 
 _Released 11.02.2021_
