@@ -7,6 +7,59 @@ shortcode-core:
 github: false
 ---
 
+## meta-mender dunfell-v2021.12
+
+_Released 12.03.2021_
+
+### Statistics
+
+A total of 27 lines added, 8 removed (delta 19)
+
+| Developers with the most changesets | |
+|---|---|
+| Kristian Amlie | 2 (40.0%) |
+| Clément Péron | 1 (20.0%) |
+| Lluis Campos | 1 (20.0%) |
+| Peter Hatina | 1 (20.0%) |
+
+| Developers with the most changed lines | |
+|---|---|
+| Lluis Campos | 13 (48.1%) |
+| Clément Péron | 9 (33.3%) |
+| Kristian Amlie | 3 (11.1%) |
+| Peter Hatina | 2 (7.4%) |
+
+| Top changeset contributors by employer | |
+|---|---|
+| Northern.tech | 3 (60.0%) |
+| peron.clem@gmail.com | 1 (20.0%) |
+| peter@hatina.eu | 1 (20.0%) |
+
+| Top lines changed by employer | |
+|---|---|
+| Northern.tech | 16 (59.3%) |
+| peron.clem@gmail.com | 9 (33.3%) |
+| peter@hatina.eu | 2 (7.4%) |
+
+| Employers with the most hackers (total 4) | |
+|---|---|
+| Northern.tech | 2 (50.0%) |
+| peron.clem@gmail.com | 1 (25.0%) |
+| peter@hatina.eu | 1 (25.0%) |
+
+### Changelogs
+
+#### meta-mender (dunfell-v2021.12)
+
+New changes in meta-mender since dunfell-v2021.11:
+
+* Fix FTBFS due to host contamination with secure boot enabled
+* Switch git:// links to https:// links since Github disabled them.
+* Avoid populating rootfs partition B to save space when compressing.
+* mender-connect master: depend on mender 3.2
+  ([MEN-5203](https://tracker.mender.io/browse/MEN-5203))
+* Fix installation when cross-compiling mender-artifact
+
 ## meta-mender zeus-v2021.11
 
 _Released 11.19.2021_
