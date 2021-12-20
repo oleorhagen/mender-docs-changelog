@@ -7,6 +7,54 @@ shortcode-core:
 github: false
 ---
 
+## meta-mender zeus-v2021.12
+
+_Released 12.20.2021_
+
+### Statistics
+
+A total of 25 lines added, 7 removed (delta 18)
+
+| Developers with the most changesets | |
+|---|---|
+| Kristian Amlie | 2 (50.0%) |
+| Clément Péron | 1 (25.0%) |
+| Lluis Campos | 1 (25.0%) |
+
+| Developers with the most changed lines | |
+|---|---|
+| Lluis Campos | 13 (52.0%) |
+| Clément Péron | 9 (36.0%) |
+| Kristian Amlie | 3 (12.0%) |
+
+| Top changeset contributors by employer | |
+|---|---|
+| Northern.tech | 3 (75.0%) |
+| peron.clem@gmail.com | 1 (25.0%) |
+
+| Top lines changed by employer | |
+|---|---|
+| Northern.tech | 16 (64.0%) |
+| peron.clem@gmail.com | 9 (36.0%) |
+
+| Employers with the most hackers (total 3) | |
+|---|---|
+| Northern.tech | 2 (66.7%) |
+| peron.clem@gmail.com | 1 (33.3%) |
+
+### Changelogs
+
+#### meta-mender (zeus-v2021.12)
+
+New changes in meta-mender since zeus-v2021.11:
+
+* Switch git:// links to https:// links since Github disabled them.
+* Avoid populating rootfs partition B to save space when compressing.
+* mender-connect master: depend on mender 3.2
+  ([MEN-5203](https://tracker.mender.io/browse/MEN-5203))
+* Fix installation when cross-compiling mender-artifact
+
+
 ## meta-mender dunfell-v2021.12
 
 _Released 12.03.2021_
